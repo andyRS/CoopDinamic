@@ -108,7 +108,7 @@
  .buscar-box .icon{
     position: absolute;
     top: 50%;
-    left: -31px;
+    margin-left: -273px;
     margin-top: 17px;
     z-index: 1;
     color: rgb(37, 37, 37);
