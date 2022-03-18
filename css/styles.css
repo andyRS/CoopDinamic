@@ -48,12 +48,22 @@
     text-shadow: 1px 1px 0px #ccc;
 }
 
+.logo img {
+	display: block;
+	position: relative;
+	width: 64px;
+	margin-top: -57px;
+	left: 282px;
+}
 .logo h1{
     font-family: Roboto-Bold;
     font-style: italic;
     font-family: 900;
     font-size: 35px;
+    transition: all 300ms;
 }
+
+
  /* fin header-cabecera*/
 
  /* inicio del buscador*/
@@ -107,14 +117,13 @@
 
 
 
-  .buscar-box input#search:hover, .buscar-box input#search:focus, .buscar-box input#search:active{
+.buscar-box input#search:hover, .buscar-box input#search:focus, .buscar-box input#search:active{
     outline:none;
     background: #5da96d;;
     border: none;
   }
 
-
-  /* fin del buscador*/
+/* fin del buscador*/
 
 /*Inicio MENU*/
 #menu a{
@@ -138,15 +147,14 @@
 }
 
 /*Inicio iconos del menu*/
-
 .icon-home .fa-home {
 	display: block;
-	font-size: 23px;
+	font-size: 20px;
 	/* margin-top: -27px; */
 	position: absolute;
 	color: white;
 	z-index: 5;
-	top: 20px;
+	top: 21px;
 	left: 61px;
 	z-index: 998;
 }
@@ -160,17 +168,17 @@
 	z-index: 5;
 	top: 20px;
 	left: 59px;
-	z-index: 998;
+	z-index: 997;
 }
 
 .icon-bussiness .fa-briefcase {
 	display: block;
-	font-size: 21px;
+	font-size: 20px;
 	position: absolute;
 	color: white;
-	top: 22px;
+	top: 21px;
 	left: 12px;
-	z-index: 997;
+	z-index: 996;
 }
 
 .icon-blog .fa-blog {
@@ -180,17 +188,37 @@
 	color: white;
 	top: 21px;
 	left: 35px;
-	z-index: 996;
+	z-index: 995;
 }
 
 .icon-contract .fa-file-contract {
 	display: block;
-	font-size: 21px;
+	font-size: 19px;
 	position: absolute;
 	color: white;
-	top: 21px;
+	top: 23px;
 	left: 2px;
-	z-index: 995;
+	z-index: 994;
+}
+
+.icon-news .fa-newspaper {
+	display: block;
+	font-size: 20px;
+	position: absolute;
+	color: white;
+	top: 22px;
+	left: 52px;
+	z-index: 993;
+}
+
+.icon-contact .fa-address-card {
+	display: block;
+	font-size: 20px;
+	position: absolute;
+	color: white;
+	top: 23px;
+	left: 40px;
+	z-index: 992;
 }
 
 /*Fin iconos del menu*/
