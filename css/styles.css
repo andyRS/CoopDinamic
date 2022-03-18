@@ -125,8 +125,6 @@
     font-size: 35px;
     transition: all 300ms;
 }
-
-
  /* fin header-cabecera*/
 
  /* inicio del buscador*/
@@ -218,39 +216,39 @@
 	color: white;
 	z-index: 5;
 	top: 21px;
-	left: 61px;
+	left: 84px;
 	z-index: 998;
 }
 
 .icon-person .fa-user {
 	display: block;
-	font-size: 17px;
+	font-size: 16px;
 	/* margin-top: -27px; */
 	position: absolute;
 	color: white;
 	z-index: 5;
 	top: 23px;
-	left: 59px;
+	left: 85px;
 	z-index: 997;
 }
 
 .icon-bussiness .fa-briefcase {
 	display: block;
-	font-size: 20px;
+	font-size: 19px;
 	position: absolute;
 	color: white;
 	top: 21px;
-	left: 12px;
+	left: 40px;
 	z-index: 996;
 }
 
 .icon-blog .fa-blog {
 	display: block;
-	font-size: 21px;
+	font-size: 20px;
 	position: absolute;
 	color: white;
-	top: 21px;
-	left: 35px;
+	top: 20px;
+	left: 64px;
 	z-index: 995;
 }
 
@@ -260,7 +258,7 @@
 	position: absolute;
 	color: white;
 	top: 23px;
-	left: 2px;
+	left: 26px;
 	z-index: 994;
 }
 
@@ -270,7 +268,7 @@
 	position: absolute;
 	color: white;
 	top: 22px;
-	left: 52px;
+	left: 76px;
 	z-index: 993;
 }
 
@@ -279,12 +277,58 @@
 	font-size: 20px;
 	position: absolute;
 	color: white;
-	top: 23px;
-	left: 40px;
+	top: 22px;
+	left: 65px;
 	z-index: 992;
 }
-
 /*Fin iconos del menu*/
+
+/*Inicio iconos del Sub-menu*/
+.icon-piggy-bank .fa-piggy-bank {
+	display: block;
+	font-size: 20px;
+	position: absolute;
+	color: white;
+	top: 20px;
+	left: 18px;
+	z-index: 991;
+}
+
+.icon-credit-card .fa-credit-card {
+	display: block;
+	font-size: 20px;
+	position: absolute;
+	color: white;
+	top: 22px;
+	left: 66px;
+	z-index: 990;
+}
+
+
+.icon-blog-2 .fa-blog {
+	display: block;
+	font-size: 16px;
+	position: absolute;
+	color: white;
+	top: 22px;
+	left: 97px;
+	z-index: 991;
+}
+
+.icon-wpforms .fa-wpforms {
+	display: block;
+	font-size: 18px;
+	position: absolute;
+	color: white;
+	top: 23px;
+	left: 72px;
+	z-index: 898;
+	font-weight: bold;
+}
+
+/*Fin iconos del Sub-menu*/
+
+
 
 
 #menu ul{
@@ -435,6 +479,7 @@ img{
 	text-transform: uppercase;
 	font-weight: 700;
 	color: #fff;
+	margin-top: 17px;
 }
 
 .buttom-destacado {
@@ -462,39 +507,66 @@ img{
 /*INICIO de la seccion Trayectoria*/
 #trayectoria {
 	display: flex;
-	width: 100%;
-	height: 450px;
+	width: 90%;
+	height: 550px;
 	margin-top: 150px;
-	padding: 20px;
 	align-items: center;
 	justify-content: space-between;
-	flex-basis: auto;
-	margin-left: -38px;
+	margin-left: 85px;
+	border: 1px solid #ccc;
+	box-shadow: 0px 0px 10px #ccc;
+	padding-top: 140px;
+	margin-bottom: 150px;
+	padding-right: 88px;
+	border-radius: 20px;
 }
+
 .icon-circle .fa-circle, .fa-flag {
 	display: block;
-	font-size: 92px;
+	font-size: 83px;
 	position: relative;
-	top: -107px;
-	left: 181px;
+	top: -97px;
+	left: 191px;
 	color: #1ca9c0;
+    text-shadow: 1px 1px 1px #201f1f, 2px 2px 2px #201f1f;
 }
+
 .icon-flag .fa-flag {
 	color: #fff;
 	position: relative;
-	font-size: 35px;
-	top: -170px;
-	left: 205px;
+	font-size: 36px;
+	top: -158px;
+	left: 219px;
 }
 
-.icon-personals .fa-user-group {
-    display: block;
-	font-size: 92px;
+.icon-fa-users .fa-users {
+	color: #fff;
 	position: relative;
-	top: 0px;
-	left: 0px;
-	color: #1ca9c0;
-	
+	font-size: 42px;
+	top: -163px;
+	left: 207px;
+	font-weight: bold;
+	text-shadow: 1px 1px 1px #201f1f, 2px 2px 2px #201f1f;
+}
+
+.icon-time .fa-clock {
+	color: #fff;
+	position: relative;
+	font-size: 47px;
+	top: -163px;
+	left: 211px;
+	font-weight: bold;
+	text-shadow: 1px 1px 1px #201f1f, 2px 2px 2px #201f1f;
+}
+
+.icon-piggy-bank-2 .fa-piggy-bank {
+	color: #fff;
+	position: relative;
+	font-size: 48px;
+	top: -167px;
+	left: 204px;
+	font-weight: bold;
+	text-shadow: 1px 1px 1px #201f1f, 2px 2px 2px #201f1f;
 }
 
 .trayectoria-card-1, .trayectoria-card-2, .trayectoria-card-3, .trayectoria-card-4{
@@ -504,13 +576,17 @@ img{
     justify-content: center;
 }
 
-.trayectoria-h3{
-    display: block;
-    font-family: Roboto-Regular;
-    color: #bebf1b;
-    font-size: 15px;
-    text-align: center;
-    width: 90%;
+.trayectoria-h3 {
+	display: block;
+	font-family: Roboto-Regular;
+	color: #bebf1b;
+	font-size: 16px;
+	text-align: center;
+	width: 90%;
+}
+
+.trayectoria-h3 h3 {
+	text-shadow: 1px 1px 1px #000, 1px 2px 3px #000;
 }
 
 .trayectoria-card-p{
