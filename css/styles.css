@@ -411,7 +411,7 @@ img{
  #destacado {
 	display: flex;
 	width: 100%;
-	padding: 150px;
+	padding: 140px;
 	flex-direction: column;
 	min-width: 1519.2px;
 	height: 300px;
@@ -425,15 +425,98 @@ img{
     font-family: Opens-Sans-Condensed;
     font-size: 40px;
     font-weight: 700;
-    color: #56912d;
+    color: #70cf2e;
     text-align: center;
 }
 
 .CoopDinamica p {
 	font-family: Opens-Sans-Condensed;
-	font-size: 45px;
+	font-size: 41px;
 	text-transform: uppercase;
 	font-weight: 700;
 	color: #fff;
 }
+
+.buttom-destacado {
+	display: block;
+	width: 450px;
+	padding: 25px;
+    margin-top: 30px;
+    font-family: Opens-Sans-Condensed;
+	text-decoration: none;
+	text-align: center;
+    font-size: 24px;
+    text-transform: uppercase;
+	color: #fff;
+	background: #61b129;
+    transition: all 300ms;
+}
+
+.buttom-destacado:hover {
+	background: rgb(205, 164, 6);
+}
+
  /*FIN de la seccion Destacado*/
+
+
+/*INICIO de la seccion Trayectoria*/
+#trayectoria {
+	display: flex;
+	width: 100%;
+	height: 450px;
+	margin-top: 150px;
+	padding: 20px;
+	align-items: center;
+	justify-content: space-between;
+	flex-basis: auto;
+	margin-left: -38px;
+}
+.icon-circle .fa-circle, .fa-flag {
+	display: block;
+	font-size: 92px;
+	position: relative;
+	top: -107px;
+	left: 181px;
+	color: #1ca9c0;
+}
+.icon-flag .fa-flag {
+	color: #fff;
+	position: relative;
+	font-size: 35px;
+	top: -170px;
+	left: 205px;
+}
+
+.icon-personals .fa-user-group {
+    display: block;
+	font-size: 92px;
+	position: relative;
+	top: 0px;
+	left: 0px;
+	color: #1ca9c0;
+	
+}
+
+.trayectoria-card-1, .trayectoria-card-2, .trayectoria-card-3, .trayectoria-card-4{
+    display: flex;
+    width: 400px;
+    height: 200px;
+    justify-content: center;
+}
+
+.trayectoria-h3{
+    display: block;
+    font-family: Roboto-Regular;
+    color: #bebf1b;
+    font-size: 15px;
+    text-align: center;
+    width: 90%;
+}
+
+.trayectoria-card-p{
+    margin-top: 10px;
+    color: #333;
+    line-height: 25px;
+}
+
+/*FIN de la seccion Trayectoria*/
