@@ -18,13 +18,17 @@
 
 }
 
+@font-face{
+    font-family: Opens-Sans-Condensed;
+    src: url(fonts/OpenSans-CondBold.ttf);
+
+}
+
 /* fin Fuentes*/
 
 #container{
     height: auto;
     margin: 0px auto;
-    border: 1px solid rgba(255, 225, 226, 0.8);
-    box-shadow: 0px 0px 10px #ccc;
     min-height: 700px;
 }
 
@@ -86,6 +90,7 @@
 }
 /* Fin Pre-Loader*/
 
+
 /* inicio header-cabecera*/
 #header{
     display: flex;
@@ -101,7 +106,7 @@
 .logo{
     flex-basis: 65%;
     padding: 10px;
-    color: rgb(10, 170, 58);
+    color: rgb(9, 163, 55);
     margin-left: 30px;
     text-shadow: 1px 1px 0px #ccc;
 }
@@ -120,6 +125,7 @@
     font-size: 35px;
     transition: all 300ms;
 }
+
 
  /* fin header-cabecera*/
 
@@ -165,24 +171,27 @@
  .buscar-box .icon{
     position: absolute;
     top: 50%;
-    margin-left: 273px;
+    margin-left: -31px;
     margin-top: 17px;
     z-index: 1;
     color: rgb(37, 37, 37);
     cursor: pointer;
   }
 
+
+
 .buscar-box input#search:hover, .buscar-box input#search:focus, .buscar-box input#search:active{
     outline:none;
     background: #5da96d;;
     border: none;
   }
+
 /* fin del buscador*/
 
 /*Inicio MENU*/
 #menu a{
     color: #f6f7f8;
-    background: #207b3b;
+    background: #278b45;
     font-family: Roboto-Regular;
     font-size: 16px;
     font-weight: bold;
@@ -195,7 +204,7 @@
 }
 
 #menu a:hover{
-    background: #13c548;
+    background: #23c754;
     border-bottom: 2px solid white;
 
 }
@@ -215,12 +224,12 @@
 
 .icon-person .fa-user {
 	display: block;
-	font-size: 19px;
+	font-size: 17px;
 	/* margin-top: -27px; */
 	position: absolute;
 	color: white;
 	z-index: 5;
-	top: 20px;
+	top: 23px;
 	left: 59px;
 	z-index: 997;
 }
@@ -320,6 +329,7 @@
 .sub-menu > li:hover{
     display: block;
 }
+
 /*Fin MENU*/
 
 
@@ -396,3 +406,34 @@ img{
     transition: background-color .8s;
 }
 
+
+ /*INICIO de la seccion Destacado*/
+ #destacado {
+	display: flex;
+	width: 100%;
+	padding: 150px;
+	flex-direction: column;
+	min-width: 1519.2px;
+	height: 300px;
+	margin-top: 100px;
+	background: rgb(31, 54, 92) none repeat scroll 0% 0%;
+	align-items: center;
+	justify-content: center;
+}
+
+.seccion-destacado h2{
+    font-family: Opens-Sans-Condensed;
+    font-size: 40px;
+    font-weight: 700;
+    color: #56912d;
+    text-align: center;
+}
+
+.CoopDinamica p {
+	font-family: Opens-Sans-Condensed;
+	font-size: 45px;
+	text-transform: uppercase;
+	font-weight: 700;
+	color: #fff;
+}
+ /*FIN de la seccion Destacado*/
