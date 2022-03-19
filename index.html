@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cooperativa Dinamica</title>
+
+     <!-- Compiled and minified CSS -->
+     <link rel="stylesheet" href="css/materialize.min.css">
+
     <!--inicio de mis estilos CSS -->
     <link rel="stylesheet" href="css/styles.css">
     <!--fin de mis estilos CSS -->
@@ -23,19 +27,23 @@
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <!--fin de favicon, icono de la web -->
 
-    <!--Inicio Jquery CDN para proyectos -->
+    <!--Inicio Jquery para proyectos -->
     <script type="text/javascript" src="js/Jquery/jquery-3.6.0.min.js"></script>
-    <!--Fin Jquery CDN para proyectos -->
+    <!--Fin Jquery para proyectos -->
 
     <!--Inicio Script para iconos de font-awesome -->
     <script src="https://kit.fontawesome.com/a998cb1e07.js" crossorigin="anonymous"></script>
     <!--fin Script para iconos de font-awesome -->
 
+    
+
+     <!-- Compiled and minified JavaScript -->
+     <script src="js/materialize.min.js"></script>
+
     <!--Inicio Scripts de la web -->
     <script type="text/javascript" src="js/slider.js"></script>
     <script type="text/javascript" src="js/loader.js"></script>
-    <script type="text/javascript" defer src="js/carusel-services.js"></script>
-    <script type="text/javascript" defer src="js/slick.min.js"></script>
+    <script type="text/javascript" src="js/main-carousel-services.js"></script>
     <!--Fin Script de la web -->
 </head>
 
@@ -231,147 +239,43 @@
         <!--Fin seccion de Trayectoria o experiencia-->
 
         <!--Inicio seccion de Servicios-->
-        <section id="services">
-            <div class="text">
-                <h4>Nuestros Serivicios</h4>
-            </div>
-            <div class="products_body center">
-                <div class="wrapper">
-                    <div class="container">
-                        <img class="top" src="img/5.jpg" alt="Img">
-                        <div class="bottom">
-                            <div class="left">
-                                <div class="details">
-                                    <h2 class="txt_products">Name</h2>
-                                    <p>Sub Name</p>
-                                </div>
-                                <div class="buy">
-                                    <a href="#">
-                                        <i class="fas fa-cart-plus"></i>
-                                    </a>
-                                </div>
-                            </div>
+        <section id="services-container">
+            <div class="row">
+                <div class="col s12">
+                    <h4 class="center-align titulo">Nuestros servicios</h4>
+                    <div class="carousel center-align">
+                        <div class="carousel-item">
+                            <h4 class="subtitulo">Prestamos</h4>
+                            <div class="linea-division"></div>
+                            <p class="sabor">Financieros</p>
+                            <img src="img/finanza.jpg" alt="finanza">
                         </div>
-                    </div>
-                    <div class="inside">
-                        <div class="icon">
-                            <i class="far fa-eye"></i>
-                        </div>
-                        <div class="contents">
-                            <h1>Name</h1>
-                            <p>Descriptions</p>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="wrapper">
-                    <div class="container">
-                        <img class="top" src="img/8.jpg" alt="Imagen">
-                        <div class="bottom">
-                            <div class="left">
-                                <div class="details">
-                                    <h2 class="txt_products">Name</h2>
-                                    <p>Sub Name</p>
-                                </div>
-                                <div class="buy">
-                                    <a href="#">
-                                        <i class="fas fa-cart-plus"></i>
-                                    </a>
-                                </div>
-                            </div>
+                        <div class="carousel-item">
+                            <h4 class="subtitulo">Ahorros</h4>
+                            <div class="linea-division"></div>
+                            <p class="sabor">Personales</p>
+                            <img src="img/6.1.jpg" alt="finanza">
                         </div>
-                    </div>
-                    <div class="inside">
-                        <div class="icon">
-                            <i class="far fa-eye"></i>
-                        </div>
-                        <div class="contents">
-                            <h1>Name</h1>
-                            <p>Descriptions</p>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="wrapper">
-                    <div class="container">
-                        <img class="top" src="img/11.jpg" alt="Imagen">
-                        <div class="bottom">
-                            <div class="left">
-                                <div class="details">
-                                    <h2 class="txt_products">Name</h2>
-                                    <p>Sub Name</p>
-                                </div>
-                                <div class="buy">
-                                    <a href="#">
-                                        <i class="fas fa-cart-plus"></i>
-                                    </a>
-                                </div>
-                            </div>
+                        <div class="carousel-item">
+                            <h4 class="subtitulo">Apertura de</h4>
+                            <div class="linea-division"></div>
+                            <p class="sabor">Cuenta</p>
+                            <img src="img/apertura.jpg" alt="finanza">
                         </div>
-                    </div>
-                    <div class="inside">
-                        <div class="icon">
-                            <i class="far fa-eye"></i>
-                        </div>
-                        <div class="contents">
-                            <h1>Name</h1>
-                            <p>Descriptions</p>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="wrapper">
-                    <div class="container">
-                        <img class="top" src="img/12.jpg" alt="imagen">
-                        <div class="bottom">
-                            <div class="left">
-                                <div class="details">
-                                    <h2 class="txt_products">Name</h2>
-                                    <p>Sub Name</p>
-                                </div>
-                                <div class="buy">
-                                    <a href="#">
-                                        <i class="fas fa-cart-plus"></i>
-                                    </a>
-                                </div>
-                            </div>
+                        <div class="carousel-item">
+                            <h4 class="subtitulo">Certificado</h4>
+                            <div class="linea-division"></div>
+                            <p class="sabor">Financieros</p>
+                            <img src="img/certificado.jpg" alt="finanza">
                         </div>
-                    </div>
-                    <div class="inside">
-                        <div class="icon">
-                            <i class="far fa-eye"></i>
-                        </div>
-                        <div class="contents">
-                            <h1>Name</h1>
-                            <p>Descriptions</p>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="wrapper">
-                    <div class="container">
-                        <img class="top" src="https://source.unsplash.com/random/?river,park" alt="">
-                        <div class="bottom">
-                            <div class="left">
-                                <div class="details">
-                                    <h2 class="txt_products">Name</h2>
-                                    <p>Sub Name</p>
-                                </div>
-                                <div class="buy">
-                                    <a href="#">
-                                        <i class="fas fa-cart-plus"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="inside">
-                        <div class="icon">
-                            <i class="far fa-eye"></i>
-                        </div>
-                        <div class="contents">
-                            <h1>Name</h1>
-                            <p>Descriptions</p>
+                        <div class="carousel-item">
+                            <h4 class="subtitulo">Seguros</h4>
+                            <div class="linea-division"></div>
+                            <img src="img/6.jpg" alt="finanza">
                         </div>
                     </div>
                 </div>
