@@ -1,598 +1,386 @@
-
-*, *::before, *::after{
-    padding: 0%;
-    margin: 0;
-    outline: 0;
-    box-sizing: border-box;
-}
-
-/* inicio Fuentes*/
-@font-face{
-    font-family: Roboto-Regular;
-    src: url(fonts/Roboto-Regular.ttf);
-}
-
-@font-face{
-    font-family: Roboto-Bold;
-    src: url(fonts/Roboto-Bold.ttf);
-
-}
-
-@font-face{
-    font-family: Opens-Sans-Condensed;
-    src: url(fonts/OpenSans-CondBold.ttf);
-
-}
-
-/* fin Fuentes*/
-
-#container{
-    height: auto;
-    margin: 0px auto;
-    min-height: 700px;
-}
-
-/* inicio Pre-Loader*/
-.contenedor_loader{
-    background: #f3f3f3;
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    z-index: 9999;
-    transition: all 1.5s;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.loader,
-.loader::before,
-.loader::after{
-    border-radius: 50%;
-    width: 2.5em;
-    height: 2.5em;
-    animation: loader 1.5s infinite ease-in-out;
-}
-
-.loader{
-    color: #4685fa;
-    font-size: 13px;
-    position: relative;
-    animation-delay: -0.16s;
-}
-
-.loader::before,
-.loader::after{
-    content: '';
-    position: absolute;
-    top: 0;
-}
-
-.loader::before{
-    left: -3.5em;
-    animation-delay: -0.32s;
-}
-
-.loader::after{
-    left: 3.5em;
-}
-
-@keyframes loader{
-    0%,
-    80%,
-    100%{
-        box-shadow: 0 2.5em 0 -1.3em;
-    }
-    40%{
-        box-shadow: 0 2.5em 0 0;
-    }
-}
-/* Fin Pre-Loader*/
-
-
-/* inicio header-cabecera*/
-#header{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    background-color: white;
-
-    height: 120px;
-    border-bottom: 1px solid rgba(255, 255, 226, 0.8);
-}
-
-.logo{
-    flex-basis: 65%;
-    padding: 10px;
-    color: rgb(9, 163, 55);
-    margin-left: 30px;
-    text-shadow: 1px 1px 0px #ccc;
-}
-
-.logo img {
-	display: block;
-	position: relative;
-	width: 64px;
-	margin-top: -57px;
-	left: 282px;
-}
-.logo h1{
-    font-family: Roboto-Bold;
-    font-style: italic;
-    font-family: 900;
-    font-size: 35px;
-    transition: all 300ms;
-}
- /* fin header-cabecera*/
-
- /* inicio del buscador*/
-.buscar-box{
-    width: 300px;
-    vertical-align: middle;
-    white-space: nowrap;
-    position: relative;
-  }
-
-  .buscar-box input#search {
-	width: 300px;
-	height: 50px;
-	background: #fff;
-	border: 1px solid #333;
-	font-size: 10pt;
-	float: left;
-	color: #63717f;
-	padding-left: 45px;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-}
-
-.buscar-box  input#search::-webkit-input-placeholder {
-    color: #fff; 
- }
-  
- .buscar-box  input#search:-moz-placeholder { /* Firefox 18- */
-    color: #333;  
- }
-  
- .buscar-box  input#search::-moz-placeholder {  /* Firefox 19+ */
-    color: #333;  
- }
-  
- .buscar-box  input#search:-ms-input-placeholder {  
-    color: #333;  
- }
-
-
-.buscar-box .icon {
-    position: absolute;
-    top: 50%;
-    margin-left: 268px;
-    margin-top: 17px;
-    z-index: 1;
-    color: rgb(37, 37, 37);
-    cursor: pointer;
-}
-
-
-
-.buscar-box input#search:hover, .buscar-box input#search:focus, .buscar-box input#search:active{
-    outline:none;
-    background: #5da96d;;
-    border: none;
-  }
-
-/* fin del buscador*/
-
-/*Inicio MENU*/
-#menu a{
-    color: #f6f7f8;
-    background: #278b45;
-    font-family: Roboto-Regular;
-    font-size: 16px;
-    font-weight: bold;
-    height: 64px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    transition: background 0.4s;
-}
-
-#menu a:hover{
-    background: #23c754;
-    border-bottom: 2px solid white;
-
-}
-
-/*Inicio iconos del menu*/
-.icon-home .fa-home {
-	display: block;
-	font-size: 20px;
-	/* margin-top: -27px; */
-	position: absolute;
-	color: white;
-	z-index: 5;
-	top: 21px;
-	left: 84px;
-	z-index: 998;
-}
-
-.icon-person .fa-user {
-	display: block;
-	font-size: 16px;
-	/* margin-top: -27px; */
-	position: absolute;
-	color: white;
-	z-index: 5;
-	top: 23px;
-	left: 85px;
-	z-index: 997;
-}
-
-.icon-bussiness .fa-briefcase {
-	display: block;
-	font-size: 19px;
-	position: absolute;
-	color: white;
-	top: 21px;
-	left: 40px;
-	z-index: 996;
-}
-
-.icon-blog .fa-blog {
-	display: block;
-	font-size: 20px;
-	position: absolute;
-	color: white;
-	top: 20px;
-	left: 64px;
-	z-index: 995;
-}
-
-.icon-contract .fa-file-contract {
-	display: block;
-	font-size: 19px;
-	position: absolute;
-	color: white;
-	top: 23px;
-	left: 26px;
-	z-index: 994;
-}
-
-.icon-news .fa-newspaper {
-	display: block;
-	font-size: 20px;
-	position: absolute;
-	color: white;
-	top: 22px;
-	left: 76px;
-	z-index: 993;
-}
-
-.icon-contact .fa-address-card {
-	display: block;
-	font-size: 20px;
-	position: absolute;
-	color: white;
-	top: 22px;
-	left: 65px;
-	z-index: 992;
-}
-/*Fin iconos del menu*/
-
-/*Inicio iconos del Sub-menu*/
-.icon-piggy-bank .fa-piggy-bank {
-	display: block;
-	font-size: 20px;
-	position: absolute;
-	color: white;
-	top: 20px;
-	left: 18px;
-	z-index: 991;
-}
-
-.icon-credit-card .fa-credit-card {
-	display: block;
-	font-size: 20px;
-	position: absolute;
-	color: white;
-	top: 22px;
-	left: 66px;
-	z-index: 990;
-}
-
-
-.icon-blog-2 .fa-blog {
-	display: block;
-	font-size: 16px;
-	position: absolute;
-	color: white;
-	top: 22px;
-	left: 97px;
-	z-index: 991;
-}
-
-.icon-wpforms .fa-wpforms {
-	display: block;
-	font-size: 18px;
-	position: absolute;
-	color: white;
-	top: 23px;
-	left: 72px;
-	z-index: 898;
-	font-weight: bold;
-}
-
-/*Fin iconos del Sub-menu*/
-
-
-
-
-#menu ul{
-    list-style: none;
-    display: flex;
-}
-
-#menu li{
-    width: 100%;
-    text-align: center;
-    position: relative;
-}
-
-#menu li:hover .sub-menu > li{
-    display: block;
-    top: 0px;
-}
-
-#menu li:hover .sub-menu > li{
-    display: block;
-    top: 0px;
-}
-
-.sub-menu > li{
-    display: none;
-    position: absolute;
-    top: 0px;
-}
-
-.sub-menu li{
-    position: relative;
-}
-
-.sub-menu{
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    width: 100%;
-    z-index: 1;
-}
-
-.sub-menu > li:hover{
-    display: block;
-}
-
-/*Fin MENU*/
-
-
-/*SLIDER*/
-#slideshow-principal{
-    position: relative;
-    overflow: hidden;
-    z-index: 0;
-    
-}
-
-#progress-bar-container{
-    position: absolute;
-    height: 10px;
-    background-color: rgba(0, 0, 0, .2);
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-}
-
-#progress-bar{
-    height: 100%;
-    background-color: rgba(228, 69, 69, 0.7);
-    border-radius: 0 3px 3px 0;
-    transition: width 0.8s;
-}
-
-#slideshow{
-    position: relative;
-    z-index: 998;
-    height: 600px;
-}
-
-img{
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    object-fit: cover;
-}
-
-#img2{
-    /*lef: 100%;*/
-    opacity: 0;
-}
-
-.active{
-     /*lef: 0 !important;*/
-    opacity: 1 !important;
-    transition: all 1s;
-}
-
-#indicadores{
-    width: 100%;
-    text-align: center;
-    position: absolute;
-    bottom: 20px;
-    z-index: 999;
-}
-
-.circles{
-    border: white 2px solid;
-    width: 25px;
-    height: 25px;
-    display: inline-block;
-    margin: 0 5px 0 5px;
-    background-color: transparent;
-    border-radius: 50%;
-}
-
-.resaltado{
-    background-color: rgba(228, 69, 69, 1);
-    transition: background-color .8s;
-}
-
-
- /*INICIO de la seccion Destacado*/
- #destacado {
-	display: flex;
-	width: 100%;
-	padding: 140px;
-	flex-direction: column;
-	min-width: 1519.2px;
-	height: 300px;
-	margin-top: 100px;
-	background: rgb(31, 54, 92) none repeat scroll 0% 0%;
-	align-items: center;
-	justify-content: center;
-}
-
-.seccion-destacado h2{
-    font-family: Opens-Sans-Condensed;
-    font-size: 40px;
-    font-weight: 700;
-    color: #70cf2e;
-    text-align: center;
-}
-
-.CoopDinamica p {
-	font-family: Opens-Sans-Condensed;
-	font-size: 41px;
-	text-transform: uppercase;
-	font-weight: 700;
-	color: #fff;
-	margin-top: 17px;
-}
-
-.buttom-destacado {
-	display: block;
-	width: 450px;
-	padding: 25px;
-    margin-top: 30px;
-    font-family: Opens-Sans-Condensed;
-	text-decoration: none;
-	text-align: center;
-    font-size: 24px;
-    text-transform: uppercase;
-	color: #fff;
-	background: #61b129;
-    transition: all 300ms;
-}
-
-.buttom-destacado:hover {
-	background: rgb(205, 164, 6);
-}
-
- /*FIN de la seccion Destacado*/
-
-
-/*INICIO de la seccion Trayectoria*/
-#trayectoria {
-	display: flex;
-	width: 90%;
-	height: 550px;
-	margin-top: 150px;
-	align-items: center;
-	justify-content: space-between;
-	margin-left: 85px;
-	border: 1px solid #ccc;
-	box-shadow: 0px 0px 10px #ccc;
-	padding-top: 140px;
-	margin-bottom: 150px;
-	padding-right: 88px;
-	border-radius: 20px;
-}
-
-.icon-circle .fa-circle, .fa-flag {
-	display: block;
-	font-size: 83px;
-	position: relative;
-	top: -97px;
-	left: 191px;
-	color: #1ca9c0;
-    text-shadow: 1px 1px 1px #201f1f, 2px 2px 2px #201f1f;
-}
-
-.icon-flag .fa-flag {
-	color: #fff;
-	position: relative;
-	font-size: 36px;
-	top: -158px;
-	left: 219px;
-}
-
-.icon-fa-users .fa-users {
-	color: #fff;
-	position: relative;
-	font-size: 42px;
-	top: -163px;
-	left: 207px;
-	font-weight: bold;
-	text-shadow: 1px 1px 1px #201f1f, 2px 2px 2px #201f1f;
-}
-
-.icon-time .fa-clock {
-	color: #fff;
-	position: relative;
-	font-size: 47px;
-	top: -163px;
-	left: 211px;
-	font-weight: bold;
-	text-shadow: 1px 1px 1px #201f1f, 2px 2px 2px #201f1f;
-}
-
-.icon-piggy-bank-2 .fa-piggy-bank {
-	color: #fff;
-	position: relative;
-	font-size: 48px;
-	top: -167px;
-	left: 204px;
-	font-weight: bold;
-	text-shadow: 1px 1px 1px #201f1f, 2px 2px 2px #201f1f;
-}
-
-.trayectoria-card-1, .trayectoria-card-2, .trayectoria-card-3, .trayectoria-card-4{
-    display: flex;
-    width: 400px;
-    height: 200px;
-    justify-content: center;
-}
-
-.trayectoria-h3 {
-	display: block;
-	font-family: Roboto-Regular;
-	color: #bebf1b;
-	font-size: 16px;
-	text-align: center;
-	width: 90%;
-}
-
-.trayectoria-h3 h3 {
-	text-shadow: 1px 1px 1px #000, 1px 2px 3px #000;
-}
-
-.trayectoria-card-p{
-    margin-top: 10px;
-    color: #333;
-    line-height: 25px;
-}
-
-/*FIN de la seccion Trayectoria*/
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cooperativa Dinamica</title>
+    <!--inicio de mis estilos CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!--fin de mis estilos CSS -->
+
+    <!--inicio de los mediaQuerys (Responsive) -->
+    <link rel="stylesheet" href="css/querys-responsivo.css">
+    <!--fin de los mediaQuerys (Responsive) -->
+
+    <!--inicio CDN de font-awesome para los iconos usados en la web -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- fin CDN de font-awesome para los iconos usados en la web -->
+
+    <!--incio de favicon, icono de la web -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <!--fin de favicon, icono de la web -->
+
+    <!--Inicio Jquery CDN para proyectos -->
+    <script type="text/javascript" src="js/Jquery/jquery-3.6.0.min.js"></script>
+    <!--Fin Jquery CDN para proyectos -->
+
+    <!--Inicio Script para iconos de font-awesome -->
+    <script src="https://kit.fontawesome.com/a998cb1e07.js" crossorigin="anonymous"></script>
+    <!--fin Script para iconos de font-awesome -->
+
+    <!--Inicio Scripts de la web -->
+    <script type="text/javascript" src="js/slider.js"></script>
+    <script type="text/javascript" src="js/loader.js"></script>
+    <script type="text/javascript" defer src="js/carusel-services.js"></script>
+    <script type="text/javascript" defer src="js/slick.min.js"></script>
+    <!--Fin Script de la web -->
+</head>
+
+<body>
+    <!--inicio contenedor del Pre-loader-->
+    <div class="contenedor_loader">
+        <div class="loader">
+
+        </div>
+    </div>
+    <!--fin contenedor del Pre-loader-->
+
+    <!--inicio contenedor principal de todo el conenido-->
+    <section id="container">
+        <!--inicio cabecera de la pagina-->
+        <header id="header">
+            <!--Logo principal-->
+            <div class="logo">
+                <h1>COOP DINAMICA</h1>
+                <img class="img-logo" src="img/Logo.png" alt="Logo" title="Cooperativa Dinamica">
+            </div>
+            <div class="box">
+                <div class="buscar-box">
+                    <span class="icon"><i class="fa fa-search"></i></span>
+                    <input type="search" id="search" placeholder="Buscar..." />
+                </div>
+            </div>
+            <!--Fin logo principal-->
+        </header>
+        <!--Fin cabecera de la pagina-->
+
+        <!--inicio menu principal-->
+        <nav id="menu">
+            <ul>
+                <li>
+                    <a href="#">INICIO</a>
+                    <span class="icon-home"><i class="fa fa-home"></i></span>
+                <li>
+                    <a href="#">PARA TI</a>
+                    <span class="icon-person"><i class="fa fa-user"></i></span>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="#"> AHORROS O INVERSIÓN</a>
+                            <span class="icon-piggy-bank"><i class="fa fa-piggy-bank"></i></span>
+                        </li>
+                        <li>
+                            <a href="#">CREDITOS</a>
+                            <span class="icon-credit-card"><i class="fa fa-credit-card"></i></span>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">PARA TU NEGOCIO</a>
+                    <span class="icon-bussiness"><i class="fa fa-briefcase"></i></span>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="#">AHORROS O INVERSIÓN</a>
+                            <span class="icon-piggy-bank"><i class="fa fa-piggy-bank"></i></span>
+                        </li>
+                        <li>
+                            <a href="#">CREDITOS</a>
+                            <span class="icon-credit-card"><i class="fa fa-credit-card"></i></span>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">DINAMIZATE</a>
+                    <span class="icon-blog"><i class="fa fa-blog"></i></span>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="#">BLOG</a>
+                            <span class="icon-blog-2"><i class="fa fa-blog"></i></span>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">¿POR QUÉ ASOCIARSE?</a>
+                    <span class="icon-contract"><i class="fa fa-file-contract"></i></span>
+                </li>
+                <li>
+                    <a href="#">PRENSA</a>
+                    <span class="icon-news"><i class="fa fa-newspaper"></i></span>
+                </li>
+                <li>
+                    <a href="#">CONTACTO</a>
+                    <span class="icon-contact"><i class="fa fa-address-card"></i></span>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="#">Formulario</a>
+                            <span class="icon-wpforms"><i class="fa fa-wpforms"></i></span>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <!--Fin menu principal-->
+
+        <!--inicio del contenedor de todo el slider-->
+        <div id="slideshow-principal">
+            <div id="progress-bar-container">
+                <div id="progress-bar"></div>
+            </div>
+            <div id="slideshow">
+                <img src="" alt="" id="img1">
+                <img src="" alt="" id="img2">
+            </div>
+            <div id="indicadores">
+
+            </div>
+        </div>
+        <!--fin del contenedor de todo el slider-->
+
+        <!--Inicio seccion de destacados-->
+        <section id="destacado">
+            <div class="seccion-destacado">
+                <h2>!Nuevo! Portal Web</h2>
+            </div>
+            <div class="CoopDinamica">
+                <p>Cooperativa de Ahorros, credito y servicios multiples la dinamica</p>
+            </div>
+            <a class="buttom-destacado" href="#">Se parte de nuestra familia</a>
+        </section>
+        <!--fin seccion de destacados-->
+
+        <!--Inicio seccion de Trayectoria o experiencia-->
+        <section id="trayectoria">
+            <div class="trayectoria-card-1">
+                <div class="icons icons-card-trayectoria-1">
+                    <span class="icon-circle"><i class="fa fa-circle"></i></span>
+                    <span class="icons-simbols icon-flag"><i class="fa fa-flag"></i></span>
+                </div>
+                <div class="trayectoria-h3">
+                    <h3>69 AÑOS DE SERVICIO </h3>
+                    <div class="trayectoria-card-p">
+                        <p>
+                            Sistema Cooperativismo Dominicano, regido por las leyes No. 3431 sobre asuntos cooperativos
+                            y
+                            por la No. 127 sobre asociaciones cooperativas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="trayectoria-card-2">
+                <div class="icons icons-card-trayectoria-2">
+                    <span class="icon-circle"><i class="fa fa-circle"></i></span>
+                    <span class="icons-simbols icon-fa-users"><i class="fa fa-users"></i></span>
+                </div>
+                <div class="trayectoria-h3">
+                    <h3>PERSONAL CAPACITADO</h3>
+                    <div class="trayectoria-card-p">
+                        <p>
+                            Contamos con expertos en cooperativismo tanto nacionales como internacionales para el
+                            acompañamiento, fomento y regularización del cooperativismo en todo el país.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="trayectoria-card-3">
+                <div class="icons icons-card-trayectoria-3">
+                    <span class="icon-circle"><i class="fa fa-circle"></i></span>
+                    <span class="icons-simbols icon-time"><i class="fa fa-clock"></i></span>
+                </div>
+                <div class="trayectoria-h3">
+                    <h3>RAPIDEZ Y EFICIENCIA</h3>
+                    <div class="trayectoria-card-p">
+                        <p>
+                            Con nuestra nuevo portal web, transformamos la metodología en la creación y/o regularización
+                            de una nueva cooperativa reduciendo en un 60% el tiempo.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="trayectoria-card-4">
+                <div class="icons icons-card-trayectoria-4">
+                    <span class="icon-circle"><i class="fa fa-circle"></i></span>
+                    <span class="icons-simbols icon-piggy-bank-2"><i class="fa fa-piggy-bank"></i></span>
+                </div>
+                <div class="trayectoria-h3">
+                    <h3>TU DINERO SEGURO</h3>
+                    <div class="trayectoria-card-p">
+                        <p>
+                            Sistema Cooperativismo Dominicano, regido por las leyes No. 3431 sobre asuntos cooperativos
+                            y
+                            por la No. 127 sobre asociaciones cooperativas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Fin seccion de Trayectoria o experiencia-->
+
+        <!--Inicio seccion de Servicios-->
+        <section id="services">
+            <div class="text">
+                <h4>Nuestros Serivicios</h4>
+            </div>
+            <div class="products_body center">
+                <div class="wrapper">
+                    <div class="container">
+                        <img class="top" src="img/5.jpg" alt="Img">
+                        <div class="bottom">
+                            <div class="left">
+                                <div class="details">
+                                    <h2 class="txt_products">Name</h2>
+                                    <p>Sub Name</p>
+                                </div>
+                                <div class="buy">
+                                    <a href="#">
+                                        <i class="fas fa-cart-plus"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inside">
+                        <div class="icon">
+                            <i class="far fa-eye"></i>
+                        </div>
+                        <div class="contents">
+                            <h1>Name</h1>
+                            <p>Descriptions</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wrapper">
+                    <div class="container">
+                        <img class="top" src="img/8.jpg" alt="Imagen">
+                        <div class="bottom">
+                            <div class="left">
+                                <div class="details">
+                                    <h2 class="txt_products">Name</h2>
+                                    <p>Sub Name</p>
+                                </div>
+                                <div class="buy">
+                                    <a href="#">
+                                        <i class="fas fa-cart-plus"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inside">
+                        <div class="icon">
+                            <i class="far fa-eye"></i>
+                        </div>
+                        <div class="contents">
+                            <h1>Name</h1>
+                            <p>Descriptions</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wrapper">
+                    <div class="container">
+                        <img class="top" src="img/11.jpg" alt="Imagen">
+                        <div class="bottom">
+                            <div class="left">
+                                <div class="details">
+                                    <h2 class="txt_products">Name</h2>
+                                    <p>Sub Name</p>
+                                </div>
+                                <div class="buy">
+                                    <a href="#">
+                                        <i class="fas fa-cart-plus"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inside">
+                        <div class="icon">
+                            <i class="far fa-eye"></i>
+                        </div>
+                        <div class="contents">
+                            <h1>Name</h1>
+                            <p>Descriptions</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wrapper">
+                    <div class="container">
+                        <img class="top" src="img/12.jpg" alt="imagen">
+                        <div class="bottom">
+                            <div class="left">
+                                <div class="details">
+                                    <h2 class="txt_products">Name</h2>
+                                    <p>Sub Name</p>
+                                </div>
+                                <div class="buy">
+                                    <a href="#">
+                                        <i class="fas fa-cart-plus"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inside">
+                        <div class="icon">
+                            <i class="far fa-eye"></i>
+                        </div>
+                        <div class="contents">
+                            <h1>Name</h1>
+                            <p>Descriptions</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wrapper">
+                    <div class="container">
+                        <img class="top" src="https://source.unsplash.com/random/?river,park" alt="">
+                        <div class="bottom">
+                            <div class="left">
+                                <div class="details">
+                                    <h2 class="txt_products">Name</h2>
+                                    <p>Sub Name</p>
+                                </div>
+                                <div class="buy">
+                                    <a href="#">
+                                        <i class="fas fa-cart-plus"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inside">
+                        <div class="icon">
+                            <i class="far fa-eye"></i>
+                        </div>
+                        <div class="contents">
+                            <h1>Name</h1>
+                            <p>Descriptions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Fin seccion de Servicios-->
+
+    </section>
+    <!--Fin contenedor principal de todo el conenido-->
+</body>
+
+</html>
