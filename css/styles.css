@@ -10,18 +10,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 @font-face{
-    font-family: Roboto-Regular;
+    font-family: 'Roboto-Regular';
     src: url(fonts/Roboto-Regular.ttf);
 }
 
 @font-face{
-    font-family: Roboto-Bold;
+    font-family: 'Roboto-Bold';
     src: url(fonts/Roboto-Bold.ttf);
 
 }
 
 @font-face{
-    font-family: Opens-Sans-Condensed;
+    font-family: 'Opens-Sans-Condensed';
     src: url(fonts/OpenSans-CondBold.ttf);
 
 }
@@ -115,10 +115,11 @@
 .logo img {
 	display: block;
 	position: relative;
-	width: 64px;
-	margin-top: -57px;
+	width: 59px;
+	margin-top: -78px;
 	left: 282px;
 }
+
 .logo h1{
     font-family: Roboto-Bold;
     font-style: italic;
@@ -530,20 +531,13 @@ img{
 	text-shadow: 1px 1px 1px #201f1f, 2px 2px 2px #201f1f;
 }
 
-.icons-simbols {
-	display: block;
-	position: relative;
-	left: -39px;
-    z-index: 800;
-}
-
 
 .icon-flag .fa-flag {
 	color: #fff;
 	position: relative;
 	font-size: 36px;
 	top: -158px;
-	left: 219px;
+	left: 180px;
 }
 
 .icon-fa-users .fa-users {
@@ -551,7 +545,7 @@ img{
 	position: relative;
 	font-size: 36px;
 	top: -157px;
-	left: 213px;
+	left: 174px;
 	font-weight: bold;
 	text-shadow: 1px 1px 1px #201f1f, 2px 2px 2px #201f1f;
 }
@@ -561,7 +555,7 @@ img{
 	position: relative;
 	font-size: 44px;
 	top: -162px;
-	left: 212px;
+	left: 173px;
 	font-weight: bold;
 	text-shadow: 1px 1px 1px #201f1f, 2px 2px 2px #201f1f;
 }
@@ -571,7 +565,7 @@ img{
 	position: relative;
 	font-size: 41px;
 	top: -161px;
-	left: 206px;
+	left: 166px;
 	font-weight: bold;
 	text-shadow: 1px 1px 1px #201f1f, 2px 2px 2px #201f1f;
 }
@@ -588,7 +582,7 @@ img{
 	display: block;
 	font-family: Roboto-Regular;
 	color: #bebf1b;
-	font-size: 16px;
+	font-size: 17px !important;
 	text-align: center;
 	width: 90%;
 }
@@ -606,151 +600,78 @@ img{
 /*FIN de la seccion Trayectoria*/
 
 /*Inicio de Servicios*/
-#services{
-    margin-bottom: 150px;
-    background: rgb(67,169,235);
-    background: linear-gradient(0deg, rgba(67,169,235,1) 0%, rgba(0,0,0,1) 100%);
-}
-
-.text{
-    text-align: center;
-    justify-content: center;
-}
-.text h4{
-    font-size: 35px;
-    margin-top: 45px;
-    margin-bottom: 35px;
-    color: white;
-}
-.products_body{
-    background: transparent;
-    display: flex;
-    justify-content: center;
-    align-items:center;
+#services-container{
     width: 100%;
-    height: 92vh;
-}
-.wrapper{
-    width: 450px;
-    height:500px;
-    background: transparent;
-    margin: auto;
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px 10px 10px 10px;
-    transform: scale(0.93);
-    transition: box-shadow 0.5s, transform 0.5s;
-    z-index: 1000;
-}
-.wrapper:hover{
-    transform: scale(1);
-    box-shadow: 5px 20px 30px rgba(0,0,0,0.2);
+    min-height: 100vh;
+    background-image: linear-gradient(-45deg, #fbf8f487 50%, #449e62 50%);
 }
 
-.wrapper .container{
-    width: 100%;
-    height: 100%;
+.titulo {
+    font-size: 40px;
+    font-family: 'Opens-Sans-Condensed';
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #fff;
 }
 
-.wrapper .container .top{
-    height: 80%;
-    width: 100%;
-    background-size: 100%;
-}
-.wrapper .container .bottom{
-    width: 100%;
-    height: 20%;
-    transition: transform 0.5s;
+.subtitulo {
+    margin: 0;
+    color: #000;
+    display: inline;
+    font-size: 50px;
+    font-weight: 500;
+    text-transform: uppercase;
 }
 
-.wrapper .container .bottom .left{
-    height: 100%;
-    width: 100%;
-    background: #f4f4f4;
-    position: relative;
-    float: left;
+.sabor { 
+    color: #fff;
+    margin: 7px 0;
+    font-size: 50px;
+    font-weight: 600;
+    text-shadow: 2px 2px 1px rgba(0,0,0,0.7);
+    font-family: 'Roboto-Regular';
+    margin-top: 0;
 }
 
-.wrapper .container .bottom .left .details{
-    padding-left: 20px;
-    float: left;
-    width: calc(70% - 40px);
-}
-
-.wrapper .container .bottom .left .details .txt_products{
-    font-size: 25px;
-}
-
-.wrapper .container .bottom .left .buy{
-    float: right;
-    height: 100%;
-    background: #f1f1f1;
-    transition: background 0.5s;
-    border-left: solid thin rgba(0,0,0,0.1);
-}
-.wrapper .container .bottom .left .buy i{
-    font-size: 30px;
-    padding: 30px;
-    color: #0781b6;
-    transition: transform 0.5s;
-}
-
-.wrapper .container .bottom .left .buy:hover i{
-    transform: rotate(360deg);
-}
-
-.wrapper .inside{
-    z-index: 9;
-    background: #0781b6;
-    width: 140px;
-    height: 140px;
-    position: absolute;
-    top: -70px;
-    right: -70px;
-    border-radius: 0px 0px 200px 200px;
-    transition: all 0.5s, border-radius 2s, top 1s;
-    overflow: hidden;
-}
-
-.wrapper .inside .icon{
-    position: absolute;
-    right: 85px;
-    top: 85px;
-    color: white;
-    opacity: 1;
-}
-
-.wrapper .inside:hover{
-    width: 100%;
-    right: 0;
-    top: 0;
-    border-radius: 0;
-    height: 80%;
-}
-.wrapper .inside:hover .icon{
-    opacity: 0;
-    right: 15px;
-    top: 15px;
-}
-.wrapper .inside:hover .contents{
-    opacity: 1;
-    transform: scale(1);
-    transform: translateY(0);
-}
-
-.wrapper .inside .contents{
-    padding: 5%;
-    opacity: 0;
-    transform: scale(0.5);
-    transform: translateY(-200%);
-    transition: opacity 0.2s,transform 0.8s;
-}
-.wrapper .inside .contents h1,
-.wrapper .inside .contents p{
-    color: white;
-}
-
-.wrapper .inside .contents p{
-    font-size: 19px;
+.linea-division {
+    width: 80%;
+    height: 2px;
+    background-color: #36221c;
 }
 /*Fin de Servicios*/
+
+/*Estilos Materialize Carousel*/
+.carousel {
+    min-height: 500px;
+}
+
+.carousel .carousel-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    width: 500px;
+    height: 500px;
+}
+
+.carousel .carousel-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 15px;
+}
+
+.carousel .indicators .indicator-item{
+    border-radius: 0px;
+    transform: rotate(45deg);
+    margin: 0 15px;
+    background: #36221c;
+}
+
+
+/*Estilos Materialize Carousel*/
