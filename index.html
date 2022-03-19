@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="css/styles.css">
     <!--fin de mis estilos CSS -->
 
+    <!--inicio de los mediaQuerys (Responsive) -->
+    <link rel="stylesheet" href="css/querys-responsivo.css">
+    <!--fin de los mediaQuerys (Responsive) -->
+
     <!--inicio CDN de font-awesome para los iconos usados en la web -->
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- fin CDN de font-awesome para los iconos usados en la web -->
@@ -30,11 +34,12 @@
     <!--Inicio Scripts de la web -->
     <script type="text/javascript" src="js/slider.js"></script>
     <script type="text/javascript" src="js/loader.js"></script>
+    <script type="text/javascript" defer src="js/carusel-services.js"></script>
+    <script type="text/javascript" defer src="js/slick.min.js"></script>
     <!--Fin Script de la web -->
 </head>
 
 <body>
-
     <!--inicio contenedor del Pre-loader-->
     <div class="contenedor_loader">
         <div class="loader">
@@ -67,7 +72,7 @@
             <ul>
                 <li>
                     <a href="#">INICIO</a>
-                    <span class="icon-home"><i class="fa fa-home"></i></span>  
+                    <span class="icon-home"><i class="fa fa-home"></i></span>
                 <li>
                     <a href="#">PARA TI</a>
                     <span class="icon-person"><i class="fa fa-user"></i></span>
@@ -160,7 +165,7 @@
             <div class="trayectoria-card-1">
                 <div class="icons icons-card-trayectoria-1">
                     <span class="icon-circle"><i class="fa fa-circle"></i></span>
-                    <span class="icon-flag"><i class="fa fa-flag"></i></span>
+                    <span class="icons-simbols icon-flag"><i class="fa fa-flag"></i></span>
                 </div>
                 <div class="trayectoria-h3">
                     <h3>69 AÑOS DE SERVICIO </h3>
@@ -177,14 +182,14 @@
             <div class="trayectoria-card-2">
                 <div class="icons icons-card-trayectoria-2">
                     <span class="icon-circle"><i class="fa fa-circle"></i></span>
-                    <span class="icon-fa-users"><i class="fa fa-users"></i></span>
+                    <span class="icons-simbols icon-fa-users"><i class="fa fa-users"></i></span>
                 </div>
                 <div class="trayectoria-h3">
                     <h3>PERSONAL CAPACITADO</h3>
                     <div class="trayectoria-card-p">
                         <p>
                             Contamos con expertos en cooperativismo tanto nacionales como internacionales para el
-                            acompañamiento, fomento y regularización del cooperativismo en todo el país..
+                            acompañamiento, fomento y regularización del cooperativismo en todo el país.
                         </p>
                     </div>
                 </div>
@@ -193,7 +198,7 @@
             <div class="trayectoria-card-3">
                 <div class="icons icons-card-trayectoria-3">
                     <span class="icon-circle"><i class="fa fa-circle"></i></span>
-                    <span class="icon-time"><i class="fa fa-clock"></i></span>
+                    <span class="icons-simbols icon-time"><i class="fa fa-clock"></i></span>
                 </div>
                 <div class="trayectoria-h3">
                     <h3>RAPIDEZ Y EFICIENCIA</h3>
@@ -209,10 +214,10 @@
             <div class="trayectoria-card-4">
                 <div class="icons icons-card-trayectoria-4">
                     <span class="icon-circle"><i class="fa fa-circle"></i></span>
-                    <span class="icon-piggy-bank-2"><i class="fa fa-piggy-bank"></i></span>
+                    <span class="icons-simbols icon-piggy-bank-2"><i class="fa fa-piggy-bank"></i></span>
                 </div>
                 <div class="trayectoria-h3">
-                    <h3>TUS AHORROS ESTAN SEGUROS</h3>
+                    <h3>TU DINERO SEGURO</h3>
                     <div class="trayectoria-card-p">
                         <p>
                             Sistema Cooperativismo Dominicano, regido por las leyes No. 3431 sobre asuntos cooperativos
@@ -225,7 +230,157 @@
         </section>
         <!--Fin seccion de Trayectoria o experiencia-->
 
+        <!--Inicio seccion de Servicios-->
+        <section id="services">
+            <div class="text">
+                <h4>Nuestros Serivicios</h4>
+            </div>
+            <div class="products_body center">
+                <div class="wrapper">
+                    <div class="container">
+                        <img class="top" src="img/5.jpg" alt="Img">
+                        <div class="bottom">
+                            <div class="left">
+                                <div class="details">
+                                    <h2 class="txt_products">Name</h2>
+                                    <p>Sub Name</p>
+                                </div>
+                                <div class="buy">
+                                    <a href="#">
+                                        <i class="fas fa-cart-plus"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inside">
+                        <div class="icon">
+                            <i class="far fa-eye"></i>
+                        </div>
+                        <div class="contents">
+                            <h1>Name</h1>
+                            <p>Descriptions</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wrapper">
+                    <div class="container">
+                        <img class="top" src="img/8.jpg" alt="Imagen">
+                        <div class="bottom">
+                            <div class="left">
+                                <div class="details">
+                                    <h2 class="txt_products">Name</h2>
+                                    <p>Sub Name</p>
+                                </div>
+                                <div class="buy">
+                                    <a href="#">
+                                        <i class="fas fa-cart-plus"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inside">
+                        <div class="icon">
+                            <i class="far fa-eye"></i>
+                        </div>
+                        <div class="contents">
+                            <h1>Name</h1>
+                            <p>Descriptions</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wrapper">
+                    <div class="container">
+                        <img class="top" src="img/11.jpg" alt="Imagen">
+                        <div class="bottom">
+                            <div class="left">
+                                <div class="details">
+                                    <h2 class="txt_products">Name</h2>
+                                    <p>Sub Name</p>
+                                </div>
+                                <div class="buy">
+                                    <a href="#">
+                                        <i class="fas fa-cart-plus"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inside">
+                        <div class="icon">
+                            <i class="far fa-eye"></i>
+                        </div>
+                        <div class="contents">
+                            <h1>Name</h1>
+                            <p>Descriptions</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wrapper">
+                    <div class="container">
+                        <img class="top" src="img/12.jpg" alt="imagen">
+                        <div class="bottom">
+                            <div class="left">
+                                <div class="details">
+                                    <h2 class="txt_products">Name</h2>
+                                    <p>Sub Name</p>
+                                </div>
+                                <div class="buy">
+                                    <a href="#">
+                                        <i class="fas fa-cart-plus"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inside">
+                        <div class="icon">
+                            <i class="far fa-eye"></i>
+                        </div>
+                        <div class="contents">
+                            <h1>Name</h1>
+                            <p>Descriptions</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wrapper">
+                    <div class="container">
+                        <img class="top" src="https://source.unsplash.com/random/?river,park" alt="">
+                        <div class="bottom">
+                            <div class="left">
+                                <div class="details">
+                                    <h2 class="txt_products">Name</h2>
+                                    <p>Sub Name</p>
+                                </div>
+                                <div class="buy">
+                                    <a href="#">
+                                        <i class="fas fa-cart-plus"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inside">
+                        <div class="icon">
+                            <i class="far fa-eye"></i>
+                        </div>
+                        <div class="contents">
+                            <h1>Name</h1>
+                            <p>Descriptions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Fin seccion de Servicios-->
+
     </section>
     <!--Fin contenedor principal de todo el conenido-->
 </body>
+
 </html>
