@@ -1,0 +1,171 @@
+/*Inicio Pantallas Grandes*/
+@media(max-width: 1920px){
+
+/*Inicio iconos del menu*/
+.icon-home .fa-home {
+	font-size: 22px;
+	top: 20px;
+	left: 62px;
+
+}
+
+.icon-person .fa-user {
+	font-size: 16px;
+	top: 23px;
+	left: 63px;
+}
+
+.icon-bussiness .fa-briefcase {
+	font-size: 16px;
+	top: 24px;
+	left: 19px;
+}
+
+.icon-blog .fa-blog {
+	font-size: 17px;
+	top: 22px;
+	left: 39px;
+}
+
+.icon-contract .fa-file-contract {
+	font-size: 16px;
+	top: 24px;
+	left: 4px;
+}
+
+.icon-news .fa-newspaper {
+	font-size: 16px;
+	top: 24px;
+	left: 55px;
+}
+
+.icon-contact .fa-address-card {
+	font-size: 16px;
+	top: 25px;
+	left: 43px;
+}
+
+/*Fin iconos del menu*/
+
+/*Inicio iconos del Sub-menu*/
+.icon-piggy-bank .fa-piggy-bank {
+	font-size: 14px;
+	top: 24px;
+	left: 2px;
+}
+
+.icon-credit-card .fa-credit-card {
+	font-size: 15px;
+	top: 25px;
+	left: 50px;	
+}
+
+.icon-blog-2 .fa-blog {
+	font-size: 14px;
+	top: 25px;
+	left: 71px;	
+}
+
+.icon-wpforms .fa-wpforms {
+	font-size: 16px;
+	top: 24px;
+	left: 51px;	
+}
+
+/*Fin iconos del Sub-menu*/
+
+}
+/*Fin Pantallas Grandes*/
+
+
+/*Inicio Pantallas Standar 1524px*/
+
+@media(max-width: 1524px){
+	.icon-home .fa-home {
+		left: 62px;
+	}
+
+	.icon-person .fa-user {
+		left: 62px;	
+	}
+
+	.icon-bussiness .fa-briefcase {
+		left: 15px;
+		top: 21px;
+	}
+
+	.icon-blog .fa-blog {
+		left: 39px;
+		top: 20px;
+	}
+	
+	.icon-contract .fa-file-contract {
+		left: 5px;
+		font-size: 18px;
+	}
+	
+	.icon-news .fa-newspaper {
+		left: 52px;
+		font-size: 19px;
+	}
+	
+	.icon-contact .fa-address-card {
+		left: 41px;
+	}
+	/*Fin iconos del menu*/
+
+	/*Inicio iconos del Sub-menu*/
+	.icon-piggy-bank .fa-piggy-bank {
+		font-size: 14px;
+		top: 24px;
+		left: 1px;
+		
+	}
+
+	.icon-credit-card .fa-credit-card {
+		font-size: 15px;
+		top: 25px;
+		left: 49px;
+		
+	}
+
+	.icon-blog-2 .fa-blog {	
+		font-size: 14px;
+		top: 25px;
+		left: 72px;
+		
+	}
+
+	.icon-wpforms .fa-wpforms {
+		font-size: 16px;
+		top: 24px;
+		left: 50px;
+		
+	}
+
+/*fin iconos del Sub-menu*/
+
+
+
+/*Fin iconos del de seccion destacados*/
+
+/*Inicio iconos del de seccion Trayectoria*/
+	#trayectoria {
+		margin-top: 150px;
+		margin-left: 85px;
+		padding-top: 117px;
+		margin-bottom: 150px;
+		padding-right: 75px;	
+	}
+
+
+
+
+
+
+
+/*Fin iconos del de seccion Trayectoria*/
+		
+}
+
+/*Fin Pantallas Standar 1524px*/
