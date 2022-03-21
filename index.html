@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cooperativa Dinamica</title>
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="css/materialize.min.css">
+
+    <!-- Estilos carousel-2 CSS -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+    <!--inicio de mis estilos CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!--fin de mis estilos CSS -->
+
+    <!--inicio de los mediaQuerys (Responsive) -->
+    <link rel="stylesheet" href="css/querys-responsivo.css">
+    <!--fin de los mediaQuerys (Responsive) -->
+
+    <!--inicio CDN de font-awesome para los iconos usados en la web -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- fin CDN de font-awesome para los iconos usados en la web -->
+
+    <!--incio de favicon, icono de la web -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <!--fin de favicon, icono de la web -->
+
+    <!--Inicio Jquery para proyectos -->
+    <script type="text/javascript" src="js/Jquery/jquery-3.6.0.min.js"></script>
+    <!--Fin Jquery para proyectos -->
+
+    <!--Inicio Script para iconos de font-awesome -->
+    <script src="https://kit.fontawesome.com/a998cb1e07.js" crossorigin="anonymous"></script>
+    <!--fin Script para iconos de font-awesome -->
+
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="js/materialize.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+
+    <!--Inicio Scripts de la web -->
+    <script type="text/javascript" src="js/slider.js"></script>
+    <script type="text/javascript" src="js/loader.js"></script>
+    <script type="text/javascript" src="js/main-carousel-services.js"></script>
+    <script type="text/javascript" src="js/Jquery/jquery.min.js"></script>
+    <!--Fin Script de la web -->
+</head>
+
+<body>
+    <!--inicio contenedor del Pre-loader-->
+    <div class="contenedor_loader">
+        <div class="loader">
+
+        </div>
+    </div>
+    <!--fin contenedor del Pre-loader-->
+
+    <!--inicio contenedor principal de todo el conenido-->
+    <section id="container">
+        <!--inicio cabecera de la pagina-->
+        <header id="header">
+            <!--Logo principal-->
+            <div class="logo">
+                <h1>COOP DINAMICA</h1>
+                <img class="img-logo" src="img/Logo.png" alt="Logo" title="Cooperativa Dinamica">
+            </div>
+            <div class="box">
+                <div class="buscar-box">
+                    <span class="icon"><i class="fa fa-search"></i></span>
+                    <input type="search" id="search" placeholder="Buscar..." />
+                </div>
+            </div>
+            <!--Fin logo principal-->
+        </header>
+        <!--Fin cabecera de la pagina-->
+
+        <!--inicio menu principal-->
+        <nav id="menu">
+            <ul>
+                <li>
+                    <a href="index.html">INICIO</a>
+                    <span class="icon-home"><i class="fa fa-home"></i></span>
+                <li>
+                    <a href="#">PARA TI</a>
+                    <span class="icon-person"><i class="fa fa-user"></i></span>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="#"> AHORROS O INVERSIÓN</a>
+                            <span class="icon-piggy-bank"><i class="fa fa-piggy-bank"></i></span>
+                        </li>
+                        <li>
+                            <a href="#">CREDITOS</a>
+                            <span class="icon-credit-card"><i class="fa fa-credit-card"></i></span>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">PARA TU NEGOCIO</a>
+                    <span class="icon-bussiness"><i class="fa fa-briefcase"></i></span>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="#">AHORROS O INVERSIÓN</a>
+                            <span class="icon-piggy-bank"><i class="fa fa-piggy-bank"></i></span>
+                        </li>
+                        <li>
+                            <a href="#">CREDITOS</a>
+                            <span class="icon-credit-card"><i class="fa fa-credit-card"></i></span>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">DINAMIZATE</a>
+                    <span class="icon-blog"><i class="fa fa-blog"></i></span>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="#">BLOG</a>
+                            <span class="icon-blog-2"><i class="fa fa-blog"></i></span>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">¿POR QUÉ ASOCIARSE?</a>
+                    <span class="icon-contract"><i class="fa fa-file-contract"></i></span>
+                </li>
+                <li>
+                    <a href="#">PRENSA</a>
+                    <span class="icon-news"><i class="fa fa-newspaper"></i></span>
+                </li>
+                <li>
+                    <a href="#">CONTACTO</a>
+                    <span class="icon-contact"><i class="fa fa-address-card"></i></span>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="#">Formulario</a>
+                            <span class="icon-wpforms"><i class="fa fa-wpforms"></i></span>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <!--Fin menu principal-->
+
+        <!--inicio del contenedor de todo el slider-->
+        <div id="slideshow-principal">
+            <div id="progress-bar-container">
+                <div id="progress-bar"></div>
+            </div>
+            <div id="slideshow">
+                <img src="" alt="" id="img1">
+                <img src="" alt="" id="img2">
+            </div>
+            <div id="indicadores">
+
+            </div>
+        </div>
+        <!--fin del contenedor de todo el slider-->
+
+        <!--Inicio seccion de destacados-->
+        <section id="destacado">
+            <div class="seccion-destacado">
+                <h2>!Nuevo! Portal Web</h2>
+            </div>
+            <div class="CoopDinamica">
+                <p>Cooperativa de Ahorros, credito y servicios multiples la dinamica</p>
+            </div>
+            <a class="buttom-destacado" href="#">Se parte de nuestra familia</a>
+        </section>
+        <!--fin seccion de destacados-->
+
+        <!--Inicio seccion de Trayectoria o experiencia-->
+        <section id="trayectoria">
+            <div class="trayectoria-card-1">
+                <div class="icons icons-card-trayectoria-1">
+                    <span class="icon-circle"><i class="fa fa-circle"></i></span>
+                    <span class="icons-simbols icon-flag"><i class="fa fa-flag"></i></span>
+                </div>
+                <div class="trayectoria-h3">
+                    <h3>69 AÑOS DE SERVICIO </h3>
+                    <div class="trayectoria-card-p">
+                        <p>
+                            Sistema Cooperativismo Dominicano, regido por las leyes No. 3431 sobre asuntos cooperativos
+                            y
+                            por la No. 127 sobre asociaciones cooperativas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="trayectoria-card-2">
+                <div class="icons icons-card-trayectoria-2">
+                    <span class="icon-circle"><i class="fa fa-circle"></i></span>
+                    <span class="icons-simbols icon-fa-users"><i class="fa fa-users"></i></span>
+                </div>
+                <div class="trayectoria-h3">
+                    <h3>PERSONAL CAPACITADO</h3>
+                    <div class="trayectoria-card-p">
+                        <p>
+                            Contamos con expertos en cooperativismo tanto nacionales como internacionales para el
+                            acompañamiento, fomento y regularización del cooperativismo en todo el país.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="trayectoria-card-3">
+                <div class="icons icons-card-trayectoria-3">
+                    <span class="icon-circle"><i class="fa fa-circle"></i></span>
+                    <span class="icons-simbols icon-time"><i class="fa fa-clock"></i></span>
+                </div>
+                <div class="trayectoria-h3">
+                    <h3>RAPIDEZ Y EFICIENCIA</h3>
+                    <div class="trayectoria-card-p">
+                        <p>
+                            Con nuestra nuevo portal web, transformamos la metodología en la creación y/o regularización
+                            de una nueva cooperativa reduciendo en un 60% el tiempo.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="trayectoria-card-4">
+                <div class="icons icons-card-trayectoria-4">
+                    <span class="icon-circle"><i class="fa fa-circle"></i></span>
+                    <span class="icons-simbols icon-piggy-bank-2"><i class="fa fa-piggy-bank"></i></span>
+                </div>
+                <div class="trayectoria-h3">
+                    <h3>TU DINERO SEGURO</h3>
+                    <div class="trayectoria-card-p">
+                        <p>
+                            Sistema Cooperativismo Dominicano, regido por las leyes No. 3431 sobre asuntos cooperativos
+                            y
+                            por la No. 127 sobre asociaciones cooperativas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Fin seccion de Trayectoria o experiencia-->
+
+        <!--Inicio seccion de Servicios-->
+        <section id="services-container">
+            <div class="row">
+                <div class="col s12">
+                    <h4 class="center-align titulo">Nuestros servicios</h4>
+                    <div class="carousel center-align">
+                        <div class="carousel-item">
+                            <h4 class="subtitulo">Prestamos</h4>
+                            <div class="linea-division"></div>
+                            <p class="subtitulo-p">Financieros</p>
+                            <img src="img/3.jpg" alt="finanza">
+                        </div>
+
+                        <div class="carousel-item">
+                            <h4 class="subtitulo">Ahorros</h4>
+                            <div class="linea-division"></div>
+                            <p class="subtitulo-p">Personales</p>
+                            <img src="img/6.1.jpg" alt="finanza">
+                        </div>
+
+                        <div class="carousel-item">
+                            <h4 class="subtitulo">Apertura de</h4>
+                            <div class="linea-division"></div>
+                            <p class="subtitulo-p">Cuenta</p>
+                            <img src="img/apertura.jpg" alt="finanza">
+                        </div>
+
+                        <div class="carousel-item">
+                            <h4 class="subtitulo">Certificado</h4>
+                            <div class="linea-division"></div>
+                            <p class="subtitulo-p">Financieros</p>
+                            <img src="img/certificado.jpg" alt="finanza">
+                        </div>
+
+                        <div class="carousel-item">
+                            <h4 class="subtitulo">Seguros</h4>
+                            <div class="linea-division"></div>
+                            <img src="img/6.jpg" alt="finanza">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Fin seccion de Servicios-->
+
+        <!--Inicio seccion de Calculadora Web Normal-->
+        <section id="destacado-calculadora">
+            <div class="seccion-destacado-calculadora">
+                <h2>Calculadora Web</h2>
+            </div>
+            <div class="coop-dinamica-calculadora">
+                <p>Puedes realizar tus caculos con esta calculadora de COOP DINAMICA</p>
+            </div>
+            <a class="buttom-destacado-calculadora" href="calculadora.html" target="_blank">ir a la calculadora</a>
+        </section>
+        <!--Fin seccion de calculadora Web Normal-->
+
+        <!--  Inicio seccion de Notias con Tarjetas-->
+        <section id="noticias">
+            <div class="title-cards">
+                <h5>NOTICIAS RECIENTES</h5>
+                <hr class="linea-divisora-title" />
+            </div>
+            <div class="container-card">
+                <div class="card">
+                    <figure>
+                        <img src="img/Idecoojpeg.jpeg">
+                    </figure>
+                    <div class="contenido-card">
+                        <h3>IDECOOP y Poder Ejecutivo entregan 808 certificados de incorporación a nuevas cooperativas
+                        </h3>
+                        <p>La entrega se enmarca en el programa de Impulso a la Economía Social y Solidaria que lleva a
+                            cabo el gobierno del Presidente Luis Abinader, a través del Instituto de Desarrollo y
+                            Crédito Cooperativo (IDECOOP). Santo Domingo, D.N. El Poder Ejecutivo encabezado por el
+                            Presidente Luis Abinader, y el presidente administrador del Instituto de Desarrollo y</p>
+                        <a href="#">Leer Màs</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <figure>
+                        <img src="/img/certificaciones808-Coop.jpg">
+                    </figure>
+                    <div class="contenido-card">
+                        <h3>IDECOOP y contrataciones publicas Firman Acuerdo para convertir las cooperativas</h3>
+                        <p>Con este acuerdoel IDECOOP avanza en el cumplimiento de la promesa de desarrollo económico
+                            que hizo el Presidente de la republica Luis Abinader, de convertir las cooperativas en
+                            proveedora del estado para impulsar la economía social y solidaria. Santo Domingo, D.N.- El
+                            Instituto de Desarrollo y Crédito Cooperativo (IDECOOP), y la Dirección General de
+                            Contrataciones…
+                        </p>
+                        <a href="#">Leer Màs</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <figure>
+                        <img src="/img/avanza-idecop.jpeg">
+                    </figure>
+                    <div class="contenido-card">
+                        <h3>IDECOOP avanza en los niveles de desempeño de la Gestión Pública Web</h3>
+                        <p>Santo Domingo, DN.- Por primera vez en varios años el Instituto de Desarrollo y Crédito
+                            Cooperativo (IDECOOP), se posiciona dentro de las Instituciones del Estado con desempeño
+                            satisfactorio en la Administración Pública. Esto se logró gracias a la gestión del
+                            presidente administrador de la entidad, Lic. Franco de los Santos y a cada uno de.</p>
+                        <a href="#">Leer Màs</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Fin seccion de Notias con Tarjetas-->
+
+        <!--Inicio del footer-->
+        <footer>
+            <div class="container__footer">
+                <div class="box__footer">
+                    <div class="logo">
+                       
+                    </div>
+                    <div class="terms">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas impedit cum cumque velit
+                            libero officiis quam doloremque reprehenderit quae corporis! Delectus architecto officia
+                            praesentium atque laudantium, nam deleniti sapiente deserunt.</p>
+                    </div>
+                </div>
+                <div class="box__footer">
+                    <h5>Menu</h5>
+                    <hr class="linea-divisora-footer menu-linea">
+                    <a href="#inicio">Inicio</a>
+                    <a href="#">Para ti</a>
+                    <a href="#">Para tu negocio</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Por que asociarse?</a>
+                    <a href="#">prensa</a>
+                    <a href="#">Contacto</a>
+                </div>
+
+                <div class="box__footer">
+                    <h5>Compañia</h5>
+                    <hr class="linea-divisora-footer compania-linea">
+                    <a href="#">Acerca de</a>
+                    <a href="#">Trabajos</a>
+                    <a href="#">Procesos</a>
+                    <a href="#">Servicios</a>
+                </div>
+
+                <div class="box__footer">
+                    <h5>Redes Sociales</h5>
+                    <hr class="linea-divisora-footer linea-redes">
+                    <a href="#"> <i class="fab fa-facebook-square"></i> Facebook</a>
+                    <a href="#"><i class="fab fa-twitter-square"></i> Twitter</a>
+                    <a href="#"><i class="fab fa-linkedin"></i> Linkedin</a>
+                    <a href="#"><i class="fab fa-instagram-square"></i> Instagram</a>
+                </div>
+
+            </div>
+
+            <div class="box__copyright">
+                <hr>
+                <p>Todos los derechos reservados © 2021 <b>Andy Rosado Desing Web</b></p>
+            </div>
+        </footer>
+        <!--Fin del footer-->
+
+
+    </section>
+    <!--Fin contenedor principal de todo el conenido-->
+
+</body>
+
+</html>
