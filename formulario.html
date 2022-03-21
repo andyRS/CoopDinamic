@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formluario de contacto</title>
+    <link href="css/styles.css" rel="stylesheet" />
+    
+     <!--inicio de los mediaQuerys (Responsive) -->
+     <link rel="stylesheet" href="css/querys-responsivo.css">
+     <!--fin de los mediaQuerys (Responsive) -->
+
+     <link href="css/formulario.css" rel="stylesheet" />
+
+    <!--incio de favicon, icono de la web -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <!--fin de favicon, icono de la web -->
+
+
+    <!--Inicio Script para iconos de font-awesome -->
+    <script src="https://kit.fontawesome.com/a998cb1e07.js" crossorigin="anonymous"></script>
+    <!--fin Script para iconos de font-awesome -->
+
+    <!--Inicio Scripts de la calculadora -->
+    <script src="js/Display.js" type="text/javascript"></script>
+    <script src="js/Calculadora.js" type="text/javascript"></script>
+    <script src="js/index.js" type="text/javascript" defer></script>
+    <script type="text/javascript" src="js/loader.js"></script>
+     <!--Fin Scripts de la calculadora -->
+</head>
+<body>
+     <!--inicio contenedor del Pre-loader-->
+     <div class="contenedor_loader">
+        <div class="loader">
+
+        </div>
+    </div>
+    <!--fin contenedor del Pre-loader-->
+
+    <!--inicio contenedor principal de todo el conenido-->
+    <section id="container">
+        <!--inicio cabecera de la pagina-->
+        <header id="header">
+            <!--Logo principal-->
+            <div class="logo">
+                <h1>COOP DINAMICA</h1>
+                <img class="img-logo" src="img/Logo.png" alt="Logo" title="Cooperativa Dinamica">
+            </div>
+            <div class="box">
+                <div class="buscar-box">
+                    <span class="icon"><i class="fa fa-search"></i></span>
+                    <input type="search" id="search" placeholder="Buscar..." />
+                </div>
+            </div>
+            <!--Fin logo principal-->
+        </header>
+        <!--Fin cabecera de la pagina-->
+
+     <!--inicio menu principal-->
+     <nav id="menu">
+        <ul>
+            <li>
+                <a href="index.html">INICIO</a>
+                <span class="icon-home"><i class="fa fa-home"></i></span>
+            <li>
+                <a href="#">PARA TI</a>
+                <span class="icon-person"><i class="fa fa-user"></i></span>
+                <ul class="sub-menu">
+                    <li>
+                        <a href="#"> AHORROS O INVERSIÓN</a>
+                        <span class="icon-piggy-bank"><i class="fa fa-piggy-bank"></i></span>
+                    </li>
+                    <li>
+                        <a href="#">CREDITOS</a>
+                        <span class="icon-credit-card"><i class="fa fa-credit-card"></i></span>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">PARA TU NEGOCIO</a>
+                <span class="icon-bussiness"><i class="fa fa-briefcase"></i></span>
+                <ul class="sub-menu">
+                    <li>
+                        <a href="#">AHORROS O INVERSIÓN</a>
+                        <span class="icon-piggy-bank"><i class="fa fa-piggy-bank"></i></span>
+                    </li>
+                    <li>
+                        <a href="#">CREDITOS</a>
+                        <span class="icon-credit-card"><i class="fa fa-credit-card"></i></span>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">DINAMIZATE</a>
+                <span class="icon-blog"><i class="fa fa-blog"></i></span>
+                <ul class="sub-menu">
+                    <li>
+                        <a href="#">BLOG</a>
+                        <span class="icon-blog-2"><i class="fa fa-blog"></i></span>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">¿POR QUÉ ASOCIARSE?</a>
+                <span class="icon-contract"><i class="fa fa-file-contract"></i></span>
+            </li>
+            <li>
+                <a href="#">PRENSA</a>
+                <span class="icon-news"><i class="fa fa-newspaper"></i></span>
+            </li>
+            <li>
+                <a href="#">CONTACTO</a>
+                <span class="icon-contact"><i class="fa fa-address-card"></i></span>
+                <ul class="sub-menu">
+                    <li>
+                        <a href="#">Formulario</a>
+                        <span class="icon-wpforms"><i class="fa fa-wpforms"></i></span>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <!--Fin menu principal-->
+    
+    <!--Inicio del Formulario de contacto-->
+    <section id="container-form-contact">
+        <h2>Formulario de conctacto</h2>
+
+        <div class="contenido">
+            <div class="info">
+                <div class="col">
+                    <i class="icono fas fa-map-marker-alt"></i>
+                    <p>Av. 26 de Julio Nro. 8 Cuidad - Pais</p>
+                </div>
+
+                <div class="col">
+                    <i class="fas fa-envelope icono"></i>
+                    <p>coopdinamica@correo.com</p>
+                </div>
+
+                <div class="col">
+                    <i class="fas fa-phone icono"></i>
+                    <p>(+1) 809-455-2020 <br/> (+1) 809-555-3030</p>
+                </div>
+
+                <div class="redes-s">
+                    <a href=""><i class="fab fa-facebook"></i></a>
+                    <a href=""><i class="fab fa-twitter"></i></a>
+                    <a href=""><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <form action="" method="GET" class="formulario">
+                <input type="text" name="nombre" placeholder="Nombre" id="nombre">
+                <input type="text" name="correo" placeholder="Correo electronico" id="correo">
+                <input type="text" name="asunto" placeholder="Asunto" id="asunto">
+                <textarea name="mensaje" id="mensaje" placeholder="Mensaje"></textarea>
+                <button type="button">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <!--Fin del Formulario de contacto-->
+
+
+
+</body>
+</html>
