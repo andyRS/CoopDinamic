@@ -118,13 +118,13 @@
 .logo img {
 	display: block;
 	position: relative;
-	width: 56px;
+	width: 39px;
 	margin-top: -85px;
 	left: 368px;
 	overflow: hidden;
 	box-shadow: 0px 0px 5px #ccc;
 	border: 1px solid #ccc;
-	border-radius: 36px;
+	border-radius: 12px;
 	top: -36px;
 }
 
@@ -263,14 +263,14 @@
 	display: none;
 }
 
-.dropdowm-2{
+.dropdowm-2 {
 	display: flex;
 	flex-direction: column;
 	position: absolute;
 	top: 0;
 	left: 100%;
-	width: 270px;
-	transition: all 300ms;	
+	width: 205px;
+	transition: all 300ms;
 }
 
 /*Fin MENU*/
@@ -349,12 +349,11 @@
 /*Inicio iconos del Sub-menu*/
 .fa-coins {
 	display: block;
-	font-size: 15px;
+	font-size: 17px;
 	position: absolute;
 	color: white;
 	top: 23px;
-	left: 7px;
-	
+	left: 19px;
 }
 
 .fa-credit-card {
@@ -363,7 +362,7 @@
 	position: absolute;
 	color: white;
 	top: 22px;
-	left: 50px;	
+	left: 57px;
 }
 
 
@@ -387,13 +386,13 @@
 	font-weight: bold;
 }
 
-.fa-calculator{
+.fa-calculator {
 	display: block;
-	font-size: 18px;
+	font-size: 13px;
 	position: absolute;
 	color: white;
-	top: 20px;
-	left: 25px;
+	top: 25px;
+	left: 3px;
 }
 
 /*Fin iconos del Sub-menu*/
@@ -563,7 +562,7 @@ img{
 }
 
 
-.icon-flag .fa-flag {
+.fa-flag {
 	color: #fff;
 	position: relative;
 	font-size: 36px;
@@ -571,7 +570,7 @@ img{
 	left: 180px;
 }
 
-.icon-fa-users .fa-users {
+ .fa-users {
 	color: #fff;
 	position: relative;
 	font-size: 36px;
@@ -581,7 +580,7 @@ img{
 	text-shadow: 1px 1px 1px #201f1f, 2px 2px 2px #201f1f;
 }
 
-.icon-time .fa-clock {
+ .fa-clock {
 	color: #fff;
 	position: relative;
 	font-size: 44px;
@@ -596,7 +595,7 @@ img{
 	position: relative;
 	font-size: 41px;
 	top: -161px;
-	left: 166px;
+	left: 175px;
 	font-weight: bold;
 	text-shadow: 1px 1px 1px #201f1f, 2px 2px 2px #201f1f;
 }
