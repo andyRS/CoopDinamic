@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces&display=swap" rel="stylesheet">
+    <link href="css/calculadora.css" rel="stylesheet" />
+     <!--inicio de los mediaQuerys (Responsive) -->
+    
+     <!--fin de los mediaQuerys (Responsive) -->
+    <!--incio de favicon, icono de la web -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <!--fin de favicon, icono de la web -->
+
+    <!--Inicio Script para iconos de font-awesome -->
+    <script src="https://kit.fontawesome.com/a998cb1e07.js" crossorigin="anonymous"></script>
+    <!--fin Script para iconos de font-awesome -->
+
+    
+
+    <!--Inicio Scripts de la calculadora -->
+    <script src="js/Display.js" type="text/javascript"></script>
+    <script src="js/Calculadora.js" type="text/javascript"></script>
+    <script src="js/index.js" type="text/javascript" defer></script>
+    <script type="text/javascript" src="js/loader.js"></script>
+     <!--Fin Scripts de la calculadora -->
+</head>
+<body>
+     <!--inicio contenedor del Pre-loader-->
+     <div class="contenedor_loader">
+        <div class="loader">
+
+        </div>
+    </div>
+    <!--fin contenedor del Pre-loader-->
+
+     <!--inicio contenedor principal de todo el conenido-->
+     <section id="container" class="container-fluid">
+        <!--inicio cabecera de la pagina-->
+        <header id="header" class="container-fluid">
+            <!--Logo principal-->
+            <div class="logo">
+                <h1>CoopDinámica</h1>
+                <img class="img-logo" src="img/Logo.png" alt="Logo" title="Cooperativa Dinamica">
+            </div>
+            <div class="box">
+                <div class="buscar-box">
+                    <input type="search" id="search" placeholder="Buscar..." /><i class="fa fa-search"></i>
+                </div>
+            </div>
+            <!--Fin logo principal-->
+        </header>
+        <!--Fin cabecera de la pagina-->
+
+        <!--inicio menu principal-->
+        <nav id="menu" class="menu-area navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <ul class="navbar-nav row">
+                    <li class="nav-item"><a class="nav-link col-xs-12 col-sm-12 col-md-4 col-lg-4" href="index.html"><i
+                                class="fa fa-home icons-menu"></i>INICIO</a></li>
+                    <li class="nav-item"><a class="nav-link col-xs col-sm col-md-4 col-lg-4" href="#"><i
+                                class="fa fa-user icons-menu"></i>PARA TI</a>
+                        <ul class="dropdowm-1 navbar-nav row">
+                            <li class="nav-item col-xs col-sm col-md col-lg-4"><a href="#"><i
+                                        class="fas fa-coins icons-menu col-xs col-sm col-md-4 col-lg-4"></i>Ahorros o
+                                    inversión</a>
+                                <ul class="dropdowm-2 navbar-nav row">
+                                    <li class="nav-item col-xs-12 col-sm-12 col-md-4 col-lg-4"><a class="nav-link"
+                                            href="#">Cuentas de Ahorros</a></li>
+                                    <li class="nav-item col-xs-12 col-sm-12 col-md-4 col-lg-4"><a class="nav-link"
+                                            href="#">Ahorros Programados</a></li>
+                                    <li class="nav-item col-xs-12 col-sm-12 col-md-4 col-lg-4"><a class="nav-link"
+                                            href="#">Certificados Financieros</a></li>
+                                    <li class="nav-item col-xs-12 col-sm-12 col-md-4 col-lg-4"><a class="nav-link"
+                                            href="#">Alquiler Hipotecario</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#"><i class="fa fa-credit-card icons-menu"></i>Créditos</a>
+                                <ul class="dropdowm-2 navbar-nav">
+                                    <li class="nav-item"><a class="nav-link" href="#">Expresos</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">De Consumo</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Hipotecarios</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Adquision de Vehiculos</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Educativos y Escolares</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Vacacionales</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="calculadora-prestamos.html"><i
+                                        class="fa fa-calculator icons-menu"></i>Calculadora de Préstamos</a>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-briefcase icons-menu"></i>PARA TU NEGOCIO</a>
+                        <ul class="dropdowm-1">
+                            <li class="nav-item"><a class="nav-link" href="#"><i
+                                        class="fa  fa-coins icons-menu "></i>Ahorros o inversión</a>
+                                <ul class="dropdowm-2 navbar-nav">
+                                    <li class="nav-item"><a class="nav-link" href="#">Cuentas de Ahorros</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Ahorros Programados</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Certificados Financieros</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Alquiler Hipotecario</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="#"><i
+                                        class="far fa-credit-card icons-menu"></i>Créditos</a>
+                                <ul class="dropdowm-2 navbar-nav">
+                                    <li class="nav-item"><a class="nav-link" href="#">Expresos</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">De Consumo</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Hipotecarios</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Adquision de Vehiculos</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Educativos y Escolares</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Vacacionales</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"> <i class="fa fa-blog icons-menu"></i>DINAMIZATE</a>
+                        <ul class="dropdowm-1 navbar-nav">
+                            <li><a class="nav-link" href="blog.html"><i class="fab fa-blogger icons-menu"></i>BLOG</a>
+                            </li>
+                        </ul>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-handshake"></i>¿POR QUÉ ASOCIARSE?</a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa fa-newspaper icons-menu"></i>PRENSA</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa fa-address-card icons-menu"></i>CONTACTO</a></i>
+                        <ul class="dropdowm-1 navbar-nav">
+                            <li>
+                                <a class="nav-link" href="formulario.html"><i
+                                        class="fa fa-wpforms icons-menu"></i>Formulario</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!--Fin menu principal-->
+
+
+    <!--Inicio contenedor principal calculadora Normal-->
+    <div class="container">
+        <div class="calculadora">
+            <div class="display">
+                <div id="valor-anterior"></div>
+                <div id="valor-actual"></div>
+            </div>
+            <button class="col-2" onclick="display.borrarTodo()">C</button>
+            <button onclick="display.borrar()">&larr;</button>
+            <button class="operador" value="dividir">%</button>
+            <button class="numero">7</button>
+            <button class="numero">8</button>
+            <button class="numero">9</button>
+            <button class="operador" value="multiplicar">X</button>
+            <button class="numero">4</button>
+            <button class="numero">5</button>
+            <button class="numero">6</button>
+            <button class="operador" value="restar">-</button>
+            <button class="numero">1</button>
+            <button class="numero">2</button>
+            <button class="numero">3</button>
+            <button class="operador" value="sumar">+</button>
+            <button class="col-2 numero">0</button>
+            <button class="numero">.</button>
+            <button class="operador" value="igual">=</button>
+        </div>
+    </div>
+    <!--Fin contenedor principal calculadora Normal-->
+
+        <!--Inicio del footer-->
+        <footer>
+            <div class="container__footer container-fluid">
+                <div class="box__footer">
+                    <div class="logo">
+                        <h5>CoopDinámica</h5>
+                    </div>
+                    <div class="terms">
+                        <p>Somos la Cooperativa de Ahorros, Credito y servicios multiples la dinamica. Tenemos mas de 10
+                            años siendo elegibles para todos, siendo
+                            una de las cooperativas mas confiables, seguras y donde valoramos tu dinero.
+                        </p>
+                    </div>
+                </div>
+                <div class="box__footer">
+                    <h5>Menu</h5>
+                    <hr class="linea-divisora-footer menu-linea">
+                    <a href="#inicio">Inicio</a>
+                    <a href="#">Para ti</a>
+                    <a href="#">Para tu negocio</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Por que asociarse?</a>
+                    <a href="#">prensa</a>
+                    <a href="#">Contacto</a>
+                </div>
+
+                <div class="box__footer">
+                    <h5>Redes Sociales</h5>
+                    <hr class="linea-divisora-footer linea-redes">
+                    <a href="#"> <i class="fab fa-facebook-square"></i> Facebook</a>
+                    <a href="#"><i class="fab fa-twitter-square"></i> Twitter</a>
+                    <a href="#"><i class="fab fa-linkedin"></i> Linkedin</a>
+                    <a href="#"><i class="fab fa-instagram-square"></i> Instagram</a>
+                </div>
+
+            </div>
+
+            <div class="box__copyright">
+                <hr>
+                <p>Todos los derechos reservados © 2022 <b>Andy Rosado Desing Web | Cooperativa Dinamica 2022 ©</b></p>
+            </div>
+        </footer>
+        <!--Fin del footer-->
+
+</body>
+</html>
