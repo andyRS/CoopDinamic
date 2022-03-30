@@ -13,10 +13,6 @@ window.addEventListener('load', () => {
         noWrap: false,
         items: 5
     });
-
-    $('.dropdown-trigger').dropdown();
-
-  
     
     
 })
