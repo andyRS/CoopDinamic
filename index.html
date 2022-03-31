@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cooperativa Dinámica</title>
+    <!--incio de favicon, icono de la web -->
+    <link rel="shortcut icon" href="img/favico.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <!--fin de favicon, icono de la web -->
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="css/materialize.min.css">
+    
+    <!--Estilos Jquery UI-->
+    <link rel="stylesheet" href="css/jquery-ui.min.css" />
+    <link rel="stylesheet" href="css/jquery-ui.structure.min.css" />
+    <link rel="stylesheet" href="css/jquery-ui.theme.min.css" />
+
+    <!-- llamada a bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <!--inicio de mis estilos CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!--fin de mis estilos CSS -->
+
+    <!-- Estilos carousel-2 CSS -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+    <!--inicio de los mediaQuerys (Responsive) -->
+    <link rel="stylesheet" href="css/querys-responsivo.css">
+    <!--fin de los mediaQuerys (Responsive) -->
+
+    <!--Inicio Jquery para proyectos -->
+    <script type="text/javascript" src="js/Jquery/jquery-3.6.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/Jquery/jquery-ui.min.js"></script>
+    <!--Fin Jquery para proyectos -->
+
+    <!--Inicio Script para iconos de font-awesome -->
+    <script src="https://kit.fontawesome.com/a998cb1e07.js" crossorigin="anonymous"></script>
+    <!--fin Script para iconos de font-awesome -->
+
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="js/materialize.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+
+
+    <!--Inicio Scripts de la web -->
+    <script type="text/javascript" src="js/slider.js"></script>
+    <script type="text/javascript" src="js/loader.js"></script>
+    <script type="text/javascript" src="js/main-carousel-services.js"></script>
+    <script type="text/javascript" src="js/scripts_we.js"></script>
+    <script type="text/javascript" src="js/Jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="js/Jquery/jquery-ui.min.js"></script>
+
+    <!--Fin Script de la web -->
+</head>
+
+<body class="container-fluid">
+    <!--inicio contenedor del Pre-loader-->
+    <div class="contenedor_loader">
+        <div class="loader">
+
+        </div>
+    </div>
+    <!--fin contenedor del Pre-loader-->
+
+    <!--inicio contenedor principal de todo el conenido-->
+    <section id="container" class="container-fluid">
+        <!--inicio cabecera de la pagina-->
+        <header id="header" class="container-fluid">
+            <!--Logo principal-->
+            <div class="logo">
+                <h1>CoopDinámica</h1>
+                <img class="img-logo" src="img/Logo.png" alt="Logo" title="Cooperativa Dinamica">
+            </div>
+            <div class="box">
+                <div class="buscar-box">
+                    <input type="search" id="search" placeholder="Buscar..." /><i class="fa fa-search"></i>
+                </div>
+            </div>
+            <!--Fin logo principal-->
+        </header>
+        <!--Fin cabecera de la pagina-->
+
+        <!--inicio menu principal-->
+        <nav id="menu" class="menu-area navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <ul class="navbar-nav row">
+                    <li class="nav-item"><a class="nav-link col-xs-12 col-sm-12 col-md-4 col-lg-4" href="index.html"><i
+                                class="fa fa-home icons-menu"></i>INICIO</a></li>
+                    <li class="nav-item"><a class="nav-link col-xs col-sm col-md-4 col-lg-4" href="#"><i
+                                class="fa fa-user icons-menu"></i>PARA TI</a>
+                        <ul class="dropdowm-1 navbar-nav row">
+                            <li class="nav-item col-xs col-sm col-md col-lg-4"><a href="#"><i
+                                        class="fas fa-coins icons-menu col-xs col-sm col-md-4 col-lg-4"></i>Ahorros o
+                                    inversión</a>
+                                <ul class="dropdowm-2 navbar-nav row">
+                                    <li class="nav-item col-xs-12 col-sm-12 col-md-4 col-lg-4"><a class="nav-link"
+                                            href="#">Cuentas de Ahorros</a></li>
+                                    <li class="nav-item col-xs-12 col-sm-12 col-md-4 col-lg-4"><a class="nav-link"
+                                            href="#">Ahorros Programados</a></li>
+                                    <li class="nav-item col-xs-12 col-sm-12 col-md-4 col-lg-4"><a class="nav-link"
+                                            href="#">Certificados Financieros</a></li>
+                                    <li class="nav-item col-xs-12 col-sm-12 col-md-4 col-lg-4"><a class="nav-link"
+                                            href="#">Alquiler Hipotecario</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#"><i class="fa fa-credit-card icons-menu"></i>Créditos</a>
+                                <ul class="dropdowm-2 navbar-nav">
+                                    <li class="nav-item"><a class="nav-link" href="#">Expresos</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">De Consumo</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Hipotecarios</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Adquision de Vehiculos</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Educativos y Escolares</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Vacacionales</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="calculadora-prestamos.html"><i
+                                        class="fa fa-calculator icons-menu"></i>Calculadora de Préstamos</a>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-briefcase icons-menu"></i>PARA TU NEGOCIO</a>
+                        <ul class="dropdowm-1">
+                            <li class="nav-item"><a class="nav-link" href="#"><i
+                                        class="fa  fa-coins icons-menu "></i>Ahorros o inversión</a>
+                                <ul class="dropdowm-2 navbar-nav">
+                                    <li class="nav-item"><a class="nav-link" href="#">Cuentas de Ahorros</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Ahorros Programados</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Certificados Financieros</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Alquiler Hipotecario</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="#"><i
+                                        class="far fa-credit-card icons-menu"></i>Créditos</a>
+                                <ul class="dropdowm-2 navbar-nav">
+                                    <li class="nav-item"><a class="nav-link" href="#">Expresos</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">De Consumo</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Hipotecarios</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Adquision de Vehiculos</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Educativos y Escolares</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Vacacionales</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"> <i class="fa fa-blog icons-menu"></i>DINAMIZATE</a>
+                        <ul class="dropdowm-1 navbar-nav">
+                            <li><a class="nav-link" href="blog.html"><i class="fab fa-blogger icons-menu"></i>BLOG</a>
+                            </li>
+                        </ul>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-handshake"></i>¿POR QUÉ ASOCIARSE?</a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa fa-newspaper icons-menu"></i>PRENSA</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa fa-address-card icons-menu"></i>CONTACTO</a></i>
+                        <ul class="dropdowm-1 navbar-nav">
+                            <li>
+                                <a class="nav-link" href="formulario.html"><i
+                                        class="fa fa-wpforms icons-menu"></i>Formulario</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!--Fin menu principal-->
+
+        <!--inicio del contenedor de todo el slider-->
+        <div id="slideshow-principal" class="container-fluid">
+            <div id="progress-bar-container">
+                <div id="progress-bar"></div>
+            </div>
+            <div id="slideshow">
+                <img src="" alt="" id="img1">
+                <img src="" alt="" id="img2">
+            </div>
+            <div id="indicadores">
+
+            </div>
+        </div>
+        <!--fin del contenedor de todo el slider-->
+
+        <!--Inicio seccion de destacados-->
+        <section id="destacado" class="container-fluid">
+            <div class="row">
+                <div class="seccion-destacado col-xs-6 col-sm-6 col-md-4 col-lg-4">
+                    <h2>!Nuevo! Portal Web</h2>
+                </div>
+                <div class="CoopDinamica col-xs-6 col-sm-6 col-md-4 col-lg-4">
+                    <p>Cooperativa de Ahorros, credito y servicios multiples la dinamica</p>
+                </div>
+            </div>
+            <a class="buttom-destacado" href="#">Se parte de nuestra familia</a>
+        </section>
+        <!--fin seccion de destacados-->
+
+        <!--Inicio seccion de Trayectoria o experiencia-->
+        <section id="trayectoria" class="container-fluid">
+            <div class="trayectoria-card-1">
+                <div class="icons icons-card-trayectoria-1">
+                    <span class="icon-circle"><i class="fa fa-circle"></i></span>
+                    <span class="icons-simbols icon-flag"><i class="fa fa-flag"></i></span>
+                </div>
+                <div class="trayectoria-h3">
+                    <h3>69 AÑOS DE SERVICIO </h3>
+                    <div class="trayectoria-card-p">
+                        <p>
+                            Sistema Cooperativismo Dominicano, regido por las leyes No. 3431 sobre asuntos cooperativos
+                            y
+                            por la No. 127 sobre asociaciones cooperativas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="trayectoria-card-2">
+                <div class="icons icons-card-trayectoria-2">
+                    <span class="icon-circle"><i class="fa fa-circle"></i></span>
+                    <span class="icons-simbols icon-fa-users"><i class="fa fa-users"></i></span>
+                </div>
+                <div class="trayectoria-h3">
+                    <h3>PERSONAL CAPACITADO</h3>
+                    <div class="trayectoria-card-p">
+                        <p>
+                            Contamos con expertos en cooperativismo tanto nacionales como internacionales para el
+                            acompañamiento, fomento y regularización del cooperativismo en todo el país.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="trayectoria-card-3">
+                <div class="icons icons-card-trayectoria-3">
+                    <span class="icon-circle"><i class="fa fa-circle"></i></span>
+                    <span class="icons-simbols icon-time"><i class="fa fa-clock"></i></span>
+                </div>
+                <div class="trayectoria-h3">
+                    <h3>RAPIDEZ Y EFICIENCIA</h3>
+                    <div class="trayectoria-card-p">
+                        <p>
+                            Con nuestra nuevo portal web, transformamos la metodología en la creación y/o regularización
+                            de una nueva cooperativa reduciendo en un 60% el tiempo.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="trayectoria-card-4">
+                <div class="icons icons-card-trayectoria-4">
+                    <span class="icon-circle"><i class="fa fa-circle"></i></span>
+                    <span class="icons-simbols icon-piggy-bank-2"><i class="fa fa-piggy-bank"></i></span>
+                </div>
+                <div class="trayectoria-h3">
+                    <h3>TU DINERO SEGURO</h3>
+                    <div class="trayectoria-card-p">
+                        <p>
+                            Sistema Cooperativismo Dominicano, regido por las leyes No. 3431 sobre asuntos cooperativos
+                            y
+                            por la No. 127 sobre asociaciones cooperativas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Fin seccion de Trayectoria o experiencia-->
+
+        <!--Inicio seccion de Servicios-->
+        <section id="services-container" class="container-fluid">
+            <div class="row">
+                <div class="col s12">
+                    <h4 class="center-align titulo">Nuestros servicios</h4>
+                    <div class="carousel center-align">
+                        <div class="carousel-item">
+                            <h4 class="subtitulo">Préstamos</h4>
+                            <div class="linea-division"></div>
+                            <p class="subtitulo-p">Financieros</p>
+                            <img src="img/3.jpg" alt="finanza">
+                        </div>
+
+                        <div class="carousel-item">
+                            <h4 class="subtitulo">Ahorros</h4>
+                            <div class="linea-division"></div>
+                            <p class="subtitulo-p">Personales</p>
+                            <img src="img/6.1.jpg" alt="finanza">
+                        </div>
+
+                        <div class="carousel-item">
+                            <h4 class="subtitulo">Apertura de</h4>
+                            <div class="linea-division"></div>
+                            <p class="subtitulo-p">Cuenta</p>
+                            <img src="img/apertura.jpg" alt="finanza">
+                        </div>
+
+                        <div class="carousel-item">
+                            <h4 class="subtitulo">Certificado</h4>
+                            <div class="linea-division"></div>
+                            <p class="subtitulo-p">Financieros</p>
+                            <img src="img/certificado.jpg" alt="finanza">
+                        </div>
+
+                        <div class="carousel-item">
+                            <h4 class="subtitulo">Seguros</h4>
+                            <div class="linea-division"></div>
+                            <img src="img/6.jpg" alt="finanza">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Fin seccion de Servicios-->
+
+        <!--Inicio seccion de Calculadora Web Normal-->
+        <section id="destacado-calculadora" class="container-fluid">
+            <div class="seccion-destacado-calculadora">
+                <h2>Calculadora Web</h2>
+            </div>
+            <div class="coop-dinamica-calculadora">
+                <p>Puedes realizar tus caculos de CoopDinamic</p>
+            </div>
+            <a class="buttom-destacado-calculadora" href="calculadora.html" target="_blank">ir a la calculadora</a>
+        </section>
+        <!--Fin seccion de calculadora Web Normal-->
+
+        <!--  Inicio seccion de Notias con Tarjetas-->
+        <section id="noticias" class="container-fluid">
+            <div class="title-cards">
+                <h5>NOTICIAS RECIENTES</h5>
+                <hr class="linea-divisora-title" />
+            </div>
+            <div class="container-card">
+                <div class="card">
+                    <figure>
+                        <img src="img/Idecoojpeg.jpeg">
+                    </figure>
+                    <div class="contenido-card">
+                        <h3>IDECOOP y Poder Ejecutivo entregan 808 certificados de incorporación a nuevas cooperativas
+                        </h3>
+                        <p>La entrega se enmarca en el programa de Impulso a la Economía Social y Solidaria que lleva a
+                            cabo el gobierno del Presidente Luis Abinader, a través del Instituto de Desarrollo y
+                            Crédito Cooperativo (IDECOOP). Santo Domingo, D.N. El Poder Ejecutivo encabezado por el
+                            Presidente Luis Abinader, y el presidente administrador del Instituto de Desarrollo y</p>
+                        <a href="#">Leer Màs</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <figure>
+                        <img src="img/certificaciones808-Coop.jpg">
+                    </figure>
+                    <div class="contenido-card">
+                        <h3>IDECOOP y contrataciones publicas Firman Acuerdo para convertir las cooperativas</h3>
+                        <p>Con este acuerdoel IDECOOP avanza en el cumplimiento de la promesa de desarrollo económico
+                            que hizo el Presidente de la republica Luis Abinader, de convertir las cooperativas en
+                            proveedora del estado para impulsar la economía social y solidaria. Santo Domingo, D.N.- El
+                            Instituto de Desarrollo y Crédito Cooperativo (IDECOOP), y la Dirección General de
+                            Contrataciones…
+                        </p>
+                        <a href="#">Leer Màs</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <figure>
+                        <img src="img/avanza-idecop.jpeg">
+                    </figure>
+                    <div class="contenido-card">
+                        <h3>IDECOOP avanza en los niveles de desempeño de la Gestión Pública Web</h3>
+                        <p>Santo Domingo, DN.- Por primera vez en varios años el Instituto de Desarrollo y Crédito
+                            Cooperativo (IDECOOP), se posiciona dentro de las Instituciones del Estado con desempeño
+                            satisfactorio en la Administración Pública. Esto se logró gracias a la gestión del
+                            presidente administrador de la entidad, Lic. Franco de los Santos y a cada uno de.</p>
+                        <a href="#">Leer Màs</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Fin seccion de Notias con Tarjetas-->
+
+        <!--Inicio de la seccion de acordeon-->
+        <section id="box-acordeon" class="container-fluid">
+            <h5>Preguntas Frecuentes</h5>
+            <div id="acordeon">
+                <h3>¿Cómo afiliarse?</h3>
+                <div>
+                    <p>
+                        • Afiliarse es fácil, solo debes llenar el formulario “solicitud de afiliación”, en ambos lados,
+                        anexar copia de tu cedula y tramitarla físicamente o por via WhatsApp, a los siguientes
+                        contactos: <br />
+
+                        • cooperativaladinamica@gmail.com <br />
+
+                        • Teléfono y WhatsApp 829-959-0549
+
+                        • Realizar un pago de RD$1,300 a las cuentas: BPD Ahorros 818479339 y BR cte. 960-288585-6
+
+                        • La directiva evalúa estas solicitudes y decide aprobación de cada socio.
+
+                    </p>
+                </div>
+
+                <h3>¿Cuánto pagó cada mes, luego de afiliarme?</h3>
+                <div>
+                    <p>
+                        • En las mismas cuentas, ya sea vía nomina o por depósitos directos a nuestras cuentas debes
+                        mantener un mínimo de aportes y ahorros de RD$700.00, como mínimos.
+                    </p>
+                </div>
+
+                <h3>¿Qué es el San Dinámico?</h3>
+                <div>
+                    <p>
+                        • Es un sistema de ahorros premiado, similar al que se juega a lo interno de las empresas o
+                        familias, que consiste en fijar una meta de ahorros, por ejemplo: RD$50,000. Se paga cada mes
+                        RD$5,000 durante 10 meses. Solo En la primera cuota, en lugar de RD$5,000 el socio solo paga o
+                        deposita RD$4,000 y la cooperativa le completa los RD$1,000 que faltan a modo de incentivo. Si
+                        no completa los 10 meses y pagos, la cooperativa recupera el incentivo.
+                        <br /><br />
+                        • Al finalizar la ultima cuota, el socio recibe la totalidad de las 10 cuotas completas, las
+                        cuales puede convertir en un Certificado de depósitos o simplemente retirarlos
+
+                    </p>
+                </div>
+
+                <h3>¿Si me descuentan por nómina, puedo hacer otros ahorros y pagos desde mi banco?</h3>
+                <div>
+                    <p>
+                        • Si, en cualquier momento un socio puede hacer depósitos, aportes o abonos a su cuenta,
+                        independientemente de cualquier deposito por nómina.
+                    </p>
+                </div>
+
+
+                <h3>¿Para pagar o depositar debo ir a sus oficinas?</h3>
+                <div>
+                    <p>
+                        • No es necesario acudir a nuestras oficinas para realizar depósitos o pagos, ya que NO
+                        RECIBIMOS EFECTIVO, todas las transacciones deben hacerse mediante depósitos o transferencias
+                        bancarias. Le agregan el concepto, imprimen el volante, lo escanean y nos lo remiten por via
+                        electrónica a nuestras oficinas.
+                    </p>
+                </div>
+
+                <h3>¿Como se enteran ustedes de mis pagos por depósitos y transferencias?</h3>
+                <div>
+                    <p>
+                        • Todas las transacciones deben hacerse mediante depósitos o transferencias bancarias. Le
+                        agregan el concepto, imprimen el volante, lo escanean y nos lo remiten por vía electrónica a
+                        nuestras oficinas. Para nosotros completar el concepto del movimiento bancario que llega a
+                        nuestras cuentas: 8184793639 BPD y BR cte. 960-288585-6.
+                    </p>
+                </div>
+
+                <h3>¿En que tiempo luego de afiliarme puedo tomar prestado?</h3>
+                <div>
+                    <p>
+                        <strong>Las condiciones para tomar préstamos en esta Cooperativa son relativamente sencillas:
+                            <br /><br /></strong>
+
+                        • Si perteneces a una Nomina que nos reporta las retenciones, basta con una carta del patrono
+                        garantizando la retención de los pagos y ahorros y ya puedes tomar el equivalente a tus
+                        prestaciones laborales, en adición a otras modalidades que puedes consultar de modo
+                        particular.<br />
+
+                        • Si tienes al menos un 30% en ahorros, del valor que quieres prestados ahorrados en al menos 6
+                        meses de pagos regulares, también puedes optar por un préstamo y tasas especiales.<br />
+
+                        • Si cuentas con al menos un 50% de ahorros, del valor que quieres prestado, ahorrados en al
+                        menos 6 a 9 meses de pagos regulares, también puedes optar por un préstamo y tasas más
+                        especiales.<br />
+
+                        • Desde que te haces socio, si tienes un garante para cubrir el valor que exceda tus ahorros,
+                        puedes obtener un préstamo con dicha garantía.<br />
+
+                        • En épocas especiales como las Madres, Navidad, Escolaridad, etc. Hacemos campañas de préstamos
+                        donde puede beneficiarse cualquier socio activo en sus aportes y ahorros regulares.
+
+                    </p>
+                </div>
+
+                <h3>¿Porque en las cuotas del préstamo, ustedes incluyen los ahorros y aportes mensuales?</h3>
+                <div>
+                    <p>
+                        Como el pago de las cuotas de préstamos deben cumplirse de modo <strong>“regular”</strong> todos
+                        los meses,
+                        nosotros aprovechamos esa circunstancia parra incluir en esas cuotas, el ahorro mínimo o
+                        acordado con el socio, de modo que luego de obtener el préstamo se mantenga al día con el pago
+                        de su préstamo, también se mantenga activo mediante el pago de sus aportes y ahorros, y lo mas
+                        importante, que al saldar el préstamo, el socio disponga de unos ahorros adicionales, que va
+                        acumulando, casi imperceptiblemente.
+                    </p>
+                </div>
+
+                <h3>¿Por qué ustedes tienen 3 tasas de interés para los préstamos?</h3>
+                <div>
+                    <p>
+                        • Es una política de la Cooperativa, manejarse en estos primeros años con una tasa que nos
+                        permita, no solo capitalizarnos, sino también cubrir el costo de nuestras operaciones: Local,
+                        Software, internet, empleados, costos financieros, costos bancarios, etc. Que hoy es de un 2.5%
+                        mensual. <br />
+
+                        • Al socio que ya cuenta con aportes y ahorros equivalentes al 30% del monto del préstamo, le
+                        rebajamos de un 2 a un 3% anual a dicha tasa. <br />
+
+                        • Al socio que ya cuenta con aportes y ahorros equivalentes al 50% del monto del préstamo, le
+                        rebajamos de un 3 a un 6% anual a la tasa original. <br />
+
+                    </p>
+                </div>
+
+                <h3>¿Cada que tiempo ustedes revisan la tasa de mi préstamo?</h3>
+                <div>
+                    <p>
+                        • Aunque nuestro departamento legal nos exige ser prudentes, al igual que la banca, incluyendo
+                        en nuestros contratos la revisión cada 6 meses de acuerdo al mercado. Sin embargo, por ahora y
+                        en los próximos años, hemos mantenido la decisión administrativa de No Variar las Tasas durante
+                        las vigencias de los préstamos, a modo de llevar tranquilidad a nuestros socios, sabiendo que
+                        sus cuotas de préstamo No Cambian, mientras dure el acuerdo pactado.
+                    </p>
+                </div>
+
+                <h3>¿Qué es una nómina afiliada?</h3>
+                <div>
+                    <p>
+                        • Una Nomina Afiliada, es cuando el propietario o encargado de un negocio con varios empleados
+                        asume voluntariamente la decisión de hacer descuentos y retenciones de las cuotas, aportes y
+                        ahorros de los empleados asociados a la cooperativa. Esto le otorga el privilegio a la empresa y
+                        a los empleados que gozan de privilegios al momento de otorgar préstamos y al momento de premiar
+                        o rifar incentivos al final de año.
+                    </p>
+                </div>
+
+                <h3>¿Tiene alguna ventaja el estar en una nómina afiliada?</h3>
+                <div>
+                    <p>
+                        • Claro que sí, cuando perteneces a una nómina afiliada, prácticamente de inmediato, te podemos
+                        facilitar préstamos en base a la sumatoria de tus ahorros y de las prestaciones laborales, que
+                        el socio autorice a su patrono que servirán de garantía para lograr un préstamo con nosotros.
+                        También hacemos una premiación especial al final de año, a cada uno de los grupos de cada Nomina
+                        Afiliada, independientes de los boletos basados en ahorros y préstamos pagados en el año.
+                    </p>
+                </div>
+
+                <h3>¿Si pertenecía a una nómina y dejó ese empleo, debo salir de la cooperativa?</h3>
+                <div>
+                    <p>
+                        • La membresía de cada socio es Individual e Independiente del lugar donde trabaje. Por tanto,
+                        si cambia de trabajo, no tiene la necesidad de salir o terminar sus vínculos con la cooperativa.
+                        Muy por el contrario, en esos casos en que se mantienen a pesar de salir de la empresa y la
+                        nómina, la cooperativa valora la persistencia de dicho socio.
+                    </p>
+                </div>
+
+                <h3>¿El que tiene muchos aportes, tiene más votos que yo?</h3>
+                <div>
+                    <p>
+                        • No. Todos los socios activos, cuentan con un solo voto en las Asambleas y reuniones de la
+                        Cooperativa. Sin embargo, los socios que realizan aportes por encima del promedio general son
+                        considerados socios estratégicos, en vista de que muestran su confianza en la Cooperativa,
+                        haciendo aportes que fortalecen el patrimonio cooperativo, lo cual nos permite disponer de
+                        fondos propios para prestarlos a los socios que necesitan recursos.
+                    </p>
+                </div>
+
+                <h3>¿Como la cooperativa consigue dinero para prestarnos?</h3>
+                <div>
+                    <p>
+                        • La primera fuente de recursos o fondos que obtiene la cooperativa son los aportes, que
+                        equivalen a lo que serian “acciones” en una empresa comercial. Por eso al afiliarse se exigen
+                        RD$1,000 de aportes y luego RD$700.00 mensuales, que incluyen RD$500 de aportes y el resto de
+                        ahorros. <br />
+
+                        • La segunda fuente de fondos, son los “Bonos de Capitalización”, estos bonos tienen la
+                        intención de acelerar la disponibilidad de fondos para prestarlo a los socios, en vista de la
+                        lentitud natural en la captación de los aportes. Estos bonos pagan un 6% anual y no penalizamos
+                        al socio cuando decide liquidarlos antes de los 6 meses o el año, que se asume cuando son
+                        creados.<br />
+
+                        • La tercera fuente de recursos, son los “Bonos CFCD”, que son unos bonos en múltiplos de
+                        RD$650,000. Con un mínimo de duración de 6 meses renovables, con tasas que parten del 12% hasta
+                        un 20% anual, dependiendo del volumen que acumule cada socio en su cartera de inversión. Estos
+                        bonos se emiten cuando surgen propuestas de negocios de: “Compra de Facturas con descuentos”;
+                        Líneas de Créditos o Grandes préstamos que requieren de fondos extraordinarios.<br />
+
+                        • La cuarta fuente de fondos, proviene de los excedentes de nuestras operaciones entre lo que
+                        pagamos por los ahorros, el costo de nuestras operaciones y lo que cobramos a nuestros socios y
+                        clientes.<br />
+
+                        • No hemos recibido donaciones directas, aún.<br />
+
+                    </p>
+                </div>
+
+                <h3>¿Qué es un Bono de capitalización?</h3>
+                <div>
+                    <p>
+                        • Es un bono especial, múltiplo de RD$10,000, similar a un certificado financiero, que se emite
+                        por periodos de 6 meses a un año. Sirve para acelerar la disponibilidad de capital de trabajo
+                        para prestar a nuestros socios.
+                    </p>
+                </div>
+
+                <h3>¿Cuánto me pagan por un bono de $10,000?</h3>
+                <div>
+                    <p>
+                        • A la fecha estamos pagando un 6% anual por estos bonos.
+                    </p>
+                </div>
+
+                <h3>¿Para grandes préstamos, cómo consigue fondos la cooperativa?</h3>
+                <div>
+                    <p>
+                        • Creamos unos Bonos Especiales, en múltiplos de RD$650,000. A un mínimo de 6 meses, renovable
+                        y premiamos el cumulo de estos Bonos, luego de acumular mas de 4 Bonos, se incrementan las tasas
+                        anuales. Los intereses se pagan mensualmente, pero en una cuenta de ahorros en la misma
+                        cooperativa, condicionado a solo retirar el 80% de los intereses acumulados, al cumplir 61 días
+                        de haberlos pagado.
+                    </p>
+                </div>
+
+                <h3>¿Cuándo ha habido crisis, porque la cooperativa no nos exonera de las cuotas o de los intereses?
+                </h3>
+                <div>
+                    <p>
+                        • La cooperativa no recibe donaciones del Estado, ni de los socios. Tiene una primera
+                        responsabilidad que es cuidar los ahorros y depósitos de los socios. Pagando religiosamente los
+                        intereses que ganen los mismos por sus depósitos y bonos. <br />
+
+                        • La segunda responsabilidad es “cubrir los costos de sus operaciones”: <strong>Local, Software,
+                            internet, empleados, costos financieros, costos bancarios, etc.</strong> No solo cubrir
+                        estos costos,
+                        sino generar excedentes o ganancias para capitalizarnos o para distribuir entre los
+                        socios.<br />
+
+                        • Entonces, si nosotros exoneráramos los intereses que son los recursos conque se pagan los
+                        intereses y los costos operacionales, pondríamos en crisis financiera a la empresa de todos que
+                        es la cooperativa.<br />
+
+                        • <strong>En pocas palabras:</strong> De los intereses que cobramos, es que pagamos los
+                        intereses de los socios
+                        que ahorran; los salarios de empleados, local, Sw, comunicación, etc. <br />
+
+                    </p>
+                </div>
+
+                <h3>¿Con ingresos mínimos se puede ahorrar?</h3>
+                <div>
+                    <p>
+                        Si, se puede. Si nos lo proponemos, con cualquier ingreso se pueden ahorrar doscientos a cuatro
+                        pesos al mes, no importa el sacrificio. Ya que el primer obstáculo para el ahorro es crear el
+                        habito, la consistencia, la perseverancia. Luego que ya lo has hecho durante un año, entonces se
+                        van creando estímulos a metas mayores, se le da un nombre o un propósito a dicho ahorro.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!--Fin de la seccion de acordeon-->
+
+        <!--Inicio del footer-->
+        <footer>
+            <div class="container__footer container-fluid">
+                <div class="box__footer">
+                    <div class="logo">
+                        <h5>CoopDinámica</h5>
+                    </div>
+                    <div class="terms">
+                        <p>Somos la Cooperativa de Ahorros, Credito y servicios multiples la dinamica. Tenemos mas de 10
+                            años siendo elegibles para todos, siendo
+                            una de las cooperativas mas confiables, seguras y donde valoramos tu dinero.
+                        </p>
+                    </div>
+                </div>
+                <div class="box__footer">
+                    <h5>Menu</h5>
+                    <hr class="linea-divisora-footer menu-linea">
+                    <a href="#inicio">Inicio</a>
+                    <a href="#">Para ti</a>
+                    <a href="#">Para tu negocio</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Por que asociarse?</a>
+                    <a href="#">prensa</a>
+                    <a href="#">Contacto</a>
+                </div>
+
+                <div class="box__footer">
+                    <h5>Redes Sociales</h5>
+                    <hr class="linea-divisora-footer linea-redes">
+                    <a href="#"> <i class="fab fa-facebook-square"></i> Facebook</a>
+                    <a href="#"><i class="fab fa-twitter-square"></i> Twitter</a>
+                    <a href="#"><i class="fab fa-linkedin"></i> Linkedin</a>
+                    <a href="#"><i class="fab fa-instagram-square"></i> Instagram</a>
+                </div>
+
+            </div>
+
+            <div class="box__copyright">
+                <hr>
+                <p>Todos los derechos reservados © 2022 <b>Andy Rosado Desing Web | Cooperativa Dinamica 2022 ©</b></p>
+            </div>
+        </footer>
+        <!--Fin del footer-->
+
+
+    </section>
+    <!--Fin contenedor principal de todo el conenido-->
+
+</body>
+
+</html>
