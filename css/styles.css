@@ -487,7 +487,7 @@ img{
 	align-items: center;
 	justify-content: center;
 	text-shadow: 1px 1px 1px #201f1f, 2px 2px 2px #201f1f;
-    transition: all 300ms;
+        transition: all 300ms;
 
 	/*Degradado*/
 	background: rgba(73,155,234,1);
@@ -743,9 +743,7 @@ img{
 	align-items: center;
 	justify-content: center;
 	text-shadow: 1px 1px 1px #201f1f, 2px 2px 2px #201f1f;
-    transition: all 300ms;
-
-
+        transition: all 300ms;
 
 	/*Degradado*/
 	background: rgba(73,155,234,1);
