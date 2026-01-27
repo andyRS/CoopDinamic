@@ -1,14 +1,17 @@
-const displayValorAnterior = document.getElementById('valor-anterior');
-const displayValorActual = document.getElementById('valor-actual');
-const botonesNumeros = document.querySelectorAll('.numero');
-const botonesOperadores = document.querySelectorAll('.operador');
+import CalculatorDisplay from './Display';
 
-const display = new Display(displayValorAnterior, displayValorActual);
+const Calculator = () => {
+  const operators = [
+    { label: '+', value: 'sumar' },
+    { label: '-', value: 'restar' },
+    { label: 'x', value: 'multiplicar' },
+    { label: '%', value: 'dividir' },
+    { label: '=', value: 'igual' },
+  ];
 
-botonesNumeros.forEach(boton => {
-    boton.addEventListener('click', () => display.agregarNumero(boton.innerHTML));
-});
+  const numbers = ['7', '8', '9', '4', '5', '6', '1', '2', '3', '0', '.'];
 
-botonesOperadores.forEach(boton => {
-    boton.addEventListener('click', () => display.computar(boton.value))
-});
+  return <CalculatorDisplay operators={operators} numbers={numbers} />;
+};
+
+export default Calculator;
