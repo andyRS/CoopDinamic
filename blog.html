@@ -11,27 +11,8 @@
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <!--fin de favicon, icono de la web -->
 
-
-    <!-- llamada a bootstrap -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-
-    <!--Estilos Jquery UI-->
-    <link rel="stylesheet" href="css/jquery-ui.min.css" />
-    <link rel="stylesheet" href="css/jquery-ui.structure.min.css" />
-    <link rel="stylesheet" href="css/jquery-ui.theme.min.css" />
-
-
-    <!-- Estilos carousel-2 CSS -->
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
     <!--inicio de los mediaQuerys (Responsive) -->
     <link rel="stylesheet" href="css/querys-responsivo.css">
@@ -42,31 +23,16 @@
      <!--fin de mis estilos CSS -->
 
 
-    <!--Inicio Jquery para proyectos -->
-    <script type="text/javascript" src="js/Jquery/jquery-3.6.0.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-    <script type="text/javascript" src="js/Jquery/jquery-ui.min.js"></script>
-    <!--Fin Jquery para proyectos -->
-
     <!--Inicio Script para iconos de font-awesome -->
     <script src="https://kit.fontawesome.com/a998cb1e07.js" crossorigin="anonymous"></script>
     <!--fin Script para iconos de font-awesome -->
 
 
-    <!-- Compiled and minified JavaScript -->
-    <script src="js/materialize.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-
-
     <!--Inicio Scripts de la web -->
 
     <script type="text/javascript" src="js/loader.js"></script>
-    <script type="text/javascript" src="js/main-carousel-services.js"></script>
-    <script type="text/javascript" src="js/scripts_we.js"></script>
-    <script type="text/javascript" src="js/Jquery/jquery.min.js"></script>
-    <script type="text/javascript" src="js/Jquery/jquery-ui.min.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
+    <script type="module" src="js/react-components.js"></script>
 
 
     <!--Fin Script de la web -->
@@ -83,107 +49,7 @@
 
     <!--inicio contenedor principal de todo el conenido-->
     <section id="container" class="container-fluid">
-        <!--inicio cabecera de la pagina-->
-        <header id="header">
-            <!--Logo principal-->
-            <div class="logo">
-                <h1>CoopDinámica</h1>
-                <img class="img-logo" src="img/Logo.png" alt="Logo" title="Cooperativa Dinamica">
-            </div>
-            <div class="box">
-                <div class="buscar-box">
-                    <input type="search" id="search" placeholder="Buscar..." /><i class="fa fa-search"></i>
-                </div>
-            </div>
-            <!--Fin logo principal-->
-        </header>
-        <!--Fin cabecera de la pagina-->
-
-        <!--inicio menu principal-->
-        <nav id="menu" class="menu-area container-fluid navbar navbar-expand-lg">
-            <div class="container-fluid">
-                <ul class="navbar-nav container-fluid">
-                    <li><a class="nav-link" href="index.html"><i class="fa fa-home icons-menu"></i>INICIO</a></li>
-                    <li><a href="#"><i class="fa fa-user icons-menu"></i>PARA TI</a>
-                        <ul class="dropdowm-1 container-fluid">
-                            <li><a href="#"><i class="fas fa-coins icons-menu"></i>Ahorros o inversión</a>
-                                <ul class="dropdowm-2 navbar-nav container-fluid">
-                                    <li class="nav-item"><a class="nav-link" href="#">Cuentas de Ahorros</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Ahorros Programados</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Certificados Financieros</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Alquiler Hipotecario</a></li>
-                                </ul>
-
-                            </li>
-                            <li><a href="#"><i class="fa fa-credit-card icons-menu container-fluid"></i>Créditos</a>
-                                <ul class="dropdowm-2 navbar-nav container-fluid">
-                                    <li class="nav-item"><a class="nav-link" href="#">Expresos</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">De Consumo</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Hipotecarios</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Adquision de Vehiculos</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Educativos y Escolares</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Vacacionales</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="calculadora-prestamos.html"><i
-                                        class="fa fa-calculator icons-menu"></i>Calculadora de Préstamos</a>
-                        </ul>
-                    </li>
-                    <li class="container-fluid">
-                        <a href="#"><i class="fa fa-briefcase icons-menu"></i>PARA TU NEGOCIO</a>
-                        <ul class="dropdowm-1 container-fluid">
-                            <li><a href="#"><i class="fa  fa-coins icons-menu container-fluid"></i>Ahorros o
-                                    inversión</a>
-                                <ul class="dropdowm-2">
-                                    <li><a href="#">Cuentas de Ahorros</a></li>
-                                    <li><a href="#">Ahorros Programados</a></li>
-                                    <li><a href="#">Certificados Financieros</a></li>
-                                    <li><a href="#">Alquiler Hipotecario</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#"><i class="far fa-credit-card icons-menu"></i>Créditos</a>
-                                <ul class="dropdowm-2">
-                                    <li><a href="#">Expresos</a></li>
-                                    <li><a href="#">De Consumo</a></li>
-                                    <li><a href="#">Hipotecarios</a></li>
-                                    <li><a href="#">Adquision de Vehiculos</a></li>
-                                    <li><a href="#">Educativos y Escolares</a></li>
-                                    <li><a href="#">Vacacionales</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li class="container-fluid">
-                        <a href="#"> <i class="fa fa-blog icons-menu"></i>DINAMIZATE</a>
-                        <ul class="dropdowm-1">
-                            <li><a href="#"><i class="fab fa-blogger icons-menu"></i>BLOG</a></li>
-                        </ul>
-                    </li>
-
-
-                    <li class="container-fluid">
-                        <a href="#"><i class="fas fa-handshake"></i>¿POR QUÉ ASOCIARSE?</a>
-
-                    </li>
-
-
-                    <li class="container-fluid">
-                        <a href="#"><i class="fa fa-newspaper icons-menu container-fluid"></i>PRENSA</a>
-                    </li>
-
-                    <li container-fluid>
-                        <a href="#"><i class="fa fa-address-card icons-menu"></i>CONTACTO</a></i>
-                        <ul class="dropdowm-1">
-                            <li>
-                                <a href="formulario.html"><i class="fa fa-wpforms icons-menu"></i>Formulario</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <!--Fin menu principal-->
+        <div id="header-nav-root"></div>
 
         <!--Inicio Slider(Background) principal-->
         <div id="slider" class="slider-big">
