@@ -70,124 +70,15 @@
 </head>
 
 <body class="container-fluid">
-    <!--inicio contenedor del Pre-loader-->
-    <div class="contenedor_loader">
-        <div class="loader">
-
-        </div>
-    </div>
-    <!--fin contenedor del Pre-loader-->
+    <div data-component="loader"></div>
 
     <!--inicio contenedor principal de todo el conenido-->
     <section id="container" class="container-fluid">
-        <!--inicio cabecera de la pagina-->
-        <header id="header" class="container-fluid">
-            <!--Logo principal-->
-            <div class="logo">
-                <h1>CoopDinámica</h1>
-                <img class="img-logo" src="img/Logo.png" alt="Logo" title="Cooperativa Dinamica" width="500"
-                    height="500">
-            </div>
-            <div class="box">
-                <div class="buscar-box">
-                    <input type="search" id="search" placeholder="Buscar..." /><i class="fa fa-search"></i>
-                </div>
-            </div>
-            <!--Fin logo principal-->
-        </header>
-        <!--Fin cabecera de la pagina-->
+        <div data-component="header" data-header-class="container-fluid" data-logo-text="CoopDinámica"
+            data-logo-title="Cooperativa Dinamica" data-logo-width="500" data-logo-height="500"
+            data-search-variant="inline"></div>
 
-        <!--inicio menu principal-->
-        <nav id="menu" class="menu-area">
-            <div class="container-fluid">
-                <ul class="row">
-                    <li><a href="index.html"><i
-                                class="fa fa-home icons-menu"></i>INICIO</a></li>
-                    <li><a href="#"><i
-                                class="fa fa-user icons-menu"></i>PARA TI</a>
-                        <ul class="dropdowm-1 row">
-                            <li><a href="#"><i
-                                        class="fas fa-coins icons-menu"></i>Ahorros o
-                                    inversión</a>
-                                <ul class="dropdowm-2 row">
-                                    <li><a href="#">Cuentas de Ahorros</a></li>
-                                    <li><a href="#">Ahorros Programados</a></li>
-                                    <li><a href="#">Certificados Financieros</a></li>
-                                    <li><a href="#">Alquiler Hipotecario</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#"><i class="fa fa-credit-card icons-menu"></i>Créditos</a>
-                                <ul class="dropdowm-2">
-                                    <li><a href="#">Expresos</a></li>
-                                    <li><a href="#">De Consumo</a></li>
-                                    <li><a href="#">Hipotecarios</a></li>
-                                    <li><a href="#">Adquision de Vehiculos</a></li>
-                                    <li><a href="#">Educativos y Escolares</a></li>
-                                    <li><a href="#">Vacacionales</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="calculadora-prestamos.html"><i
-                                        class="fa fa-calculator icons-menu"></i>Calculadora de Préstamos</a>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-briefcase icons-menu"></i>PARA TU NEGOCIO</a>
-                        <ul class="dropdowm-1">
-                            <li><a href="#"><i
-                                        class="fa fa-coins icons-menu"></i>Ahorros o inversión</a>
-                                <ul class="dropdowm-2">
-                                    <li><a href="#">Cuentas de Ahorros</a></li>
-                                    <li><a href="#">Ahorros Programados</a></li>
-                                    <li><a href="#">Certificados Financieros</a></li>
-                                    <li><a href="#">Alquiler Hipotecario</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#"><i
-                                        class="far fa-credit-card icons-menu"></i>Créditos</a>
-                                <ul class="dropdowm-2">
-                                    <li><a href="#">Expresos</a></li>
-                                    <li><a href="#">De Consumo</a></li>
-                                    <li><a href="#">Hipotecarios</a></li>
-                                    <li><a href="#">Adquision de Vehiculos</a></li>
-                                    <li><a href="#">Educativos y Escolares</a></li>
-                                    <li><a href="#">Vacacionales</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li>
-                        <a href="#"> <i class="fa fa-blog icons-menu"></i>DINAMIZATE</a>
-                        <ul class="dropdowm-1">
-                            <li><a href="blog.html"><i class="fab fa-blogger icons-menu"></i>BLOG</a>
-                            </li>
-                        </ul>
-                    </li>
-
-
-                    <li>
-                        <a href="#"><i class="fas fa-handshake"></i>¿POR QUÉ ASOCIARSE?</a>
-
-                    </li>
-
-
-                    <li>
-                        <a href="#"><i class="fa fa-newspaper icons-menu"></i>PRENSA</a>
-                    </li>
-
-                    <li>
-                        <a href="#"><i class="fa fa-address-card icons-menu"></i>CONTACTO</a></i>
-                        <ul class="dropdowm-1">
-                            <li>
-                                <a href="formulario.html"><i
-                                        class="fa fa-wpforms icons-menu"></i>Formulario</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <!--Fin menu principal-->
+        <div data-component="nav-menu" data-nav-variant="default"></div>
 
         <!--inicio del contenedor de todo el slider-->
         <div id="slideshow-principal" class="container-fluid">
@@ -635,55 +526,14 @@
         </section>
         <!--Fin de la seccion de acordeon-->
 
-        <!--Inicio del footer-->
-        <footer>
-            <div class="container__footer container-fluid">
-                <div class="box__footer">
-                    <div class="logo">
-                        <h5>CoopDinámica</h5>
-                    </div>
-                    <div class="terms">
-                        <p>Somos la Cooperativa de Ahorros, Credito y servicios multiples la dinamica. Tenemos mas de 10
-                            años siendo elegibles para todos, siendo
-                            una de las cooperativas mas confiables, seguras y donde valoramos tu dinero.
-                        </p>
-                    </div>
-                </div>
-                <div class="box__footer">
-                    <h5>Menu</h5>
-                    <hr class="linea-divisora-footer menu-linea">
-                    <a href="#inicio">Inicio</a>
-                    <a href="#">Para ti</a>
-                    <a href="#">Para tu negocio</a>
-                    <a href="#">Blog</a>
-                    <a href="#">Por que asociarse?</a>
-                    <a href="#">prensa</a>
-                    <a href="#">Contacto</a>
-                </div>
-
-                <div class="box__footer">
-                    <h5>Redes Sociales</h5>
-                    <hr class="linea-divisora-footer linea-redes">
-                    <a href="#"> <i class="fab fa-facebook-square"></i> Facebook</a>
-                    <a href="#"><i class="fab fa-twitter-square"></i> Twitter</a>
-                    <a href="#"><i class="fab fa-linkedin"></i> Linkedin</a>
-                    <a href="#"><i class="fab fa-instagram-square"></i> Instagram</a>
-                </div>
-
-            </div>
-
-            <div class="box__copyright">
-                <hr>
-                <p>Todos los derechos reservados © 2022 <b>Andy Rosado Desing Web | Cooperativa Dinamica 2022 ©</b></p>
-            </div>
-        </footer>
-        <!--Fin del footer-->
+        <div data-component="footer"></div>
 
 
     </section>
     <!--Fin contenedor principal de todo el conenido-->
 
     <script type="text/javascript" src="js/news.js"></script>
+    <script type="text/javascript" src="js/components.js"></script>
 </body>
 
 </html>
