@@ -1,66 +1,141 @@
-window.addEventListener('load', () => {
-    const monto = document.getElementById('monto');
-    const tiempo = document.getElementById('tiempo');
-    const interes = document.getElementById('interes');
-    const btnCalcular = document.getElementById('btnCalcular');
-    const llenarTabla = document.querySelector('#lista-tabla tbody');
+import { useMemo, useState } from 'react';
 
-    
+const formatDate = (date) => {
+  const day = String(date.getDate()).padStart(2, '0');
+  const month = String(date.getMonth() + 1).padStart(2, '0');
+  const year = date.getFullYear();
+  return `${day}-${month}-${year}`;
+};
 
-    btnCalcular.addEventListener('click', () => {
-        calcularCuota(monto.value, interes.value, tiempo.value);
+const calculateSchedule = ({ amount, interest, term }) => {
+  if (!amount || !interest || !term) {
+    return [];
+  }
 
-    })
+  const monthlyRate = interest / 100;
+  const cuota =
+    amount *
+    ((Math.pow(1 + monthlyRate, term) * monthlyRate) /
+      (Math.pow(1 + monthlyRate, term) - 1));
 
+  const schedule = [];
+  let balance = amount;
+  let currentDate = new Date();
+  currentDate.setMonth(currentDate.getMonth() + 1);
 
-    function calcularCuota(monto, interes, tiempo) {
+  for (let i = 0; i < term; i += 1) {
+    const pagoInteres = balance * monthlyRate;
+    const pagoCapital = cuota - pagoInteres;
+    balance -= pagoCapital;
 
-        while (llenarTabla.firstChild) {
-            llenarTabla.removeChild(llenarTabla.firstChild);
-        }
+    schedule.push({
+      fecha: formatDate(currentDate),
+      cuota: cuota.toFixed(2),
+      capital: pagoCapital.toFixed(2),
+      interes: pagoInteres.toFixed(2),
+      saldo: balance.toFixed(2),
+    });
 
-        let fechas = [];
-        let fechaActual = Date.now();
-        let mes_actual = moment(fechaActual);
-        mes_actual.add(1, 'month');
+    currentDate = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, currentDate.getDate());
+  }
 
-        let pagoInteres = 0, pagoCapital = 0, cuota = 0;
+  return schedule;
+};
 
-        cuota = monto * (Math.pow(1 + interes / 100, tiempo) * interes / 100) / (Math.pow(1 + interes / 100, tiempo) - 1);
+const useAmortization = () => {
+  const [amount, setAmount] = useState('');
+  const [interest, setInterest] = useState('');
+  const [term, setTerm] = useState('');
 
-        for (let i = 1; i <= tiempo; i++) {
+  const schedule = useMemo(
+    () =>
+      calculateSchedule({
+        amount: parseFloat(amount),
+        interest: parseFloat(interest),
+        term: parseInt(term, 10),
+      }),
+    [amount, interest, term]
+  );
 
-            pagoInteres = parseFloat(monto * (interes / 100));
-            pagoCapital = cuota - pagoInteres;
-            monto = parseFloat(monto - pagoCapital);
+  const clearForm = () => {
+    setAmount('');
+    setInterest('');
+    setTerm('');
+  };
 
-            //Formato fechas
-            fechas[i] = mes_actual.format('DD-MM-YYYY');
-            mes_actual.add(1, 'month');
+  return {
+    amount,
+    interest,
+    term,
+    schedule,
+    setAmount,
+    setInterest,
+    setTerm,
+    clearForm,
+  };
+};
 
-            const row = document.createElement('tr');
-            row.innerHTML = `
-                <td>${fechas[i]}</td>
-                <td>${cuota.toFixed(2)}</td>
-                <td>${pagoCapital.toFixed(2)}</td>
-                <td>${pagoInteres.toFixed(2)}</td>
-                <td>${monto.toFixed(2)}</td>
-            `;
-            llenarTabla.appendChild(row)
-        }
-    
-    }
+const AmortizationTable = () => {
+  const {
+    amount,
+    interest,
+    term,
+    schedule,
+    setAmount,
+    setInterest,
+    setTerm,
+    clearForm,
+  } = useAmortization();
 
+  return (
+    <div className="amortizacion">
+      <div className="amortizacion__form">
+        <input
+          type="number"
+          value={amount}
+          onChange={(event) => setAmount(event.target.value)}
+          placeholder="Monto"
+        />
+        <input
+          type="number"
+          value={interest}
+          onChange={(event) => setInterest(event.target.value)}
+          placeholder="Interés"
+        />
+        <input
+          type="number"
+          value={term}
+          onChange={(event) => setTerm(event.target.value)}
+          placeholder="Tiempo"
+        />
+        <button type="button" onClick={clearForm}>
+          Limpiar
+        </button>
+      </div>
+      <table className="amortizacion__tabla">
+        <thead>
+          <tr>
+            <th>Fecha</th>
+            <th>Cuota</th>
+            <th>Capital</th>
+            <th>Interés</th>
+            <th>Saldo</th>
+          </tr>
+        </thead>
+        <tbody>
+          {schedule.map((row) => (
+            <tr key={`${row.fecha}-${row.saldo}`}>
+              <td>{row.fecha}</td>
+              <td>{row.cuota}</td>
+              <td>{row.capital}</td>
+              <td>{row.interes}</td>
+              <td>{row.saldo}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+};
 
-   
-        $('#btnLimpiar').click(function() {
-          $('input[type="text"]').val('');
-        });
-    
-
-   
-})
-
-
-
-
+export { AmortizationTable, useAmortization };

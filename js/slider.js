@@ -1,123 +1,120 @@
-addEventListener('DOMContentLoaded', () => {
-    'use strict';
-    
-    const imagenes = ['img/1.jpg','img/2.jpg','img/3.jpg','img/4.jpg',
-                       'img/5.jpg','img/6.jpg', 'img/7.jpg']
+import { useEffect, useMemo, useRef, useState } from 'react';
 
+const Slider = ({
+  images = [
+    'img/1.jpg',
+    'img/2.jpg',
+    'img/3.jpg',
+    'img/4.jpg',
+    'img/5.jpg',
+    'img/6.jpg',
+    'img/7.jpg',
+  ],
+  autoPlayDelay = 5000,
+}) => {
+  const prefersReducedMotion = useMemo(
+    () => window.matchMedia('(prefers-reduced-motion: reduce)').matches,
+    []
+  );
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(prefersReducedMotion);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+  const intervalRef = useRef(null);
 
-    const img1 = document.querySelector('#img1')
-    const img2 = document.querySelector('#img2')
-    const progressBar = document.querySelector('#progress-bar')
-    const divIndicadores = document.querySelector('#indicadores')
-    const toggleButton = document.querySelector('#slider-toggle')
-    let porcentaje_base = 100/imagenes.length
-    let porcentaje_actual = porcentaje_base
-    let currentIndex = 0
-    let intervalo = null
-    let isPaused = false
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  const progressBase = 100 / images.length;
+  const progressWidth = progressBase * (currentIndex + 1);
 
-
-    for (let index = 0; index < imagenes.length; index++) {
-        const button = document.createElement('button')
-        button.type = 'button'
-        button.classList.add('circles')
-        button.dataset.index = index
-        button.setAttribute('aria-label', `Ir a la diapositiva ${index + 1}`)
-        divIndicadores.appendChild(button)
-    }
-    
-
-    progressBar.style.width = `${porcentaje_base}%`
-    img1.src = imagenes[0]
-    const circulos = document.querySelectorAll('.circles')
-    circulos[0].classList.add('resaltado')
-
-    const actualizarIndicadores = (index) => {
-        const circulo_actual = Array.from(circulos).find(el => Number(el.dataset.index) === index)
-        Array.from(circulos).forEach(cir => cir.classList.remove('resaltado'))
-        circulo_actual.classList.add('resaltado')
+  const startAutoPlay = () => {
+    if (intervalRef.current || prefersReducedMotion) {
+      return;
     }
 
-    const actualizarBarra = (index) => {
-        porcentaje_actual = porcentaje_base * (index + 1)
-        progressBar.style.width = `${porcentaje_actual}%`
+    intervalRef.current = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+      setIsTransitioning(true);
+    }, autoPlayDelay);
+  };
+
+  const stopAutoPlay = () => {
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+      intervalRef.current = null;
     }
+  };
 
-    const mostrarSlide = (index) => {
-        img2.src = imagenes[index]
-        actualizarIndicadores(index)
-
-        img2.classList.add('active')
-        actualizarBarra(index)
-        currentIndex = index
-
-        setTimeout(() => {
-            img1.src = img2.src
-            img2.classList.remove('active')
-        }, 1000)
-    }
-
-    const slideshow = () => {
-        const nextIndex = (currentIndex + 1) % imagenes.length
-        mostrarSlide(nextIndex)
-    }
-
-    const detenerAutoplay = () => {
-        if (intervalo) {
-            clearInterval(intervalo)
-            intervalo = null
-        }
-    }
-
-    const iniciarAutoplay = (force = false) => {
-        if (intervalo || (!force && prefersReducedMotion)) {
-            return
-        }
-
-        intervalo = setInterval(slideshow, 5000)
-    }
-
-    const actualizarBotonToggle = () => {
-        if (!toggleButton) {
-            return
-        }
-
-        toggleButton.textContent = isPaused ? 'Reproducir' : 'Pausar'
-        toggleButton.setAttribute('aria-pressed', String(isPaused))
-    }
-
-    circulos.forEach(circulo => {
-        circulo.addEventListener('click', (event) => {
-            const target = event.currentTarget
-            const index = Number(target.dataset.index)
-            isPaused = true
-            detenerAutoplay()
-            actualizarBotonToggle()
-            mostrarSlide(index)
-        })
-    })
-
-    if (toggleButton) {
-        toggleButton.addEventListener('click', () => {
-            if (isPaused) {
-                isPaused = false
-                iniciarAutoplay(true)
-            } else {
-                isPaused = true
-                detenerAutoplay()
-            }
-            actualizarBotonToggle()
-        })
-    }
-
-    if (prefersReducedMotion) {
-        isPaused = true
-        detenerAutoplay()
+  useEffect(() => {
+    if (isPaused) {
+      stopAutoPlay();
     } else {
-        iniciarAutoplay()
+      startAutoPlay();
     }
 
-    actualizarBotonToggle()
-    
-})
+    return stopAutoPlay;
+  }, [isPaused]);
+
+  useEffect(() => {
+    if (isTransitioning) {
+      const timeout = setTimeout(() => {
+        setIsTransitioning(false);
+      }, 1000);
+
+      return () => clearTimeout(timeout);
+    }
+
+    return undefined;
+  }, [isTransitioning]);
+
+  const handleIndicatorClick = (index) => {
+    setIsPaused(true);
+    stopAutoPlay();
+    setCurrentIndex(index);
+    setIsTransitioning(true);
+  };
+
+  const handleToggle = () => {
+    if (isPaused) {
+      setIsPaused(false);
+    } else {
+      setIsPaused(true);
+      stopAutoPlay();
+    }
+  };
+
+  return (
+    <div className="slider">
+      <div className="slider__images">
+        <img id="img1" src={images[currentIndex]} alt="Diapositiva actual" />
+        <img
+          id="img2"
+          src={images[currentIndex]}
+          className={isTransitioning ? 'active' : ''}
+          alt="Transición"
+        />
+      </div>
+      <div className="slider__controls">
+        <div id="progress-bar" style={{ width: `${progressWidth}%` }} />
+        <div id="indicadores">
+          {images.map((_, index) => (
+            <button
+              key={`indicator-${index}`}
+              type="button"
+              className={`circles ${index === currentIndex ? 'resaltado' : ''}`}
+              aria-label={`Ir a la diapositiva ${index + 1}`}
+              onClick={() => handleIndicatorClick(index)}
+            />
+          ))}
+        </div>
+        <button
+          id="slider-toggle"
+          type="button"
+          aria-pressed={isPaused}
+          onClick={handleToggle}
+        >
+          {isPaused ? 'Reproducir' : 'Pausar'}
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default Slider;
