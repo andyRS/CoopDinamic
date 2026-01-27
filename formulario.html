@@ -189,13 +189,21 @@
                 </div>
 
                 <form action="enviado.html" method="GET" class="formulario" id="formulario">
-                    <input type="text" name="nombre" placeholder="Nombre" id="nombre">
+                    <div id="form-messages" class="form-alert" aria-live="polite"></div>
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="nombre" placeholder="Nombre" id="nombre" autocomplete="name">
+                    <label for="cedula">Cedula</label>
                     <input type="text" name="cedula" placeholder="Cedula sin guiones" id="cedula">
-                    <input type="text" name="correo" placeholder="Correo electronico" id="correo">
-                    <input type="tel" name="telefono" placeholder="Telefono sin guiones" id="telefono">
+                    <label for="correo">Correo electronico</label>
+                    <input type="email" name="correo" placeholder="Correo electronico" id="correo" required minlength="6"
+                        pattern="^[^\\s@]+@[^\\s@]+\\.[^\\s@]{2,}$" autocomplete="email">
+                    <label for="telefono">Telefono</label>
+                    <input type="tel" name="telefono" placeholder="Telefono sin guiones" id="telefono" autocomplete="tel">
+                    <label for="asunto">Asunto</label>
                     <input type="text" name="asunto" placeholder="Asunto" id="asunto">
+                    <label for="mensaje">Mensaje</label>
                     <textarea name="mensaje" id="mensaje" placeholder="Mensaje"></textarea>
-                    <button type="button" id="validarCedula" onclick="validarFormulario()">Enviar</button>
+                    <button type="submit" id="validarCedula">Enviar</button>
                     <button type="reset" id="limpiarFormluario" value="Limpiar formulario">Limpiar Campos</button>
                 </form>
             </div>
