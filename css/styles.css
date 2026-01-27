@@ -14,17 +14,20 @@
 @font-face{
     font-family: 'Roboto-Regular';
     src: url(fonts/Roboto-Regular.ttf);
+    font-display: swap;
 }
 
 @font-face{
     font-family: 'Roboto-Bold';
     src: url(fonts/Roboto-Bold.ttf);
+    font-display: swap;
 
 }
 
 @font-face{
     font-family: 'Opens-Sans-Condensed';
     src: url(fonts/OpenSans-CondBold.ttf);
+    font-display: swap;
 
 }
 
