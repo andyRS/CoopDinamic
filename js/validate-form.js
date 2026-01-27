@@ -1,7 +1,6 @@
 // creamos la funcion
 function validarFormulario(){
-    // removemos el div con la clase alert
-    $('.alert').remove();
+    limpiarMensaje();
 
 
     // declarion de variables
@@ -116,13 +115,18 @@ function validarFormulario(){
         }
     }
 
-    $('form').submit();
     return true;
     
 } 
 
+$('form').on('submit', function(event){
+    if (!validarFormulario()) {
+        event.preventDefault();
+    }
+});
+
 $('input').focus(function(){
-    $('.alert').remove();
+    limpiarMensaje();
     colorDefault('nombre');
     colorDefault('cedula');
     colorDefault('correo');
@@ -131,7 +135,7 @@ $('input').focus(function(){
 });
 
 $('textarea').focus(function(){
-    $('.alert').remove();
+    limpiarMensaje();
     colorDefault('mensaje');
 });
 
@@ -152,7 +156,11 @@ function cambiarColor(dato){
 // funcion para mostrar la alerta
 
 function mostraAlerta(texto){
-    $('#nombre').before('<div class="alert">Error: '+ texto +'</div>');
+    $('#form-messages').text('Error: ' + texto);
+}
+
+function limpiarMensaje() {
+    $('#form-messages').text('');
 }
 
 // funcion para limpiar los campos
