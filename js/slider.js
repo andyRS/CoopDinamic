@@ -5,20 +5,26 @@ addEventListener('DOMContentLoaded', () => {
                        'img/5.jpg','img/6.jpg', 'img/7.jpg']
 
 
-    let i = 1
     const img1 = document.querySelector('#img1')
     const img2 = document.querySelector('#img2')
     const progressBar = document.querySelector('#progress-bar')
     const divIndicadores = document.querySelector('#indicadores')
+    const toggleButton = document.querySelector('#slider-toggle')
     let porcentaje_base = 100/imagenes.length
     let porcentaje_actual = porcentaje_base
+    let currentIndex = 0
+    let intervalo = null
+    let isPaused = false
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
 
     for (let index = 0; index < imagenes.length; index++) {
-        const div = document.createElement('div')
-        div.classList.add('circles')
-        div.id = index
-        divIndicadores.appendChild(div)
+        const button = document.createElement('button')
+        button.type = 'button'
+        button.classList.add('circles')
+        button.dataset.index = index
+        button.setAttribute('aria-label', `Ir a la diapositiva ${index + 1}`)
+        divIndicadores.appendChild(button)
     }
     
 
@@ -27,21 +33,24 @@ addEventListener('DOMContentLoaded', () => {
     const circulos = document.querySelectorAll('.circles')
     circulos[0].classList.add('resaltado')
 
-    const slideshow = () => {
-        img2.src = imagenes[i]
-        const circulo_actual = Array.from(circulos).find(el => el.id == i)
+    const actualizarIndicadores = (index) => {
+        const circulo_actual = Array.from(circulos).find(el => Number(el.dataset.index) === index)
         Array.from(circulos).forEach(cir => cir.classList.remove('resaltado'))
         circulo_actual.classList.add('resaltado')
+    }
+
+    const actualizarBarra = (index) => {
+        porcentaje_actual = porcentaje_base * (index + 1)
+        progressBar.style.width = `${porcentaje_actual}%`
+    }
+
+    const mostrarSlide = (index) => {
+        img2.src = imagenes[index]
+        actualizarIndicadores(index)
 
         img2.classList.add('active')
-        i++
-        porcentaje_actual+=porcentaje_base
-        progressBar.style.width = `${porcentaje_actual}%`
-
-        if (i == imagenes.length) {
-            i = 0
-            porcentaje_actual = porcentaje_base - porcentaje_base
-        }
+        actualizarBarra(index)
+        currentIndex = index
 
         setTimeout(() => {
             img1.src = img2.src
@@ -49,6 +58,66 @@ addEventListener('DOMContentLoaded', () => {
         }, 1000)
     }
 
-        setInterval(slideshow, 5000)
+    const slideshow = () => {
+        const nextIndex = (currentIndex + 1) % imagenes.length
+        mostrarSlide(nextIndex)
+    }
+
+    const detenerAutoplay = () => {
+        if (intervalo) {
+            clearInterval(intervalo)
+            intervalo = null
+        }
+    }
+
+    const iniciarAutoplay = (force = false) => {
+        if (intervalo || (!force && prefersReducedMotion)) {
+            return
+        }
+
+        intervalo = setInterval(slideshow, 5000)
+    }
+
+    const actualizarBotonToggle = () => {
+        if (!toggleButton) {
+            return
+        }
+
+        toggleButton.textContent = isPaused ? 'Reproducir' : 'Pausar'
+        toggleButton.setAttribute('aria-pressed', String(isPaused))
+    }
+
+    circulos.forEach(circulo => {
+        circulo.addEventListener('click', (event) => {
+            const target = event.currentTarget
+            const index = Number(target.dataset.index)
+            isPaused = true
+            detenerAutoplay()
+            actualizarBotonToggle()
+            mostrarSlide(index)
+        })
+    })
+
+    if (toggleButton) {
+        toggleButton.addEventListener('click', () => {
+            if (isPaused) {
+                isPaused = false
+                iniciarAutoplay(true)
+            } else {
+                isPaused = true
+                detenerAutoplay()
+            }
+            actualizarBotonToggle()
+        })
+    }
+
+    if (prefersReducedMotion) {
+        isPaused = true
+        detenerAutoplay()
+    } else {
+        iniciarAutoplay()
+    }
+
+    actualizarBotonToggle()
     
 })
