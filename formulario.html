@@ -67,90 +67,139 @@
         <!--inicio menu principal-->
         <nav id="menu" class="menu-area navbar navbar-expand-lg">
             <div class="container-fluid">
-                <ul class="navbar-nav row">
-                    <li class="nav-item"><a class="nav-link col-xs-12 col-sm-12 col-md-4 col-lg-4" href="index.html"><i
-                                class="fa fa-home icons-menu"></i>INICIO</a></li>
-                    <li class="nav-item"><a class="nav-link col-xs col-sm col-md-4 col-lg-4" href="#"><i
-                                class="fa fa-user icons-menu"></i>PARA TI</a>
-                        <ul class="dropdowm-1 navbar-nav row">
-                            <li class="nav-item col-xs col-sm col-md col-lg-4"><a href="#"><i
-                                        class="fas fa-coins icons-menu col-xs col-sm col-md-4 col-lg-4"></i>Ahorros o
-                                    inversión</a>
-                                <ul class="dropdowm-2 navbar-nav row">
+                <ul class="navbar-nav row" role="menubar">
+                    <li class="nav-item"><a class="nav-link col-xs-12 col-sm-12 col-md-4 col-lg-4" href="index.html"
+                            role="menuitem"><i class="fa fa-home icons-menu"></i>INICIO</a></li>
+                    <li class="nav-item">
+                        <button class="nav-link col-xs col-sm col-md-4 col-lg-4" type="button" aria-expanded="false"
+                            aria-controls="para-ti-menu" aria-haspopup="true" role="menuitem">
+                            <i class="fa fa-user icons-menu"></i>PARA TI
+                        </button>
+                        <ul class="dropdowm-1 navbar-nav row" id="para-ti-menu" role="menu">
+                            <li class="nav-item col-xs col-sm col-md col-lg-4">
+                                <button class="nav-link" type="button" aria-expanded="false"
+                                    aria-controls="para-ti-ahorros-menu" aria-haspopup="true" role="menuitem">
+                                    <i class="fas fa-coins icons-menu col-xs col-sm col-md-4 col-lg-4"></i>Ahorros o
+                                    inversión
+                                </button>
+                                <ul class="dropdowm-2 navbar-nav row" id="para-ti-ahorros-menu" role="menu">
                                     <li class="nav-item col-xs-12 col-sm-12 col-md-4 col-lg-4"><a class="nav-link"
-                                            href="#">Cuentas de Ahorros</a></li>
+                                            href="index.html#services-container" role="menuitem">Cuentas de Ahorros</a>
+                                    </li>
                                     <li class="nav-item col-xs-12 col-sm-12 col-md-4 col-lg-4"><a class="nav-link"
-                                            href="#">Ahorros Programados</a></li>
+                                            href="index.html#services-container" role="menuitem">Ahorros
+                                            Programados</a></li>
                                     <li class="nav-item col-xs-12 col-sm-12 col-md-4 col-lg-4"><a class="nav-link"
-                                            href="#">Certificados Financieros</a></li>
+                                            href="index.html#services-container" role="menuitem">Certificados
+                                            Financieros</a></li>
                                     <li class="nav-item col-xs-12 col-sm-12 col-md-4 col-lg-4"><a class="nav-link"
-                                            href="#">Alquiler Hipotecario</a></li>
+                                            href="index.html#services-container" role="menuitem">Alquiler
+                                            Hipotecario</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#"><i class="fa fa-credit-card icons-menu"></i>Créditos</a>
-                                <ul class="dropdowm-2 navbar-nav">
-                                    <li class="nav-item"><a class="nav-link" href="#">Expresos</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">De Consumo</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Hipotecarios</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Adquision de Vehiculos</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Educativos y Escolares</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Vacacionales</a></li>
+                            <li>
+                                <button class="nav-link" type="button" aria-expanded="false"
+                                    aria-controls="para-ti-creditos-menu" aria-haspopup="true" role="menuitem">
+                                    <i class="fa fa-credit-card icons-menu"></i>Créditos
+                                </button>
+                                <ul class="dropdowm-2 navbar-nav" id="para-ti-creditos-menu" role="menu">
+                                    <li class="nav-item"><a class="nav-link" href="calculadora-prestamos.html"
+                                            role="menuitem">Expresos</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="calculadora-prestamos.html"
+                                            role="menuitem">De Consumo</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="calculadora-prestamos.html"
+                                            role="menuitem">Hipotecarios</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="calculadora-prestamos.html"
+                                            role="menuitem">Adquision de Vehiculos</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="calculadora-prestamos.html"
+                                            role="menuitem">Educativos y Escolares</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="calculadora-prestamos.html"
+                                            role="menuitem">Vacacionales</a></li>
                                 </ul>
                             </li>
-                            <li><a href="calculadora-prestamos.html"><i
+                            <li><a href="calculadora-prestamos.html" role="menuitem"><i
                                         class="fa fa-calculator icons-menu"></i>Calculadora de Préstamos</a>
                         </ul>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-briefcase icons-menu"></i>PARA TU NEGOCIO</a>
-                        <ul class="dropdowm-1">
-                            <li class="nav-item"><a class="nav-link" href="#"><i
-                                        class="fa  fa-coins icons-menu "></i>Ahorros o inversión</a>
-                                <ul class="dropdowm-2 navbar-nav">
-                                    <li class="nav-item"><a class="nav-link" href="#">Cuentas de Ahorros</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Ahorros Programados</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Certificados Financieros</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Alquiler Hipotecario</a></li>
+                        <button class="nav-link" type="button" aria-expanded="false" aria-controls="negocio-menu"
+                            aria-haspopup="true" role="menuitem">
+                            <i class="fa fa-briefcase icons-menu"></i>PARA TU NEGOCIO
+                        </button>
+                        <ul class="dropdowm-1" id="negocio-menu" role="menu">
+                            <li class="nav-item">
+                                <button class="nav-link" type="button" aria-expanded="false"
+                                    aria-controls="negocio-ahorros-menu" aria-haspopup="true" role="menuitem">
+                                    <i class="fa  fa-coins icons-menu "></i>Ahorros o inversión
+                                </button>
+                                <ul class="dropdowm-2 navbar-nav" id="negocio-ahorros-menu" role="menu">
+                                    <li class="nav-item"><a class="nav-link" href="index.html#services-container"
+                                            role="menuitem">Cuentas de Ahorros</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="index.html#services-container"
+                                            role="menuitem">Ahorros Programados</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="index.html#services-container"
+                                            role="menuitem">Certificados Financieros</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="index.html#services-container"
+                                            role="menuitem">Alquiler Hipotecario</a></li>
                                 </ul>
                             </li>
-                            <li class="nav-item"><a class="nav-link" href="#"><i
-                                        class="far fa-credit-card icons-menu"></i>Créditos</a>
-                                <ul class="dropdowm-2 navbar-nav">
-                                    <li class="nav-item"><a class="nav-link" href="#">Expresos</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">De Consumo</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Hipotecarios</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Adquision de Vehiculos</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Educativos y Escolares</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Vacacionales</a></li>
+                            <li class="nav-item">
+                                <button class="nav-link" type="button" aria-expanded="false"
+                                    aria-controls="negocio-creditos-menu" aria-haspopup="true" role="menuitem">
+                                    <i class="far fa-credit-card icons-menu"></i>Créditos
+                                </button>
+                                <ul class="dropdowm-2 navbar-nav" id="negocio-creditos-menu" role="menu">
+                                    <li class="nav-item"><a class="nav-link" href="calculadora-prestamos.html"
+                                            role="menuitem">Expresos</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="calculadora-prestamos.html"
+                                            role="menuitem">De Consumo</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="calculadora-prestamos.html"
+                                            role="menuitem">Hipotecarios</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="calculadora-prestamos.html"
+                                            role="menuitem">Adquision de Vehiculos</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="calculadora-prestamos.html"
+                                            role="menuitem">Educativos y Escolares</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="calculadora-prestamos.html"
+                                            role="menuitem">Vacacionales</a></li>
                                 </ul>
                             </li>
                         </ul>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#"> <i class="fa fa-blog icons-menu"></i>DINAMIZATE</a>
-                        <ul class="dropdowm-1 navbar-nav">
-                            <li><a class="nav-link" href="blog.html"><i class="fab fa-blogger icons-menu"></i>BLOG</a>
+                        <button class="nav-link" type="button" aria-expanded="false" aria-controls="dinamizate-menu"
+                            aria-haspopup="true" role="menuitem">
+                            <i class="fa fa-blog icons-menu"></i>DINAMIZATE
+                        </button>
+                        <ul class="dropdowm-1 navbar-nav" id="dinamizate-menu" role="menu">
+                            <li><a class="nav-link" href="blog.html" role="menuitem"><i
+                                        class="fab fa-blogger icons-menu"></i>BLOG</a>
                             </li>
                         </ul>
                     </li>
 
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fas fa-handshake"></i>¿POR QUÉ ASOCIARSE?</a>
+                        <a class="nav-link" href="index.html#box-acordeon" role="menuitem"><i
+                                class="fas fa-handshake"></i>¿POR QUÉ
+                            ASOCIARSE?</a>
 
                     </li>
 
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa fa-newspaper icons-menu"></i>PRENSA</a>
+                        <a class="nav-link" href="blog.html" role="menuitem"><i
+                                class="fa fa-newspaper icons-menu"></i>PRENSA</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa fa-address-card icons-menu"></i>CONTACTO</a></i>
-                        <ul class="dropdowm-1 navbar-nav">
+                        <button class="nav-link" type="button" aria-expanded="false" aria-controls="contacto-menu"
+                            aria-haspopup="true" role="menuitem">
+                            <i class="fa fa-address-card icons-menu"></i>CONTACTO
+                        </button>
+                        <ul class="dropdowm-1 navbar-nav" id="contacto-menu" role="menu">
                             <li>
-                                <a class="nav-link" href="formulario.html"><i
+                                <a class="nav-link" href="formulario.html" role="menuitem"><i
                                         class="fa fa-wpforms icons-menu"></i>Formulario</a>
                             </li>
                         </ul>
@@ -160,6 +209,7 @@
         </nav>
         <!--Fin menu principal-->
 
+        <main id="main-content">
         <!--Inicio del Formulario de contacto-->
         <section id="container-form-contact">
             <h2>Formulario de conctacto</h2>
@@ -181,12 +231,15 @@
                         <p>(+1) 809-455-2020 <br /> (+1) 809-555-3030</p>
                     </div>
 
-                    <div class="redes-s">
-                        <a href=""><i class="fab fa-facebook"></i></a>
-                        <a href=""><i class="fab fa-twitter"></i></a>
-                        <a href=""><i class="fab fa-instagram"></i></a>
-                    </div>
+                <div class="redes-s">
+                        <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><i
+                                class="fab fa-facebook"></i></a>
+                        <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"><i
+                                class="fab fa-instagram"></i></a>
                 </div>
+            </div>
 
                 <form action="enviado.html" method="GET" class="formulario" id="formulario">
                     <input type="text" name="nombre" placeholder="Nombre" id="nombre">
@@ -201,13 +254,14 @@
             </div>
         </section>
         <!--Fin del Formulario de contacto-->
+        </main>
 
           <!--Inicio del footer-->
           <footer>
             <div class="container__footer container-fluid">
                 <div class="box__footer">
                     <div class="logo">
-                        <h5>CoopDinámica</h5>
+                        <h3>CoopDinámica</h3>
                     </div>
                     <div class="terms">
                         <p>Somos la Cooperativa de Ahorros, Credito y servicios multiples la dinamica. Tenemos mas de 10
@@ -217,24 +271,36 @@
                     </div>
                 </div>
                 <div class="box__footer">
-                    <h5>Menu</h5>
+                    <h3>Menu</h3>
                     <hr class="linea-divisora-footer menu-linea">
-                    <a href="#inicio">Inicio</a>
-                    <a href="#">Para ti</a>
-                    <a href="#">Para tu negocio</a>
-                    <a href="#">Blog</a>
-                    <a href="#">Por que asociarse?</a>
-                    <a href="#">prensa</a>
-                    <a href="#">Contacto</a>
+                    <nav aria-label="Enlaces del sitio">
+                        <ul>
+                            <li><a href="index.html">Inicio</a></li>
+                            <li><a href="index.html#services-container">Para ti</a></li>
+                            <li><a href="index.html#services-container">Para tu negocio</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="index.html#box-acordeon">Por que asociarse?</a></li>
+                            <li><a href="blog.html">Prensa</a></li>
+                            <li><a href="formulario.html">Contacto</a></li>
+                        </ul>
+                    </nav>
                 </div>
 
                 <div class="box__footer">
-                    <h5>Redes Sociales</h5>
+                    <h3>Redes Sociales</h3>
                     <hr class="linea-divisora-footer linea-redes">
-                    <a href="#"> <i class="fab fa-facebook-square"></i> Facebook</a>
-                    <a href="#"><i class="fab fa-twitter-square"></i> Twitter</a>
-                    <a href="#"><i class="fab fa-linkedin"></i> Linkedin</a>
-                    <a href="#"><i class="fab fa-instagram-square"></i> Instagram</a>
+                    <nav aria-label="Redes sociales">
+                        <ul>
+                            <li><a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><i
+                                        class="fab fa-facebook-square"></i> Facebook</a></li>
+                            <li><a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer"><i
+                                        class="fab fa-twitter-square"></i> Twitter</a></li>
+                            <li><a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"><i
+                                        class="fab fa-linkedin"></i> Linkedin</a></li>
+                            <li><a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"><i
+                                        class="fab fa-instagram-square"></i> Instagram</a></li>
+                        </ul>
+                    </nav>
                 </div>
 
             </div>
