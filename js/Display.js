@@ -1,55 +1,46 @@
-class Display {
-    constructor(displayValorAnterior, displayValorActual) {
-        this.displayValorActual = displayValorActual;
-        this.displayValorAnterior = displayValorAnterior;
-        this.calculador = new Calculadora();
-        this.tipoOperacion = undefined;
-        this.valorActual = '';
-        this.valorAnterior = '';
-        this.signos = {
-            sumar: '+',
-            dividir: '%',
-            multiplicar: 'x',
-            restar: '-', 
-        }
-    }
+import { useCalculator } from './Calculadora';
 
-    borrar() {
-        this.valorActual = this.valorActual.toString().slice(0,-1);
-        this.imprimirValores();
-    }
+const CalculatorDisplay = ({ operators = [], numbers = [] }) => {
+  const { addNumber, clearAll, clearEntry, compute, display } = useCalculator();
 
-    borrarTodo() {
-        this.valorActual = '';
-        this.valorAnterior = '';
-        this.tipoOperacion = undefined;
-        this.imprimirValores();
-    }
+  return (
+    <div className="calculadora">
+      <div className="display">
+        <div id="valor-anterior">
+          {display.previousValue} {display.operationSymbol}
+        </div>
+        <div id="valor-actual">{display.currentValue}</div>
+      </div>
+      <div className="teclado">
+        <button type="button" onClick={clearAll} className="operador">
+          AC
+        </button>
+        <button type="button" onClick={clearEntry} className="operador">
+          ⌫
+        </button>
+        {operators.map((operator) => (
+          <button
+            key={operator.value}
+            type="button"
+            className="operador"
+            onClick={() => compute(operator.value)}
+          >
+            {operator.label}
+          </button>
+        ))}
+        {numbers.map((number) => (
+          <button
+            key={number}
+            type="button"
+            className="numero"
+            onClick={() => addNumber(number)}
+          >
+            {number}
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+};
 
-    computar(tipo) {
-        this.tipoOperacion !== 'igual' && this.calcular();
-        this.tipoOperacion = tipo;
-        this.valorAnterior = this.valorActual || this.valorAnterior;
-        this.valorActual = '';
-        this.imprimirValores();
-    }
-
-    agregarNumero(numero) {
-        if(numero === '.' && this.valorActual.includes('.')) return
-        this.valorActual = this.valorActual.toString() + numero.toString();
-        this.imprimirValores();
-    }
-
-    imprimirValores() {
-        this.displayValorActual.textContent = this.valorActual;
-        this.displayValorAnterior.textContent = `${this.valorAnterior} ${this.signos[this.tipoOperacion] || ''}`;
-    }
-
-    calcular() {
-        const valorAnterior = parseFloat(this.valorAnterior);
-        const valorActual = parseFloat(this.valorActual);
-
-        if( isNaN(valorActual)  || isNaN(valorAnterior) ) return
-        this.valorActual = this.calculador[this.tipoOperacion](valorAnterior, valorActual);
-    }
-}
+export default CalculatorDisplay;
