@@ -1,9 +1,33 @@
-'use strict'
+import { useEffect, useState } from 'react';
 
-window.addEventListener('load', ()=>{
-    const contenedorLoader = document.querySelector('.contenedor_loader');
+const Loader = ({ children, className = '' }) => {
+  const [isLoading, setIsLoading] = useState(true);
 
-    contenedorLoader.style.opacity= 0;
-    contenedorLoader.style.visibility = 'hidden';
+  useEffect(() => {
+    const handleLoad = () => setIsLoading(false);
 
-});
+    if (document.readyState === 'complete') {
+      handleLoad();
+    } else {
+      window.addEventListener('load', handleLoad);
+    }
+
+    return () => {
+      window.removeEventListener('load', handleLoad);
+    };
+  }, []);
+
+  return (
+    <div
+      className={`contenedor_loader ${className}`.trim()}
+      style={{
+        opacity: isLoading ? 1 : 0,
+        visibility: isLoading ? 'visible' : 'hidden',
+      }}
+    >
+      {children}
+    </div>
+  );
+};
+
+export default Loader;

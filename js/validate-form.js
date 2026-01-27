@@ -1,170 +1,166 @@
-// creamos la funcion
-function validarFormulario(){
-    limpiarMensaje();
+import { useState } from 'react';
 
+const initialValues = {
+  nombre: '',
+  correo: '',
+  cedula: '',
+  telefono: '',
+  asunto: '',
+  mensaje: '',
+};
 
-    // declarion de variables
-   
-    var nombre=$('#nombre').val(),
-        correo=$('#correo').val(),
-        cedula=$('#cedula').val(),
-        telefono=$('#telefono').val(),
-        asunto=$('#asunto').val(),
-        mensaje=$('#mensaje').val();
+const regex = {
+  nombre: /^[a-zA-ZñÑáéíóúÁÉÍÓÚ ]*$/,
+  correo: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/,
+  cedula: /^\d{11}$/,
+  telefono: /^\d{3}\d{3}\d{4}$/,
+  asunto: /^[,\.\a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ ]*$/,
+  mensaje: /^[,\.\a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ ]*$/,
+};
 
-    // validamos el campo nombre
-    if(nombre=="" || nombre==null){
+const validateFields = (values) => {
+  const errors = {};
 
-        cambiarColor("nombre");
-        // mostramos le mensaje de alerta
-        mostraAlerta("Campo obligatorio");
-        return false;
-    }else{
-        var expresion= /^[a-zA-ZñÑáéíóúÁÉÍÓÚ ]*$/;
-        if(!expresion.test(nombre)){
-            // mostrara el mesaje que debe ingresar un nombre válido
-            cambiarColor("nombre");
-            mostraAlerta("No se permiten carateres especiales o numeros");
-            return false;
-        }
-    }
-
-   
-    //validamos la cedula
-     if(cedula=="" || cedula==null || cedula.length == 0  || isNaN(cedula)){
-        cambiarColor("cedula");
-        // mostramos le mensaje de alerta
-        mostraAlerta("Campo obligatorio");
-        return false;
-    }else{
-        var expresion= /^\d{11}$/;
-        if(!expresion.test(cedula)){
-            // mostrara el mesaje que debe ingresar una cedula válida
-            cambiarColor("cedula");
-            mostraAlerta("Ingrese una cedula valida ");
-            return false;
-        }
-    }
-   
-   
-    // validamos el correo
-    if(correo=="" || correo==null){
-
-        cambiarColor("correo");
-        // mostramos le mensaje de alerta
-        mostraAlerta("Campo obligatorio");
-        return false;
-    }else{
-        var expresion= /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
-        if(!expresion.test(correo)){
-            // mostrara el mesaje que debe ingresar un correo válido
-            cambiarColor("correo");
-            mostraAlerta("Por favor ingrese un correo válido");
-            return false;
-        }
-    }
-
-      //validamos el telefono
-      if(telefono=="" || telefono==null || telefono.length == 0){
-        cambiarColor("telefono");
-        // mostramos le mensaje de alerta
-        mostraAlerta("Campo obligatorio");
-        return false;
-    }else{
-        var expresion= /^\d{3}\d{3}\d{4}$/;
-        if(!expresion.test(telefono)){
-            // mostrara el mesaje que debe ingresar una cedula válida
-            cambiarColor("telefono");
-            mostraAlerta("Por favor ingrese un numero de telefono valido");
-            return false;
-        }
-    }
-   
-
-    // validamos el asunto
-    if(asunto=="" || asunto==null){
-
-        cambiarColor("asunto");
-        // mostramos le mensaje de alerta
-        mostraAlerta("Campo obligatorio");
-        return false;
-    }else{
-        var expresion= /^[,\\.\\a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ ]*$/;
-        if(!expresion.test(asunto)){
-            // mostrara el mesaje que debe ingresar un asunto válido
-            cambiarColor("asunto");
-            mostraAlerta("No se permiten caracteres especiales");
-            return false;
-        }
-    }
-
-     // validamos el mensaje
-     if(mensaje=="" || mensaje==null){
-
-        cambiarColor("mensaje");
-        // mostramos le mensaje de alerta
-        mostraAlerta("Campo obligatorio");
-        return false;
-    }else{
-        var expresion= /^[,\\.\\a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ ]*$/;
-        if(!expresion.test(mensaje)){
-            // mostrara el mesaje que debe ingresar un mensaje válido
-            cambiarColor("mensaje");
-            mostraAlerta("No se permiten caracteres especiales");
-            return false;
-        }
-    }
-
-    return true;
-    
-} 
-
-$('form').on('submit', function(event){
-    if (!validarFormulario()) {
-        event.preventDefault();
-    }
-});
-
-$('input').focus(function(){
-    limpiarMensaje();
-    colorDefault('nombre');
-    colorDefault('cedula');
-    colorDefault('correo');
-    colorDefault('asunto');
-    colorDefault('telefono')
-});
-
-$('textarea').focus(function(){
-    limpiarMensaje();
-    colorDefault('mensaje');
-});
-
-// creamos un funcion de color por defecto a los bordes de los inputs
-function colorDefault(dato){
-    $('#' + dato).css({
-        border: "1px solid #999"
-    });
-}
-
-// creamos una funcio para cambiar de color a su bordes de los input
-function cambiarColor(dato){
-    $('#' + dato).css({
-        border: "1px solid #dd5144"
-    });
-}
-
-// funcion para mostrar la alerta
-
-function mostraAlerta(texto){
-    $('#form-messages').text('Error: ' + texto);
-}
-
-function limpiarMensaje() {
-    $('#form-messages').text('');
-}
-
-// funcion para limpiar los campos
-
-function limpiarFormulario() {
-    document.getElementById("formulario").reset();
+  if (!values.nombre) {
+    errors.nombre = 'Campo obligatorio';
+  } else if (!regex.nombre.test(values.nombre)) {
+    errors.nombre = 'No se permiten carateres especiales o numeros';
   }
+
+  if (!values.cedula) {
+    errors.cedula = 'Campo obligatorio';
+  } else if (!regex.cedula.test(values.cedula)) {
+    errors.cedula = 'Ingrese una cedula valida';
+  }
+
+  if (!values.correo) {
+    errors.correo = 'Campo obligatorio';
+  } else if (!regex.correo.test(values.correo)) {
+    errors.correo = 'Por favor ingrese un correo válido';
+  }
+
+  if (!values.telefono) {
+    errors.telefono = 'Campo obligatorio';
+  } else if (!regex.telefono.test(values.telefono)) {
+    errors.telefono = 'Por favor ingrese un numero de telefono valido';
+  }
+
+  if (!values.asunto) {
+    errors.asunto = 'Campo obligatorio';
+  } else if (!regex.asunto.test(values.asunto)) {
+    errors.asunto = 'No se permiten caracteres especiales';
+  }
+
+  if (!values.mensaje) {
+    errors.mensaje = 'Campo obligatorio';
+  } else if (!regex.mensaje.test(values.mensaje)) {
+    errors.mensaje = 'No se permiten caracteres especiales';
+  }
+
+  return errors;
+};
+
+const useContactFormValidation = () => {
+  const [values, setValues] = useState(initialValues);
+  const [errors, setErrors] = useState({});
+  const [formMessage, setFormMessage] = useState('');
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setValues((prevValues) => ({ ...prevValues, [name]: value }));
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const nextErrors = validateFields(values);
+    setErrors(nextErrors);
+
+    if (Object.keys(nextErrors).length > 0) {
+      const firstError = Object.values(nextErrors)[0];
+      setFormMessage(`Error: ${firstError}`);
+      return;
+    }
+
+    setFormMessage('');
+  };
+
+  const handleReset = () => {
+    setValues(initialValues);
+    setErrors({});
+    setFormMessage('');
+  };
+
+  return {
+    errors,
+    formMessage,
+    handleChange,
+    handleReset,
+    handleSubmit,
+    values,
+  };
+};
+
+const ContactForm = () => {
+  const { errors, formMessage, handleChange, handleReset, handleSubmit, values } =
+    useContactFormValidation();
+
+  return (
+    <form id="formulario" onSubmit={handleSubmit}>
+      <input
+        id="nombre"
+        name="nombre"
+        value={values.nombre}
+        onChange={handleChange}
+        className={errors.nombre ? 'is-error' : ''}
+        placeholder="Nombre"
+      />
+      <input
+        id="cedula"
+        name="cedula"
+        value={values.cedula}
+        onChange={handleChange}
+        className={errors.cedula ? 'is-error' : ''}
+        placeholder="Cédula"
+      />
+      <input
+        id="correo"
+        name="correo"
+        value={values.correo}
+        onChange={handleChange}
+        className={errors.correo ? 'is-error' : ''}
+        placeholder="Correo"
+      />
+      <input
+        id="telefono"
+        name="telefono"
+        value={values.telefono}
+        onChange={handleChange}
+        className={errors.telefono ? 'is-error' : ''}
+        placeholder="Teléfono"
+      />
+      <input
+        id="asunto"
+        name="asunto"
+        value={values.asunto}
+        onChange={handleChange}
+        className={errors.asunto ? 'is-error' : ''}
+        placeholder="Asunto"
+      />
+      <textarea
+        id="mensaje"
+        name="mensaje"
+        value={values.mensaje}
+        onChange={handleChange}
+        className={errors.mensaje ? 'is-error' : ''}
+        placeholder="Mensaje"
+      />
+      <div id="form-messages">{formMessage}</div>
+      <button type="submit">Enviar</button>
+      <button type="button" onClick={handleReset}>
+        Limpiar
+      </button>
+    </form>
+  );
+};
+
+export { ContactForm, useContactFormValidation };
