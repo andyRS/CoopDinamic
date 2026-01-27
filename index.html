@@ -19,17 +19,6 @@
     <link rel="stylesheet" href="css/jquery-ui.structure.min.css" />
     <link rel="stylesheet" href="css/jquery-ui.theme.min.css" />
 
-    <!-- llamada a bootstrap -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-
     <!--inicio de mis estilos CSS -->
     <link rel="stylesheet" href="css/styles.css">
     <!--fin de mis estilos CSS -->
@@ -44,7 +33,6 @@
 
     <!--Inicio Jquery para proyectos -->
     <script type="text/javascript" src="js/Jquery/jquery-3.6.0.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script type="text/javascript" src="js/Jquery/jquery-ui.min.js"></script>
     <!--Fin Jquery para proyectos -->
 
@@ -63,8 +51,6 @@
     <script type="text/javascript" src="js/loader.js"></script>
     <script type="text/javascript" src="js/main-carousel-services.js"></script>
     <script type="text/javascript" src="js/scripts_we.js"></script>
-    <script type="text/javascript" src="js/Jquery/jquery.min.js"></script>
-    <script type="text/javascript" src="js/Jquery/jquery-ui.min.js"></script>
 
     <!--Fin Script de la web -->
 </head>
@@ -97,36 +83,32 @@
         <!--Fin cabecera de la pagina-->
 
         <!--inicio menu principal-->
-        <nav id="menu" class="menu-area navbar navbar-expand-lg">
+        <nav id="menu" class="menu-area">
             <div class="container-fluid">
-                <ul class="navbar-nav row">
-                    <li class="nav-item"><a class="nav-link col-xs-12 col-sm-12 col-md-4 col-lg-4" href="index.html"><i
+                <ul class="row">
+                    <li><a href="index.html"><i
                                 class="fa fa-home icons-menu"></i>INICIO</a></li>
-                    <li class="nav-item"><a class="nav-link col-xs col-sm col-md-4 col-lg-4" href="#"><i
+                    <li><a href="#"><i
                                 class="fa fa-user icons-menu"></i>PARA TI</a>
-                        <ul class="dropdowm-1 navbar-nav row">
-                            <li class="nav-item col-xs col-sm col-md col-lg-4"><a href="#"><i
-                                        class="fas fa-coins icons-menu col-xs col-sm col-md-4 col-lg-4"></i>Ahorros o
+                        <ul class="dropdowm-1 row">
+                            <li><a href="#"><i
+                                        class="fas fa-coins icons-menu"></i>Ahorros o
                                     inversión</a>
-                                <ul class="dropdowm-2 navbar-nav row">
-                                    <li class="nav-item col-xs-12 col-sm-12 col-md-4 col-lg-4"><a class="nav-link"
-                                            href="#">Cuentas de Ahorros</a></li>
-                                    <li class="nav-item col-xs-12 col-sm-12 col-md-4 col-lg-4"><a class="nav-link"
-                                            href="#">Ahorros Programados</a></li>
-                                    <li class="nav-item col-xs-12 col-sm-12 col-md-4 col-lg-4"><a class="nav-link"
-                                            href="#">Certificados Financieros</a></li>
-                                    <li class="nav-item col-xs-12 col-sm-12 col-md-4 col-lg-4"><a class="nav-link"
-                                            href="#">Alquiler Hipotecario</a></li>
+                                <ul class="dropdowm-2 row">
+                                    <li><a href="#">Cuentas de Ahorros</a></li>
+                                    <li><a href="#">Ahorros Programados</a></li>
+                                    <li><a href="#">Certificados Financieros</a></li>
+                                    <li><a href="#">Alquiler Hipotecario</a></li>
                                 </ul>
                             </li>
                             <li><a href="#"><i class="fa fa-credit-card icons-menu"></i>Créditos</a>
-                                <ul class="dropdowm-2 navbar-nav">
-                                    <li class="nav-item"><a class="nav-link" href="#">Expresos</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">De Consumo</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Hipotecarios</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Adquision de Vehiculos</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Educativos y Escolares</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Vacacionales</a></li>
+                                <ul class="dropdowm-2">
+                                    <li><a href="#">Expresos</a></li>
+                                    <li><a href="#">De Consumo</a></li>
+                                    <li><a href="#">Hipotecarios</a></li>
+                                    <li><a href="#">Adquision de Vehiculos</a></li>
+                                    <li><a href="#">Educativos y Escolares</a></li>
+                                    <li><a href="#">Vacacionales</a></li>
                                 </ul>
                             </li>
                             <li><a href="calculadora-prestamos.html"><i
@@ -136,53 +118,53 @@
                     <li>
                         <a href="#"><i class="fa fa-briefcase icons-menu"></i>PARA TU NEGOCIO</a>
                         <ul class="dropdowm-1">
-                            <li class="nav-item"><a class="nav-link" href="#"><i
-                                        class="fa  fa-coins icons-menu "></i>Ahorros o inversión</a>
-                                <ul class="dropdowm-2 navbar-nav">
-                                    <li class="nav-item"><a class="nav-link" href="#">Cuentas de Ahorros</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Ahorros Programados</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Certificados Financieros</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Alquiler Hipotecario</a></li>
+                            <li><a href="#"><i
+                                        class="fa fa-coins icons-menu"></i>Ahorros o inversión</a>
+                                <ul class="dropdowm-2">
+                                    <li><a href="#">Cuentas de Ahorros</a></li>
+                                    <li><a href="#">Ahorros Programados</a></li>
+                                    <li><a href="#">Certificados Financieros</a></li>
+                                    <li><a href="#">Alquiler Hipotecario</a></li>
                                 </ul>
                             </li>
-                            <li class="nav-item"><a class="nav-link" href="#"><i
+                            <li><a href="#"><i
                                         class="far fa-credit-card icons-menu"></i>Créditos</a>
-                                <ul class="dropdowm-2 navbar-nav">
-                                    <li class="nav-item"><a class="nav-link" href="#">Expresos</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">De Consumo</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Hipotecarios</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Adquision de Vehiculos</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Educativos y Escolares</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Vacacionales</a></li>
+                                <ul class="dropdowm-2">
+                                    <li><a href="#">Expresos</a></li>
+                                    <li><a href="#">De Consumo</a></li>
+                                    <li><a href="#">Hipotecarios</a></li>
+                                    <li><a href="#">Adquision de Vehiculos</a></li>
+                                    <li><a href="#">Educativos y Escolares</a></li>
+                                    <li><a href="#">Vacacionales</a></li>
                                 </ul>
                             </li>
                         </ul>
                     </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"> <i class="fa fa-blog icons-menu"></i>DINAMIZATE</a>
-                        <ul class="dropdowm-1 navbar-nav">
-                            <li><a class="nav-link" href="blog.html"><i class="fab fa-blogger icons-menu"></i>BLOG</a>
+                    <li>
+                        <a href="#"> <i class="fa fa-blog icons-menu"></i>DINAMIZATE</a>
+                        <ul class="dropdowm-1">
+                            <li><a href="blog.html"><i class="fab fa-blogger icons-menu"></i>BLOG</a>
                             </li>
                         </ul>
                     </li>
 
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fas fa-handshake"></i>¿POR QUÉ ASOCIARSE?</a>
+                    <li>
+                        <a href="#"><i class="fas fa-handshake"></i>¿POR QUÉ ASOCIARSE?</a>
 
                     </li>
 
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa fa-newspaper icons-menu"></i>PRENSA</a>
+                    <li>
+                        <a href="#"><i class="fa fa-newspaper icons-menu"></i>PRENSA</a>
                     </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa fa-address-card icons-menu"></i>CONTACTO</a></i>
-                        <ul class="dropdowm-1 navbar-nav">
+                    <li>
+                        <a href="#"><i class="fa fa-address-card icons-menu"></i>CONTACTO</a></i>
+                        <ul class="dropdowm-1">
                             <li>
-                                <a class="nav-link" href="formulario.html"><i
+                                <a href="formulario.html"><i
                                         class="fa fa-wpforms icons-menu"></i>Formulario</a>
                             </li>
                         </ul>
@@ -210,10 +192,10 @@
         <!--Inicio seccion de destacados-->
         <section id="destacado" class="container-fluid">
             <div class="row">
-                <div class="seccion-destacado col-xs-6 col-sm-6 col-md-4 col-lg-4">
+                <div class="seccion-destacado col s12 m6">
                     <h2>!Nuevo! Portal Web</h2>
                 </div>
-                <div class="CoopDinamica col-xs-6 col-sm-6 col-md-4 col-lg-4">
+                <div class="CoopDinamica col s12 m6">
                     <p>Cooperativa de Ahorros, credito y servicios multiples la dinamica</p>
                 </div>
             </div>
