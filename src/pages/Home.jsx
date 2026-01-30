@@ -154,7 +154,7 @@ const Home = () => {
                 },
                 {
                   title: 'Servicios',
-                  img: '/img/certificado.webp',
+                  img: '/img/servicios.webp',
                   items: [
                     'Asesoría financiera',
                     'Educación cooperativa',
