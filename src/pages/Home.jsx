@@ -32,14 +32,9 @@ const Home = () => {
             </p>
 
             <div className="flex flex-wrap gap-4">
-              <Button
-                variant="cta"
-                size="xl"
-                onClick={() => setShowSimulator(true)}
-              >
+              <Button variant="cta" size="xl" onClick={() => setShowSimulator(true)}>
                 🧮 Simular Crédito
               </Button>
-
               <Button variant="outline" size="xl">
                 ✅ Hazte Socio
               </Button>
@@ -76,13 +71,9 @@ const Home = () => {
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-              
-              {/* TEXTO */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                 <div>
-                  <h3 className="text-2xl font-bold mb-4 text-gray-900">
-                    Ventajas
-                  </h3>
+                  <h3 className="text-2xl font-bold mb-4">Ventajas</h3>
                   <ul className="space-y-2 text-gray-700">
                     <li>✔ Ganas dinero por ahorrar</li>
                     <li>✔ Préstamos de fácil acceso</li>
@@ -93,9 +84,7 @@ const Home = () => {
                 </div>
 
                 <div>
-                  <h3 className="text-2xl font-bold mb-4 text-gray-900">
-                    Beneficios
-                  </h3>
+                  <h3 className="text-2xl font-bold mb-4">Beneficios</h3>
                   <ul className="space-y-2 text-gray-700">
                     <li>✔ Repartición de excedentes</li>
                     <li>✔ Tasas competitivas</li>
@@ -106,7 +95,6 @@ const Home = () => {
                 </div>
               </div>
 
-              {/* IMAGEN EMOCIONAL */}
               <img
                 src="/img/familia_real.webp"
                 alt="Familia socia de CoopDinámica"
@@ -166,25 +154,41 @@ const Home = () => {
               ].map((card, i) => (
                 <div
                   key={i}
-                  className="bg-gray-50 rounded-2xl p-6 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all"
+                  className="
+                    bg-white
+                    rounded-2xl
+                    border border-gray-100
+                    shadow-md
+                    hover:shadow-xl
+                    hover:-translate-y-1
+                    transition-all
+                    duration-300
+                    overflow-hidden
+                  "
                 >
-                  <div className="relative mb-4">
+                  {/* Imagen */}
+                  <div className="relative h-36">
                     <img
                       src={card.img}
-                      alt={card.title === 'Ahorro' ? 'Ahorro' : card.title === 'Crédito' ? 'Crédito' : 'Certificado'}
-                      className="w-full h-40 object-cover rounded-xl mb-4"
+                      alt={card.title}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
                     />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
                   </div>
 
-                  <h3 className="text-2xl font-bold text-center text-coop-blue mb-2">
-                    {card.title}
-                  </h3>
+                  {/* Contenido */}
+                  <div className="p-6">
+                    <h3 className="text-2xl font-bold text-center text-coop-blue mb-4">
+                      {card.title}
+                    </h3>
 
-                  <ul className="space-y-1 text-gray-700">
-                    {card.items.map((item, idx) => (
-                      <li key={idx}>✔ {item}</li>
-                    ))}
-                  </ul>
+                    <ul className="space-y-2 text-gray-700 text-sm">
+                      {card.items.map((item, idx) => (
+                        <li key={idx}>✔ {item}</li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               ))}
             </div>
@@ -211,22 +215,19 @@ const Home = () => {
                   step: 1,
                   img: '/img/step-form.webp',
                   title: 'Completa el formulario',
-                  text:
-                    'Realiza el proceso en línea o visita una de nuestras sucursales.'
+                  text: 'Realiza el proceso en línea o visita una de nuestras sucursales.'
                 },
                 {
                   step: 2,
                   img: '/img/step-payment.webp',
                   title: 'Realiza el pago de apertura',
-                  text:
-                    'RD$1,000 (RD$500 ahorros + RD$500 apertura).'
+                  text: 'RD$1,000 (RD$500 ahorros + RD$500 apertura).'
                 },
                 {
                   step: 3,
                   img: '/img/step-member.webp',
                   title: 'Conviértete en socio',
-                  text:
-                    'Forma parte de nuestra gran familia cooperativa.'
+                  text: 'Forma parte de nuestra gran familia cooperativa.'
                 }
               ].map((step, i) => (
                 <div
@@ -257,11 +258,7 @@ const Home = () => {
               <Button variant="cta" size="xl">
                 ✅ Hazte Socio
               </Button>
-              <Button
-                variant="outline"
-                size="xl"
-                onClick={() => setShowSimulator(true)}
-              >
+              <Button variant="outline" size="xl" onClick={() => setShowSimulator(true)}>
                 🧮 Simular Crédito
               </Button>
             </div>
