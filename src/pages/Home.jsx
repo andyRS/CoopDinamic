@@ -1,5 +1,32 @@
+        {/* Beneficios para hacerse socio */}
+        <section className="py-16 bg-gray-50 border-b border-gray-100">
+          <div className="container mx-auto px-4">
+            <h3 className="uppercase tracking-widest text-sm text-gray-500 font-semibold mb-2 text-center">Disfruta de todos estos beneficios</h3>
+            <h2 className="text-4xl font-extrabold text-center mb-8 text-coop-green">¿Quieres Formar Parte De CoopDinámica?</h2>
+            <p className="text-center text-gray-600 mb-12">¡Es muy fácil! Solo tienes que seguir estos pasos:</p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+              {/* Paso 1 */}
+              <div className="flex flex-col items-center">
+                <img src="/img/solicitud-formulario.png" alt="Formulario" className="w-40 h-40 object-contain mb-4" />
+                <h4 className="text-xl font-bold mb-2 text-coop-blue text-center">Completa el formulario de solicitud</h4>
+                <p className="text-gray-600 text-center">Puedes realizar el proceso de forma virtual o visitando con tu cédula alguna de nuestras sucursales.</p>
+              </div>
+              {/* Paso 2 */}
+              <div className="flex flex-col items-center">
+                <img src="/img/comprobante.png" alt="Comprobante" className="w-40 h-40 object-contain mb-4" />
+                <h4 className="text-xl font-bold mb-2 text-coop-blue text-center">Realiza el pago del monto de apertura</h4>
+                <p className="text-gray-600 text-center">Equivalente a RD$ 1,000 (RD$ 500 ahorros retirables + RD$ 500 de apertura).</p>
+              </div>
+              {/* Paso 3 */}
+              <div className="flex flex-col items-center">
+                <img src="/img/hazte-socio.png" alt="Hazte Socio" className="w-40 h-40 object-contain mb-4" />
+                <h4 className="text-xl font-bold mb-2 text-coop-blue text-center">Conviértete en un socio feliz</h4>
+                <p className="text-gray-600 text-center">Completa la solicitud en línea y forma parte de nuestra gran familia.</p>
+              </div>
+            </div>
+          </div>
+        </section>
 import Loader from '../components/ui/Loader'
-import Header from '../components/layout/Header'
 import Navigation from '../components/layout/NavigationModern'
 import Footer from '../components/layout/Footer'
 import { useState } from 'react'
@@ -13,24 +40,20 @@ import FAQSection from '../components/features/FAQSection'
 const Home = () => {
   const [showSimulator, setShowSimulator] = useState(false)
   return (
-    <div className="min-h-screen bg-white">
+    <>
       <Loader />
-      <div className="container mx-auto px-4">
-        <Header />
-        <Navigation />
-
-        {/* Hero personalizado con botones y modal */}
-        <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-coop-green via-coop-dark-green to-blue-900">
-          <div className="relative z-10 container mx-auto px-4 text-center text-white">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6">
-              Tu cooperativa digital,
-              <br />
-              <span className="text-yellow-300">simple y segura</span>
+      <Navigation />
+      <div className="min-h-screen bg-gray-50 pt-24">
+        {/* HERO MODERNO */}
+        <section className="relative flex flex-col md:flex-row items-center justify-between gap-8 bg-white py-16 px-4 md:px-12 border-b border-gray-100">
+          <div className="flex-1 max-w-xl z-10">
+            <h1 className="text-4xl md:text-6xl font-extrabold text-coop-green mb-4 leading-tight">
+              ¡Cuna y Origen del <span className="text-coop-blue">Cooperativismo</span> Dominicano!
             </h1>
-            <p className="text-xl mb-12">
-              Solicita créditos en minutos. Sin papeleos, sin esperas.
+            <p className="text-lg md:text-xl text-gray-700 mb-6">
+              CoopDinámica ofrece servicios financieros y sociales en beneficio de la comunidad. Nuestra misión es fomentar el desarrollo económico y social a través de la cooperación y la solidaridad.
             </p>
-            <div className="flex gap-4 justify-center">
+            <div className="flex flex-wrap gap-4 mb-4">
               <Button 
                 variant="cta" 
                 size="xl"
@@ -43,7 +66,11 @@ const Home = () => {
               </Button>
             </div>
           </div>
+          <div className="flex-1 flex justify-center items-center">
+            <img src="/img/hero-coop.jpg" alt="Cooperativa" className="rounded-2xl shadow-xl w-full max-w-md object-cover" />
+	  </div>
         </section>
+
 
         <Modal 
           isOpen={showSimulator}
@@ -53,117 +80,128 @@ const Home = () => {
           <LoanSimulator />
         </Modal>
 
-        {/* Services Section */}
-        <ServicesCarousel />
-        {/* Why Join Section */}
-        <section className="py-16 bg-gradient-to-b from-white to-gray-50">
+        {/* ¿Por Qué Hacerte Socio? - Inspirado en CoopManoguayabo */}
+        <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
-            <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">
-              ¿Por qué asociarse a CoopDinámica?
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-              {/* Card 1 */}
-              <div className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
-                <div className="text-center mb-6">
-                  <i className="fas fa-shield-alt text-6xl text-coop-green"></i>
-                </div>
-                <h3 className="text-2xl font-bold mb-4 text-center text-gray-800">Seguridad</h3>
-                <p className="text-gray-600 text-center leading-relaxed">
-                  Más de 10 años ofreciendo servicios financieros confiables y seguros a nuestros socios.
-                </p>
+            <p className="uppercase tracking-widest text-sm text-center text-gray-500 font-semibold mb-2">Aumenta tus oportunidades en la vida con CoopDinámica</p>
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-8">
+              <h2 className="text-5xl font-extrabold text-center md:text-left mb-6 md:mb-0 text-gray-900">¿Por Qué Hacerte Socio?</h2>
+              <div className="flex flex-col gap-4 md:gap-2 md:items-end">
+                <Button variant="success" size="lg" className="w-full md:w-auto">Ver Testimonios</Button>
+                <Button variant="success" size="lg" className="w-full md:w-auto">Ver Proveedores</Button>
               </div>
-              {/* Card 2 */}
-              <div className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
-                <div className="text-center mb-6">
-                  <i className="fas fa-users text-6xl text-coop-green"></i>
-                </div>
-                <h3 className="text-2xl font-bold mb-4 text-center text-gray-800">Comunidad</h3>
-                <p className="text-gray-600 text-center leading-relaxed">
-                  Somos una cooperativa que valora a sus miembros y trabaja por el bienestar de todos.
-                </p>
+            </div>
+            <hr className="my-8 border-t-2 border-gray-200" />
+            <div className="text-center text-lg font-semibold text-gray-600 mb-8">Ventajas &amp; Beneficios</div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+              {/* Ventajas */}
+              <div>
+                <h3 className="text-2xl font-bold mb-4 text-gray-900 text-center">Ventajas</h3>
+                <ul className="space-y-3 text-left text-gray-700">
+                  <li>✔ Ganas dinero por ahorrar</li>
+                  <li>✔ Préstamos de fácil acceso</li>
+                  <li>✔ Financiamiento de electrodomésticos y artículos personales</li>
+                  <li>✔ Especiales de temporada</li>
+                  <li>✔ Apoyo sociocultural</li>
+                </ul>
               </div>
-              {/* Card 3 */}
-              <div className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
-                <div className="text-center mb-6">
-                  <i className="fas fa-chart-line text-6xl text-coop-green"></i>
-                </div>
-                <h3 className="text-2xl font-bold mb-4 text-center text-gray-800">Crecimiento</h3>
-                <p className="text-gray-600 text-center leading-relaxed">
-                  Tasas competitivas y soluciones financieras que se adaptan a tus necesidades.
-                </p>
+              {/* Beneficios */}
+              <div>
+                <h3 className="text-2xl font-bold mb-4 text-gray-900 text-center">Beneficios</h3>
+                <ul className="space-y-3 text-left text-gray-700">
+                  <li>✔ Repartición de excedentes cada año</li>
+                  <li>✔ Tasas de interés competitivas</li>
+                  <li>✔ Amplia gama de productos y servicios financieros</li>
+                  <li>✔ Asesoría y capacitación financiera</li>
+                  <li>✔ Premios y recompensas por ahorro</li>
+                </ul>
+              </div>
+              {/* Video Testimonio */}
+              <div className="flex flex-col items-center justify-center">
+                <iframe width="100%" height="220" src="https://www.youtube.com/embed/1QZQ2KkQ2dA" title="Testimonio Ramón Antonio Pérez" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen className="rounded-xl shadow-lg"></iframe>
               </div>
             </div>
           </div>
         </section>
-        {/* News Section */}
+        // ...existing code...
+        {/* Productos y Servicios */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
-            <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">
-              Noticias y Eventos
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* News Card 1 */}
-              <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                <img 
-                  src="/img/avanza-idecop.jpeg" 
-                  alt="IDECOOP" 
-                  className="w-full h-48 object-cover"
-                />
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-3 text-gray-800">Certificación IDECOOP</h3>
-                  <p className="text-gray-600 leading-relaxed mb-4">
-                    CoopDinámica ha sido certificada por IDECOOP, consolidando nuestro compromiso 
-                    con la excelencia y transparencia.
-                  </p>
-                  <a href="#" className="text-coop-green font-semibold hover:text-coop-dark-green">
-                    Leer más →
-                  </a>
-                </div>
+            <h2 className="text-4xl font-extrabold text-center mb-4 text-coop-green">Productos y Servicios</h2>
+            <p className="text-center text-gray-600 mb-12">En CoopDinámica, tenemos lo que necesitas para cumplir tus objetivos financieros y personales.</p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+              {/* Ahorro */}
+              <div>
+                <img src="/img/ahorro.jpg" alt="Ahorro" className="w-full h-40 object-cover rounded-xl mb-4" />
+                <h3 className="text-2xl font-bold text-coop-blue mb-2 text-center">Ahorro</h3>
+                <ul className="space-y-2 text-gray-700 text-base">
+                  <li>✔ Cuentas de Ahorro</li>
+                  <li>✔ Ahorros Programados</li>
+                  <li>✔ Certificados Financieros</li>
+                  <li>✔ Ahorro Escolar</li>
+                  <li>✔ Ahorro Navideño</li>
+                </ul>
               </div>
-              {/* News Card 2 */}
-              <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                <img 
-                  src="/img/certificaciones808-Coop.jpg" 
-                  alt="Certificaciones" 
-                  className="w-full h-48 object-cover"
-                />
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-3 text-gray-800">Nuevas Certificaciones</h3>
-                  <p className="text-gray-600 leading-relaxed mb-4">
-                    Orgullosamente certificados bajo los estándares internacionales de calidad 
-                    cooperativa ISO 808.
-                  </p>
-                  <a href="#" className="text-coop-green font-semibold hover:text-coop-dark-green">
-                    Leer más →
-                  </a>
-                </div>
+              {/* Crédito */}
+              <div>
+                <img src="/img/credito.jpg" alt="Crédito" className="w-full h-40 object-cover rounded-xl mb-4" />
+                <h3 className="text-2xl font-bold text-coop-blue mb-2 text-center">Crédito</h3>
+                <ul className="space-y-2 text-gray-700 text-base">
+                  <li>✔ Préstamos Expresos</li>
+                  <li>✔ Hipotecarios</li>
+                  <li>✔ Vehículos</li>
+                  <li>✔ Educativos</li>
+                  <li>✔ Empresariales</li>
+                </ul>
               </div>
-              {/* News Card 3 */}
-              <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                <img 
-                  src="/img/apertura.jpg" 
-                  alt="Apertura" 
-                  className="w-full h-48 object-cover"
-                />
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-3 text-gray-800">Nuevas Oficinas</h3>
-                  <p className="text-gray-600 leading-relaxed mb-4">
-                    Expandimos nuestros servicios con la apertura de nuevas oficinas para 
-                    servirte mejor.
-                  </p>
-                  <a href="#" className="text-coop-green font-semibold hover:text-coop-dark-green">
-                    Leer más →
-                  </a>
-                </div>
+              {/* Servicios */}
+              <div>
+                <img src="/img/servicios.jpg" alt="Servicios" className="w-full h-40 object-cover rounded-xl mb-4" />
+                <h3 className="text-2xl font-bold text-coop-blue mb-2 text-center">Servicios</h3>
+                <ul className="space-y-2 text-gray-700 text-base">
+                  <li>✔ Asesoría financiera</li>
+                  <li>✔ Educación cooperativa</li>
+                  <li>✔ Actividades sociales</li>
+                  <li>✔ Programas de recompensas</li>
+                  <li>✔ Más beneficios...</li>
+                </ul>
               </div>
             </div>
           </div>
         </section>
         {/* FAQ Section */}
         <FAQSection />
+        {/* Beneficios para hacerse socio (ahora debajo del FAQ) */}
+        <section className="py-16 bg-gray-50 border-b border-gray-100">
+          <div className="container mx-auto px-4">
+            <h3 className="uppercase tracking-widest text-sm text-gray-500 font-semibold mb-2 text-center">Disfruta de todos estos beneficios</h3>
+            <h2 className="text-4xl font-extrabold text-center mb-8 text-coop-green">¿Quieres Formar Parte De CoopDinámica?</h2>
+            <p className="text-center text-gray-600 mb-12">¡Es muy fácil! Solo tienes que seguir estos pasos:</p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+              {/* Paso 1 */}
+              <div className="flex flex-col items-center">
+                <img src="/img/solicitud-formulario.png" alt="Formulario" className="w-40 h-40 object-contain mb-4" />
+                <h4 className="text-xl font-bold mb-2 text-coop-blue text-center">Completa el formulario de solicitud</h4>
+                <p className="text-gray-600 text-center">Puedes realizar el proceso de forma virtual o visitando con tu cédula alguna de nuestras sucursales.</p>
+              </div>
+              {/* Paso 2 */}
+              <div className="flex flex-col items-center">
+                <img src="/img/comprobante.png" alt="Comprobante" className="w-40 h-40 object-contain mb-4" />
+                <h4 className="text-xl font-bold mb-2 text-coop-blue text-center">Realiza el pago del monto de apertura</h4>
+                <p className="text-gray-600 text-center">Equivalente a RD$ 1,000 (RD$ 500 ahorros retirables + RD$ 500 de apertura).</p>
+              </div>
+              {/* Paso 3 */}
+              <div className="flex flex-col items-center">
+                <img src="/img/hazte-socio.png" alt="Hazte Socio" className="w-40 h-40 object-contain mb-4" />
+                <h4 className="text-xl font-bold mb-2 text-coop-blue text-center">Conviértete en un socio feliz</h4>
+                <p className="text-gray-600 text-center">Completa la solicitud en línea y forma parte de nuestra gran familia.</p>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
       <Footer />
-    </div>
+    </>
   )
 }
 

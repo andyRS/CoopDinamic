@@ -9,6 +9,7 @@ const Navigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState(null)
   const location = useLocation()
+  // No dark mode, notificaciones ni usuario en menú simplificado
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,19 +33,19 @@ const Navigation = () => {
           title: 'Ahorros',
           icon: '💰',
           items: [
-            { label: 'Cuentas de Ahorro', path: '#' },
-            { label: 'Ahorros Programados', path: '#' },
-            { label: 'Certificados Financieros', path: '#' }
+            { label: 'Cuentas de Ahorro', path: '/cuentas-ahorro' },
+            { label: 'Ahorros Programados', path: '/ahorros-programados' },
+            { label: 'Certificados Financieros', path: '/certificados-financieros' }
           ]
         },
         {
           title: 'Créditos',
           icon: '💳',
           items: [
-            { label: 'Préstamos Expresos', path: '#' },
-            { label: 'Hipotecarios', path: '#' },
-            { label: 'Vehículos', path: '#' },
-            { label: 'Educativos', path: '#' }
+            { label: 'Préstamos Expresos', path: '/prestamos-expresos' },
+            { label: 'Hipotecarios', path: '/hipotecarios' },
+            { label: 'Vehículos', path: '/vehiculos' },
+            { label: 'Educativos', path: '/educativos' }
           ]
         }
       ]
@@ -57,9 +58,9 @@ const Navigation = () => {
           title: 'Soluciones',
           icon: '🏢',
           items: [
-            { label: 'Crédito Empresarial', path: '#' },
-            { label: 'Capital de Trabajo', path: '#' },
-            { label: 'Línea de Crédito', path: '#' }
+            { label: 'Crédito Empresarial', path: '/credito-empresarial' },
+            { label: 'Capital de Trabajo', path: '/capital-trabajo' },
+            { label: 'Línea de Crédito', path: '/linea-credito' }
           ]
         }
       ]
@@ -81,139 +82,84 @@ const Navigation = () => {
   return (
     <>
       {/* Desktop Navigation */}
-      <motion.nav
-        initial={false}
-        animate={{
-          backgroundColor: isScrolled ? 'rgba(255, 255, 255, 0.95)' : 'rgba(255, 255, 255, 1)',
-          boxShadow: isScrolled ? '0 4px 20px rgba(0,0,0,0.1)' : 'none',
-          padding: isScrolled ? '12px 0' : '20px 0'
-        }}
-        className="fixed top-0 left-0 right-0 z-40 backdrop-blur-md transition-all duration-300 
-                 dark:bg-dark-bg/95 border-b border-gray-100 dark:border-gray-800"
-      >
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-coop-green to-coop-blue shadow-lg border-b border-coop-green">
         <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between">
-            {/* Logo */}
+          <div className="flex items-center justify-between gap-4 py-2">
+            {/* Logo y slogan */}
             <Link to="/" className="flex items-center space-x-3 group">
-              <motion.img
-                whileHover={{ rotate: 360 }}
-                transition={{ duration: 0.6 }}
-                src="/img/Logo.png"
-                alt="CoopDinámica"
-                className="w-10 h-10 rounded-lg"
-              />
+              <img src="/img/Logo.png" alt="CoopDinámica" className="w-12 h-12 rounded-xl shadow-lg" />
               <div>
-                <h1 className="text-2xl font-bold text-coop-green dark:text-coop-light-green 
-                             group-hover:text-coop-dark-green transition-colors">
-                  CoopDinámica
-                </h1>
-                <p className="text-xs text-gray-500 dark:text-gray-400">Tu cooperativa de confianza</p>
+                <h1 className="text-2xl font-bold text-white group-hover:text-yellow-300 transition-colors">CoopDinámica</h1>
+                <p className="text-xs text-white/80">Tu cooperativa de confianza</p>
               </div>
             </Link>
-
-            {/* Desktop Menu */}
+            {/* Menú principal */}
             <div className="hidden lg:flex items-center space-x-1">
               {menuItems.map((item, index) => (
-                <div
-                  key={index}
-                  className="relative"
-                  onMouseEnter={() => item.submenus && setActiveDropdown(item.label)}
-                  onMouseLeave={() => setActiveDropdown(null)}
-                >
+                <div key={index} className="relative">
                   {item.path ? (
-                    <Link
-                      to={item.path}
-                      className={`
-                        flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all
-                        ${isActive(item.path) 
-                          ? 'bg-coop-green text-white' 
-                          : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'}
-                      `}
-                    >
+                    <Link to={item.path} className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all ${isActive(item.path) ? 'bg-yellow-300 text-coop-green' : 'text-white hover:bg-white/10'}`}>
                       <span className="text-lg">{item.icon}</span>
                       {item.label}
-                      {isActive(item.path) && (
-                        <motion.div
-                          layoutId="activeTab"
-                          className="absolute bottom-0 left-0 right-0 h-0.5 bg-coop-green"
-                        />
-                      )}
                     </Link>
                   ) : (
-                    <button
-                      className="flex items-center gap-2 px-4 py-2 rounded-lg font-medium text-gray-700 
-                               dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-all"
+                    <div
+                      onMouseEnter={() => setActiveDropdown(item.label)}
+                      onMouseLeave={() => setActiveDropdown(null)}
+                      style={{ display: 'inline-block' }}
                     >
-                      <span className="text-lg">{item.icon}</span>
-                      {item.label}
-                      <FiChevronDown className={`transition-transform ${
-                        activeDropdown === item.label ? 'rotate-180' : ''
-                      }`} />
-                    </button>
-                  )}
-
-                  {/* Mega Menu Dropdown */}
-                  <AnimatePresence>
-                    {item.submenus && activeDropdown === item.label && (
-                      <motion.div
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: 10 }}
-                        className="absolute top-full left-0 mt-2 bg-white dark:bg-dark-card rounded-2xl 
-                                 shadow-2xl border border-gray-200 dark:border-gray-700 p-6 min-w-[400px]"
+                      <button
+                        className="flex items-center gap-2 px-4 py-2 rounded-lg font-medium text-white hover:bg-white/10 transition-all"
+                        onClick={() => setActiveDropdown(activeDropdown === item.label ? null : item.label)}
+                        aria-haspopup="true"
+                        aria-expanded={activeDropdown === item.label}
                       >
-                        <div className="grid grid-cols-2 gap-6">
-                          {item.submenus.map((submenu, idx) => (
-                            <div key={idx}>
-                              <div className="flex items-center gap-2 mb-3 text-coop-green dark:text-coop-light-green">
-                                <span className="text-2xl">{submenu.icon}</span>
-                                <h3 className="font-bold text-lg">{submenu.title}</h3>
-                              </div>
-                              <ul className="space-y-2">
-                                {submenu.items.map((subitem, subIdx) => (
-                                  <li key={subIdx}>
-                                    <a
-                                      href={subitem.path}
-                                      className="block px-3 py-2 rounded-lg text-gray-700 dark:text-gray-300 
-                                               hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-                                    >
-                                      {subitem.label}
-                                    </a>
-                                  </li>
-                                ))}
-                              </ul>
+                        <span className="text-lg">{item.icon}</span>
+                        {item.label}
+                        <FiChevronDown className={`transition-transform ${activeDropdown === item.label ? 'rotate-180' : ''}`} />
+                      </button>
+                      <AnimatePresence>
+                        {item.submenus && activeDropdown === item.label && (
+                          <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 10 }} className="absolute top-full left-0 bg-white rounded-xl shadow-md py-6 px-8 min-w-[400px] transition-all duration-200">
+                            <div className="grid grid-cols-2 gap-8">
+                              {item.submenus.map((submenu, idx) => (
+                                <div key={idx} className={idx !== 0 ? 'pl-8 border-l border-gray-100' : ''}>
+                                  <div className="flex items-center gap-2 mb-3 text-coop-green">
+                                    <span className="text-2xl">{submenu.icon}</span>
+                                    <h3 className="font-bold text-lg">{submenu.title}</h3>
+                                  </div>
+                                  <ul className="space-y-1">
+                                    {submenu.items.map((subitem, subIdx) => (
+                                      <li key={subIdx}>
+                                        <a href={subitem.path} className="block px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors">{subitem.label}</a>
+                                      </li>
+                                    ))}
+                                  </ul>
+                                </div>
+                              ))}
                             </div>
-                          ))}
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+                  )}
+                  {/* Mega Menu Dropdown */}
+                  {/* Eliminado dropdown duplicado */}
                 </div>
               ))}
             </div>
-
-            {/* Right Actions */}
-            <div className="hidden lg:flex items-center gap-3">
+            {/* Acciones */}
+            <div className="hidden lg:flex items-center gap-3 ml-4">
               <Link to="/formulario">
-                <Button variant="ghost" size="sm">
-                  Contacto
-                </Button>
+                <Button variant="ghost" size="sm" className="text-white border-white hover:bg-white/10">Contacto</Button>
               </Link>
-              <Button variant="primary" size="sm" icon={<span>🚀</span>}>
-                Hazte Socio
-              </Button>
+              <Button variant="primary" size="sm" className="bg-yellow-300 text-coop-green hover:bg-yellow-400 border-none">Hazte Socio</Button>
             </div>
-
-            {/* Mobile Menu Button */}
-            <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-            >
-              {isMobileMenuOpen ? <FiX className="text-2xl" /> : <FiMenu className="text-2xl" />}
-            </button>
+            {/* Botón menú móvil */}
+            <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="lg:hidden p-2 rounded-lg hover:bg-white/10 transition-colors">{isMobileMenuOpen ? <FiX className="text-2xl text-white" /> : <FiMenu className="text-2xl text-white" />}</button>
           </div>
         </div>
-      </motion.nav>
+      </nav>
 
       {/* Mobile Menu */}
       <AnimatePresence>

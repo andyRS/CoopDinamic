@@ -1,5 +1,4 @@
 import Loader from '../components/ui/Loader'
-import Header from '../components/layout/Header'
 import Navigation from '../components/layout/NavigationModern'
 import Footer from '../components/layout/Footer'
 
@@ -60,11 +59,10 @@ const Blog = () => {
       <Loader />
       
       <div className="container mx-auto px-4">
-        <Header />
         <Navigation />
 
         {/* Blog Hero */}
-        <section className="py-12 bg-gradient-to-r from-coop-green to-coop-dark-green rounded-lg mb-12">
+        <section className="py-12 bg-gradient-to-r from-coop-green to-coop-dark-green rounded-lg mb-12 mt-24">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-5xl font-bold text-white mb-4">Blog CoopDinámica</h1>
             <p className="text-xl text-white/90">
