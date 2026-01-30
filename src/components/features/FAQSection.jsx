@@ -3,80 +3,56 @@ import Accordion from '../ui/Accordion'
 const FAQSection = () => {
   const faqItems = [
     {
-      title: '¿Qué es una Cooperativa?',
+      title: '¿Qué es una cooperativa?',
       content: (
-        <p>
-          Una cooperativa es una empresa de propiedad conjunta, democráticamente controlada. 
-          Una empresa cooperativa es un negocio por su propia personalidad que pertenece y es 
-          controlada por las personas que utilizan los productos, suministros y servicios que 
-          esta provee. A diferencia de otras empresas, las cooperativas entregan retornos a sus 
-          miembros. Los retornos de una Cooperativa pueden ser en especie, es decir, en la misma 
-          naturaleza del producto de los servicios producidos por la misma.
+        <p className="font-montserrat text-base md:text-lg leading-relaxed text-gray-800">
+          Una cooperativa es una empresa de propiedad conjunta y control democrático. Es un negocio que pertenece y es gestionado por las personas que utilizan sus productos y servicios. A diferencia de otras empresas, las cooperativas reparten beneficios a sus miembros, ya sea en efectivo o en especie, según los servicios que ofrece.
         </p>
       ),
     },
     {
       title: '¿Cuáles son los valores de las cooperativas?',
       content: (
-        <div>
+        <div className="font-montserrat text-base md:text-lg text-gray-800">
           <p className="mb-3">Los valores cooperativos incluyen:</p>
-          <p className="mb-2">• <strong>Ayuda mutua:</strong> Nuestra responsabilidad como miembros es contribuir equitativamente y controlar democráticamente el capital de su cooperativa.</p>
-          <p className="mb-2">• <strong>Responsabilidad propia:</strong> Cada persona debe de demostrar su responsabilidad propia, actuando con autonomía y libre albedrío.</p>
-          <p className="mb-2">• <strong>Democracia:</strong> Nuestros miembros tienen igual derecho al voto (un socio, un voto) sin importar su aportación.</p>
-          <p className="mb-2">• <strong>Igualdad:</strong> Independientemente del origen, raza, sexo, religión todos los miembros tienen los mismos derechos y obligaciones.</p>
-          <p className="mb-2">• <strong>Equidad:</strong> Es la virtud de la aplicación de la justicia en nuestras acciones. Equilibrio o imparcialidad con criterio propio.</p>
-          <p>• <strong>Solidaridad:</strong> Nuestros miembros creen en un mundo justo en el cual reine el bienestar económico de todas las personas.</p>
+          <ul className="list-disc pl-6 space-y-1">
+            <li><strong>Ayuda mutua:</strong> Contribuir y controlar democráticamente el capital de la cooperativa.</li>
+            <li><strong>Responsabilidad propia:</strong> Actuar con autonomía y compromiso personal.</li>
+            <li><strong>Democracia:</strong> Todos los miembros tienen igual derecho al voto (un socio, un voto).</li>
+            <li><strong>Igualdad:</strong> Todos los miembros tienen los mismos derechos y obligaciones, sin distinción.</li>
+            <li><strong>Equidad:</strong> Aplicar la justicia de manera imparcial y equilibrada.</li>
+            <li><strong>Solidaridad:</strong> Buscar el bienestar económico y social de todos los miembros.</li>
+          </ul>
         </div>
       ),
     },
     {
       title: '¿Qué es un socio estratégico de una cooperativa?',
       content: (
-        <p>
-          Los <strong>Socios estratégicos</strong>, son aquellos que no son socios a través del proceso normal 
-          de afiliación. Sin embargo, se cuentan para ser parte de la cooperativa a través de su capacidad de 
-          pago con inversiones desde <strong>RD$50,000</strong> hasta sumas ilimitadas. Socios Estratégicos son 
-          considerados socios estratégicos, en vista de que muestran su confianza en la Cooperativa, haciendo 
-          aportes que fortalecen el patrimonio cooperativo, lo cual nos permite disponer de fondos propios para 
-          prestarlos a los socios que necesitan recursos.
+        <p className="font-montserrat text-base md:text-lg leading-relaxed text-gray-800">
+          Los <strong>socios estratégicos</strong> son personas que, sin pasar por el proceso tradicional de afiliación, forman parte de la cooperativa mediante inversiones desde <strong>RD$50,000</strong> en adelante. Su confianza y aportes fortalecen el patrimonio cooperativo, permitiendo disponer de más fondos para préstamos a los socios.
         </p>
       ),
     },
     {
-      title: '¿Cómo la cooperativa consigue dinero para prestarnos?',
+      title: '¿Cómo obtiene la cooperativa dinero para prestar?',
       content: (
-        <div>
-          <p className="mb-3">
-            • La primera fuente de recursos o fondos que obtiene la cooperativa son los aportes, que equivalen 
-            a lo que serían "acciones" en una empresa comercial. Por eso al afiliarse se exigen RD$1,000 de 
-            aportes y luego RD$700.00 mensuales, que incluyen RD$500 de aportes y el resto de ahorros.
-          </p>
-          <p className="mb-3">
-            • La segunda fuente de fondos, son los "Bonos de Capitalización", estos bonos tienen la intención 
-            de acelerar la disponibilidad de fondos para prestarlo a los socios, en vista de la lentitud natural 
-            en la captación de los aportes. Estos bonos pagan un 6% anual y no penalizamos al socio cuando decide 
-            liquidarlos antes de los 6 meses o el año, que se asume cuando son creados.
-          </p>
-          <p className="mb-3">
-            • La tercera fuente de recursos, son los "Bonos CFCD", que son unos bonos en múltiplos de RD$650,000. 
-            Con un mínimo de duración de 6 meses renovables, con tasas que parten del 12% hasta un 20% anual, 
-            dependiendo del volumen que acumule cada socio en su cartera de inversión.
-          </p>
-          <p className="mb-3">
-            • La cuarta fuente de fondos, proviene de los excedentes de nuestras operaciones entre lo que pagamos 
-            por los ahorros, el costo de nuestras operaciones y lo que cobramos a nuestros socios y clientes.
-          </p>
-          <p>• No hemos recibido donaciones directas, aún.</p>
+        <div className="font-montserrat text-base md:text-lg text-gray-800 space-y-2">
+          <ul className="list-decimal pl-6 space-y-1">
+            <li>Los <strong>aportes</strong> de los socios, similares a acciones en una empresa comercial. Al afiliarse, se requieren RD$1,000 de aportes iniciales y luego RD$700 mensuales (RD$500 de aportes y el resto en ahorros).</li>
+            <li>Los <strong>Bonos de Capitalización</strong>, que aceleran la disponibilidad de fondos para préstamos. Pagan un 6% anual y pueden liquidarse sin penalidad antes de 6 meses o un año.</li>
+            <li>Los <strong>Bonos CFCD</strong>, en múltiplos de RD$650,000, con duración mínima de 6 meses y tasas de 12% a 20% anual, según el volumen de inversión.</li>
+            <li>Los <strong>excedentes</strong> de las operaciones, es decir, la diferencia entre lo que se paga por ahorros, los costos operativos y lo que se cobra a socios y clientes.</li>
+            <li>No se han recibido donaciones directas hasta la fecha.</li>
+          </ul>
         </div>
       ),
     },
     {
-      title: '¿Qué es un Bono de capitalización?',
+      title: '¿Qué es un bono de capitalización?',
       content: (
-        <p>
-          • Es un bono especial, múltiplo de RD$10,000, similar a un certificado financiero, que se emite 
-          por periodos de 6 meses a un año. Sirve para acelerar la disponibilidad de capital de trabajo 
-          para prestar a nuestros socios.
+        <p className="font-montserrat text-base md:text-lg leading-relaxed text-gray-800">
+          Es un bono especial, en múltiplos de RD$10,000, similar a un certificado financiero, emitido por periodos de 6 meses a un año. Sirve para aumentar el capital de trabajo disponible para préstamos a los socios.
         </p>
       ),
     },

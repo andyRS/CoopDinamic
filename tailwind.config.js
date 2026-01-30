@@ -7,6 +7,12 @@ export default {
   darkMode: 'class',
   theme: {
     extend: {
+      fontFamily: {
+        'sans': ['Montserrat', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        'montserrat': ['Montserrat', 'sans-serif'],
+        'roboto': ['Roboto', 'sans-serif'],
+        'open-sans': ['Open Sans', 'sans-serif'],
+      },
       colors: {
         'coop-green': '#09a337',
         'coop-blue': '#4685fa',
