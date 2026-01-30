@@ -24,6 +24,7 @@ const Navigation = () => {
       submenus: [
         {
           title: 'Ahorros',
+          icon: '💰',
           items: [
             { label: 'Cuentas de Ahorro', path: '/cuentas-ahorro' },
             { label: 'Ahorros Programados', path: '/ahorros-programados' },
@@ -32,6 +33,7 @@ const Navigation = () => {
         },
         {
           title: 'Créditos',
+          icon: '💳',
           items: [
             { label: 'Préstamos Expresos', path: '/prestamos-expresos' },
             { label: 'Hipotecarios', path: '/hipotecarios' },
@@ -46,7 +48,8 @@ const Navigation = () => {
       icon: '💼',
       submenus: [
         {
-          title: 'Soluciones Empresariales',
+          title: 'Soluciones',
+          icon: '🏢',
           items: [
             { label: 'Crédito Empresarial', path: '/credito-empresarial' },
             { label: 'Capital de Trabajo', path: '/capital-trabajo' },
@@ -67,41 +70,37 @@ const Navigation = () => {
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300
         ${isScrolled
-          ? 'bg-white/90 backdrop-blur shadow-md'
-          : 'bg-gradient-to-r from-coop-green to-coop-blue'}
+          ? 'bg-white shadow-md border-b border-gray-200'
+          : 'bg-gradient-to-r from-coop-green to-coop-blue shadow-lg'}
         `}
       >
         <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between h-16">
-            
+          <div className="flex items-center justify-between py-3">
+
             {/* LOGO */}
             <Link to="/" className="flex items-center gap-3">
-              <img
-                src="/img/Logo.png"
-                alt="CoopDinámica"
-                className="w-10 h-10 rounded-lg"
-              />
-              <div className="leading-tight">
-                <span className={`font-bold text-lg ${isScrolled ? 'text-coop-green' : 'text-white'}`}>
+              <img src="/img/Logo.png" alt="CoopDinámica" className="w-11 h-11 rounded-xl" />
+              <div>
+                <h1 className={`text-xl font-bold ${isScrolled ? 'text-coop-green' : 'text-white'}`}>
                   CoopDinámica
-                </span>
-                <span className={`block text-xs ${isScrolled ? 'text-gray-500' : 'text-white/80'}`}>
+                </h1>
+                <p className={`text-xs ${isScrolled ? 'text-gray-500' : 'text-white/80'}`}>
                   Tu cooperativa de confianza
-                </span>
+                </p>
               </div>
             </Link>
 
             {/* MENU DESKTOP */}
             <div className="hidden lg:flex items-center gap-1">
-              {menuItems.map((item, i) => (
-                <div key={i} className="relative">
+              {menuItems.map((item, index) => (
+                <div key={index} className="relative">
                   {item.path ? (
                     <Link
                       to={item.path}
-                      className={`px-4 py-2 rounded-md text-sm font-medium transition
-                        ${isActive(item.path)
-                          ? 'bg-coop-green text-white'
-                          : isScrolled
+                      className={`px-4 py-2 rounded-lg font-medium transition
+                      ${isActive(item.path)
+                        ? 'bg-yellow-300 text-coop-green'
+                        : isScrolled
                           ? 'text-gray-700 hover:bg-gray-100'
                           : 'text-white hover:bg-white/10'}
                       `}
@@ -114,42 +113,35 @@ const Navigation = () => {
                       onMouseLeave={() => setActiveDropdown(null)}
                     >
                       <button
-                        className={`px-4 py-2 rounded-md flex items-center gap-1 text-sm font-medium transition
-                          ${isScrolled
-                            ? 'text-gray-700 hover:bg-gray-100'
-                            : 'text-white hover:bg-white/10'}
+                        className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition
+                        ${isScrolled ? 'text-gray-700 hover:bg-gray-100' : 'text-white hover:bg-white/10'}
                         `}
                       >
                         {item.label}
-                        <FiChevronDown className={`transition ${activeDropdown === item.label ? 'rotate-180' : ''}`} />
+                        <FiChevronDown />
                       </button>
 
                       <AnimatePresence>
                         {activeDropdown === item.label && (
                           <motion.div
-                            initial={{ opacity: 0, y: 8 }}
+                            initial={{ opacity: 0, y: 10 }}
                             animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: 8 }}
-                            className="absolute left-0 top-full mt-2 bg-white rounded-xl shadow-lg p-6 min-w-[380px]"
+                            exit={{ opacity: 0, y: 10 }}
+                            className="absolute top-full left-0 bg-white rounded-xl shadow-xl p-6 min-w-[420px]"
                           >
-                            <div className="grid grid-cols-2 gap-6">
-                              {item.submenus.map((submenu, idx) => (
-                                <div key={idx}>
-                                  <h4 className="font-semibold text-coop-green mb-2">
-                                    {submenu.title}
-                                  </h4>
-                                  <ul className="space-y-1">
-                                    {submenu.items.map((sub, sidx) => (
-                                      <li key={sidx}>
-                                        <Link
-                                          to={sub.path}
-                                          className="block px-3 py-2 rounded text-sm text-gray-700 hover:bg-gray-100"
-                                        >
-                                          {sub.label}
-                                        </Link>
-                                      </li>
-                                    ))}
-                                  </ul>
+                            <div className="grid grid-cols-2 gap-8">
+                              {item.submenus.map((submenu, i) => (
+                                <div key={i}>
+                                  <h3 className="font-bold text-coop-green mb-2">{submenu.title}</h3>
+                                  {submenu.items.map((sub, j) => (
+                                    <Link
+                                      key={j}
+                                      to={sub.path}
+                                      className="block px-3 py-2 rounded text-gray-700 hover:bg-gray-100"
+                                    >
+                                      {sub.label}
+                                    </Link>
+                                  ))}
                                 </div>
                               ))}
                             </div>
@@ -162,25 +154,37 @@ const Navigation = () => {
               ))}
             </div>
 
-            {/* CTA DESKTOP */}
+            {/* ACCIONES DESKTOP */}
             <div className="hidden lg:flex items-center gap-3">
               <Link to="/formulario">
-                <Button variant="ghost" size="sm">
+                <Button
+                  size="sm"
+                  className={
+                    isScrolled
+                      ? 'border border-gray-300 text-gray-700 hover:bg-gray-100'
+                      : 'bg-white text-coop-green font-semibold hover:bg-gray-100'
+                  }
+                >
                   Contacto
                 </Button>
               </Link>
-              <Button variant="primary" size="sm">
+
+              <Button
+                size="sm"
+                className="bg-yellow-300 text-coop-green font-bold hover:bg-yellow-400"
+              >
                 Hazte Socio
               </Button>
             </div>
 
             {/* MOBILE BUTTON */}
             <button
+              className="lg:hidden p-2 rounded-lg"
               onClick={() => setIsMobileMenuOpen(true)}
-              className="lg:hidden p-2 rounded-md"
             >
-              <FiMenu className={`text-2xl ${isScrolled ? 'text-gray-700' : 'text-white'}`} />
+              <FiMenu className={`text-2xl ${isScrolled ? 'text-gray-800' : 'text-white'}`} />
             </button>
+
           </div>
         </div>
       </nav>
@@ -192,67 +196,33 @@ const Navigation = () => {
             initial={{ x: '100%' }}
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
-            className="fixed inset-0 z-50 bg-white lg:hidden"
+            className="fixed inset-0 z-50 bg-white"
           >
-            <div className="flex items-center justify-between p-4 border-b">
-              <span className="font-bold text-coop-green">Menú</span>
-              <button onClick={() => setIsMobileMenuOpen(false)}>
-                <FiX className="text-2xl" />
-              </button>
+            <div className="flex justify-between items-center p-4 border-b">
+              <span className="font-bold text-coop-green">CoopDinámica</span>
+              <FiX className="text-2xl" onClick={() => setIsMobileMenuOpen(false)} />
             </div>
 
             <div className="p-4 space-y-2">
               {menuItems.map((item, i) => (
-                <div key={i}>
-                  {item.path ? (
-                    <Link
-                      to={item.path}
-                      onClick={() => setIsMobileMenuOpen(false)}
-                      className="block px-4 py-3 rounded-lg text-gray-700 hover:bg-gray-100"
-                    >
-                      {item.label}
-                    </Link>
-                  ) : (
-                    <div>
-                      <button
-                        onClick={() => setActiveDropdown(activeDropdown === item.label ? null : item.label)}
-                        className="w-full flex justify-between px-4 py-3 rounded-lg hover:bg-gray-100"
-                      >
-                        {item.label}
-                        <FiChevronDown />
-                      </button>
-
-                      {activeDropdown === item.label &&
-                        item.submenus.map((submenu, idx) => (
-                          <div key={idx} className="ml-4 mt-2">
-                            <p className="text-xs font-semibold text-gray-500 mb-1">
-                              {submenu.title}
-                            </p>
-                            {submenu.items.map((sub, sidx) => (
-                              <Link
-                                key={sidx}
-                                to={sub.path}
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="block px-3 py-2 text-sm rounded hover:bg-gray-100"
-                              >
-                                {sub.label}
-                              </Link>
-                            ))}
-                          </div>
-                        ))}
-                    </div>
-                  )}
-                </div>
+                item.path && (
+                  <Link
+                    key={i}
+                    to={item.path}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="block px-4 py-3 rounded-lg hover:bg-gray-100"
+                  >
+                    {item.label}
+                  </Link>
+                )
               ))}
             </div>
 
             <div className="p-4 border-t space-y-2">
-              <Link to="/formulario" onClick={() => setIsMobileMenuOpen(false)}>
-                <Button variant="ghost" fullWidth>
-                  Contacto
-                </Button>
+              <Link to="/formulario">
+                <Button fullWidth variant="outline">Contacto</Button>
               </Link>
-              <Button variant="primary" fullWidth>
+              <Button fullWidth className="bg-yellow-300 text-coop-green font-bold">
                 Hazte Socio
               </Button>
             </div>
