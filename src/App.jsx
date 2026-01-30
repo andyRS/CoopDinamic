@@ -51,6 +51,7 @@ function App() {
           <Route path="/credito-empresarial" element={<CreditoEmpresarial />} />
           <Route path="/capital-trabajo" element={<CapitalTrabajo />} />
           <Route path="/linea-credito" element={<LineaCredito />} />
+          <Route path="/hazte-socio" element={<HazteSocio />} />
         </Routes>
       </div>
     </Router>
