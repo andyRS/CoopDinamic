@@ -7,19 +7,19 @@
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
               {/* Paso 1 */}
               <div className="flex flex-col items-center">
-                <img src="/img/solicitud-formulario.png" alt="Formulario" className="w-40 h-40 object-contain mb-4" />
+                <img src="/img/step-form.webp" alt="Formulario de solicitud" className="w-40 h-40 object-contain mb-4" />
                 <h4 className="text-xl font-bold mb-2 text-coop-blue text-center">Completa el formulario de solicitud</h4>
                 <p className="text-gray-600 text-center">Puedes realizar el proceso de forma virtual o visitando con tu cédula alguna de nuestras sucursales.</p>
               </div>
               {/* Paso 2 */}
               <div className="flex flex-col items-center">
-                <img src="/img/comprobante.png" alt="Comprobante" className="w-40 h-40 object-contain mb-4" />
+                <img src="/img/step-payment.webp" alt="Pago de aportación" className="w-40 h-40 object-contain mb-4" />
                 <h4 className="text-xl font-bold mb-2 text-coop-blue text-center">Realiza el pago del monto de apertura</h4>
                 <p className="text-gray-600 text-center">Equivalente a RD$ 1,000 (RD$ 500 ahorros retirables + RD$ 500 de apertura).</p>
               </div>
               {/* Paso 3 */}
               <div className="flex flex-col items-center">
-                <img src="/img/hazte-socio.png" alt="Hazte Socio" className="w-40 h-40 object-contain mb-4" />
+                <img src="/img/step-member.webp" alt="Socio activo" className="w-40 h-40 object-contain mb-4" />
                 <h4 className="text-xl font-bold mb-2 text-coop-blue text-center">Conviértete en un socio feliz</h4>
                 <p className="text-gray-600 text-center">Completa la solicitud en línea y forma parte de nuestra gran familia.</p>
               </div>
