@@ -131,7 +131,7 @@ const Navigation = () => {
                                   <ul className="space-y-1">
                                     {submenu.items.map((subitem, subIdx) => (
                                       <li key={subIdx}>
-                                        <a href={subitem.path} className="block px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors">{subitem.label}</a>
+                                        <Link to={subitem.path} className="block px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors">{subitem.label}</Link>
                                       </li>
                                     ))}
                                   </ul>
@@ -241,15 +241,15 @@ const Navigation = () => {
                                     {submenu.icon} {submenu.title}
                                   </p>
                                   {submenu.items.map((subitem, subIdx) => (
-                                    <a
+                                    <Link
                                       key={subIdx}
-                                      href={subitem.path}
+                                      to={subitem.path}
                                       onClick={() => setIsMobileMenuOpen(false)}
                                       className="block px-3 py-2 text-sm rounded text-gray-600 dark:text-gray-400 
                                                hover:bg-gray-100 dark:hover:bg-gray-800"
                                     >
                                       {subitem.label}
-                                    </a>
+                                    </Link>
                                   ))}
                                 </div>
                               ))}
