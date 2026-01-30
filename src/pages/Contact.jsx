@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Loader from '../components/ui/Loader'
 import Header from '../components/layout/Header'
-import Navigation from '../components/layout/Navigation'
+import Navigation from '../components/layout/NavigationModern'
 import Footer from '../components/layout/Footer'
 
 const Contact = () => {

@@ -1,62 +1,66 @@
 import Loader from '../components/ui/Loader'
 import Header from '../components/layout/Header'
-import Navigation from '../components/layout/Navigation'
+import Navigation from '../components/layout/NavigationModern'
 import Footer from '../components/layout/Footer'
-import ImageSlider from '../components/features/ImageSlider'
-import ServicesCarousel from '../components/features/ServicesCarousel'
-import FAQSection from '../components/features/FAQSection'
 import { useState } from 'react'
 import Button from '../components/ui/Button'
 import Modal from '../components/ui/Modal'
 import LoanSimulator from '../components/features/LoanSimulator'
+import ServicesCarousel from '../components/features/ServicesCarousel'
+import FAQSection from '../components/features/FAQSection'
 
-
-function Home() {
-  const [showSimulator, setShowSimulator] = useState(false)
-
-  return (
-    <>
-      <Button 
-        variant="cta" 
-        size="xl"
-        onClick={() => setShowSimulator(true)}
-      >
-        Simular Crédito
-      </Button>
-
-      <Modal 
-        isOpen={showSimulator}
-        onClose={() => setShowSimulator(false)}
-        title="Simulador de Préstamo"
-      >
-        <LoanSimulator />
-      </Modal>
-    </>
-  )
-}
 
 const Home = () => {
+  const [showSimulator, setShowSimulator] = useState(false)
   return (
     <div className="min-h-screen bg-white">
       <Loader />
-      
       <div className="container mx-auto px-4">
         <Header />
         <Navigation />
 
-        {/* Hero Slider */}
-        <ImageSlider />
+        {/* Hero personalizado con botones y modal */}
+        <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-coop-green via-coop-dark-green to-blue-900">
+          <div className="relative z-10 container mx-auto px-4 text-center text-white">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6">
+              Tu cooperativa digital,
+              <br />
+              <span className="text-yellow-300">simple y segura</span>
+            </h1>
+            <p className="text-xl mb-12">
+              Solicita créditos en minutos. Sin papeleos, sin esperas.
+            </p>
+            <div className="flex gap-4 justify-center">
+              <Button 
+                variant="cta" 
+                size="xl"
+                onClick={() => setShowSimulator(true)}
+              >
+                🧮 Simular Crédito
+              </Button>
+              <Button size="xl" variant="outline">
+                ✅ Hazte Socio
+              </Button>
+            </div>
+          </div>
+        </section>
+
+        <Modal 
+          isOpen={showSimulator}
+          onClose={() => setShowSimulator(false)}
+          title="Simulador de Préstamo"
+        >
+          <LoanSimulator />
+        </Modal>
 
         {/* Services Section */}
         <ServicesCarousel />
-
         {/* Why Join Section */}
         <section className="py-16 bg-gradient-to-b from-white to-gray-50">
           <div className="container mx-auto px-4">
             <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">
               ¿Por qué asociarse a CoopDinámica?
             </h2>
-            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               {/* Card 1 */}
               <div className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
@@ -68,7 +72,6 @@ const Home = () => {
                   Más de 10 años ofreciendo servicios financieros confiables y seguros a nuestros socios.
                 </p>
               </div>
-
               {/* Card 2 */}
               <div className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
                 <div className="text-center mb-6">
@@ -79,7 +82,6 @@ const Home = () => {
                   Somos una cooperativa que valora a sus miembros y trabaja por el bienestar de todos.
                 </p>
               </div>
-
               {/* Card 3 */}
               <div className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
                 <div className="text-center mb-6">
@@ -93,14 +95,12 @@ const Home = () => {
             </div>
           </div>
         </section>
-
         {/* News Section */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">
               Noticias y Eventos
             </h2>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {/* News Card 1 */}
               <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
@@ -120,7 +120,6 @@ const Home = () => {
                   </a>
                 </div>
               </div>
-
               {/* News Card 2 */}
               <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
                 <img 
@@ -139,7 +138,6 @@ const Home = () => {
                   </a>
                 </div>
               </div>
-
               {/* News Card 3 */}
               <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
                 <img 
@@ -161,11 +159,9 @@ const Home = () => {
             </div>
           </div>
         </section>
-
         {/* FAQ Section */}
         <FAQSection />
       </div>
-
       <Footer />
     </div>
   )
