@@ -9,6 +9,7 @@
     "preview": "vite preview",
     "deploy": "npm run build && gh-pages -d dist",
     "predeploy": "npm run build"
+    ,"postinstall": "chmod +x node_modules/.bin/vite"
   },
   "dependencies": {
     "react": "^18.2.0",
