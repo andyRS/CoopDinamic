@@ -153,7 +153,13 @@ const Navigation = () => {
               <Link to="/formulario">
                 <Button variant="ghost" size="sm" className="text-white border-white hover:bg-white/10">Contacto</Button>
               </Link>
-              <Button variant="primary" size="sm" className="bg-yellow-300 text-coop-green hover:bg-yellow-400 border-none">Hazte Socio</Button>
+              <Button 
+                variant="primary" 
+                size="sm" 
+                className="bg-yellow-300 text-coop-green font-bold border-none shadow hover:bg-yellow-400 hover:text-coop-green focus:bg-yellow-400 focus:text-coop-green active:bg-yellow-500 active:text-coop-green transition-colors"
+              >
+                Hazte Socio
+              </Button>
             </div>
             {/* Botón menú móvil */}
             <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="lg:hidden p-2 rounded-lg hover:bg-white/10 transition-colors">{isMobileMenuOpen ? <FiX className="text-2xl text-white" /> : <FiMenu className="text-2xl text-white" />}</button>

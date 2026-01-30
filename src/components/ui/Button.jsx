@@ -17,7 +17,7 @@ const Button = ({
   const variants = {
     primary: 'bg-gradient-to-r from-coop-green to-coop-dark-green text-white hover:shadow-2xl hover:shadow-coop-green/50',
     secondary: 'bg-white dark:bg-dark-card text-coop-green border-2 border-coop-green hover:bg-coop-green hover:text-white',
-    outline: 'border-2 border-current hover:bg-current hover:text-white',
+    outline: 'border-2 border-coop-green text-coop-green bg-white hover:bg-coop-green hover:text-white',
     ghost: 'hover:bg-coop-green/10 text-coop-green',
     danger: 'bg-error text-white hover:shadow-lg hover:shadow-error/50',
     success: 'bg-success text-white hover:shadow-lg hover:shadow-success/50',
