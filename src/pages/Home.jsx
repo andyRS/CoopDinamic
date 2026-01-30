@@ -181,6 +181,7 @@ const Home = () => {
                       loading="lazy"
                     />
                   </div>
+                  <div className="border-b border-gray-100" />
 
                   {/* Contenido */}
                   <div className="p-6">
