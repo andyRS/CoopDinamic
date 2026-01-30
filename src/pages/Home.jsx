@@ -1,4 +1,5 @@
-import { useState, Link } from 'react'
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import Loader from '../components/ui/Loader'
 import Navigation from '../components/layout/NavigationModern'
 import Footer from '../components/layout/Footer'
