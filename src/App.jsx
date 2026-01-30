@@ -15,6 +15,7 @@ import Educativos from './pages/Educativos'
 import CreditoEmpresarial from './pages/CreditoEmpresarial'
 import CapitalTrabajo from './pages/CapitalTrabajo'
 import LineaCredito from './pages/LineaCredito'
+import HazteSocio from './pages/HazteSocio'
 
 /**
  * VERSIÓN ALTERNATIVA CON HASHROUTER
