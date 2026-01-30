@@ -119,10 +119,10 @@ const Home = () => {
     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
       {[
         {
-          title: 'Ahorro',
+          title: 'Ahorros',
           img: '/img/ahorro.webp',
           items: [
-            'Cuentas de Ahorro',
+            'Cuentas de Ahorros',
             'Ahorros Programados',
             'Certificados Financieros',
             'Ahorro Escolar',
