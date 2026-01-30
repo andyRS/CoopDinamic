@@ -143,7 +143,7 @@ const Home = () => {
                 },
                 {
                   title: 'Crédito',
-                  img: '/img/prestamo.webp',
+                  img: '/img/credito.webp',
                   items: [
                     'Préstamos Expresos',
                     'Hipotecarios',
@@ -171,7 +171,7 @@ const Home = () => {
                   <div className="relative mb-4">
                     <img
                       src={card.img}
-                      alt={card.title === 'Ahorro' ? 'Ahorro' : card.title === 'Crédito' ? 'Préstamo' : 'Certificado'}
+                      alt={card.title === 'Ahorro' ? 'Ahorro' : card.title === 'Crédito' ? 'Crédito' : 'Certificado'}
                       className="w-full h-40 object-cover rounded-xl mb-4"
                     />
                   </div>
