@@ -5,6 +5,35 @@ import Footer from '../components/layout/Footer'
 import ImageSlider from '../components/features/ImageSlider'
 import ServicesCarousel from '../components/features/ServicesCarousel'
 import FAQSection from '../components/features/FAQSection'
+import { useState } from 'react'
+import Button from '../components/ui/Button'
+import Modal from '../components/ui/Modal'
+import LoanSimulator from '../components/features/LoanSimulator'
+
+
+function Home() {
+  const [showSimulator, setShowSimulator] = useState(false)
+
+  return (
+    <>
+      <Button 
+        variant="cta" 
+        size="xl"
+        onClick={() => setShowSimulator(true)}
+      >
+        Simular Crédito
+      </Button>
+
+      <Modal 
+        isOpen={showSimulator}
+        onClose={() => setShowSimulator(false)}
+        title="Simulador de Préstamo"
+      >
+        <LoanSimulator />
+      </Modal>
+    </>
+  )
+}
 
 const Home = () => {
   return (
