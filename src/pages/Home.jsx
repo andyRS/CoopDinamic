@@ -67,7 +67,13 @@ const Home = () => {
             </div>
           </div>
           <div className="flex-1 flex justify-center items-center">
-            <img src="/img/hero-coop.jpg" alt="Cooperativa" className="rounded-2xl shadow-xl w-full max-w-md object-cover" />
+            <div className="flex-1 relative">
+              <img
+                src="/img/hero-coopdinamica.webp"
+                alt="Cooperativismo Dominicano"
+                className="w-full h-full object-cover rounded-2xl shadow-xl"
+              />
+            </div>
 	  </div>
         </section>
 
