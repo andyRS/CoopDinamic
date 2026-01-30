@@ -22,13 +22,13 @@ const Footer = () => {
             <h5 className="text-xl font-bold mb-4">Menú</h5>
             <hr className="border-coop-green border-t-2 w-16 mb-4" />
             <div className="flex flex-col space-y-2">
-              <a href="#inicio" className="text-gray-300 hover:text-coop-green transition-colors">Inicio</a>
-              <a href="#" className="text-gray-300 hover:text-coop-green transition-colors">Para ti</a>
-              <a href="#" className="text-gray-300 hover:text-coop-green transition-colors">Para tu negocio</a>
-              <a href="/blog" className="text-gray-300 hover:text-coop-green transition-colors">Blog</a>
-              <a href="#" className="text-gray-300 hover:text-coop-green transition-colors">¿Por qué asociarse?</a>
-              <a href="#" className="text-gray-300 hover:text-coop-green transition-colors">Prensa</a>
-              <a href="/formulario" className="text-gray-300 hover:text-coop-green transition-colors">Contacto</a>
+              <a href="/#/" className="text-gray-300 hover:text-coop-green transition-colors">Inicio</a>
+              <a href="/#/cuentas-ahorro" className="text-gray-300 hover:text-coop-green transition-colors">Para ti</a>
+              <a href="/#/credito-empresarial" className="text-gray-300 hover:text-coop-green transition-colors">Para tu negocio</a>
+              <a href="/#/blog" className="text-gray-300 hover:text-coop-green transition-colors">Blog</a>
+              <a href="/#/" className="text-gray-300 hover:text-coop-green transition-colors">¿Por qué asociarse?</a>
+              <a href="/#/" className="text-gray-300 hover:text-coop-green transition-colors">Prensa</a>
+              <a href="/#/formulario" className="text-gray-300 hover:text-coop-green transition-colors">Contacto</a>
             </div>
           </div>
 
