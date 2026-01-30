@@ -169,12 +169,14 @@ const Navigation = () => {
                 </Button>
               </Link>
 
-              <Button
-                size="sm"
-                className="bg-yellow-300 text-coop-green font-bold hover:bg-yellow-400"
-              >
-                Hazte Socio
-              </Button>
+              <Link to="/hazte-socio">
+                <Button
+                  size="sm"
+                  className="bg-yellow-300 text-coop-green font-bold hover:bg-yellow-400"
+                >
+                  Hazte Socio
+                </Button>
+              </Link>
             </div>
 
             {/* MOBILE BUTTON */}
@@ -222,9 +224,11 @@ const Navigation = () => {
               <Link to="/formulario">
                 <Button fullWidth variant="outline">Contacto</Button>
               </Link>
-              <Button fullWidth className="bg-yellow-300 text-coop-green font-bold">
-                Hazte Socio
-              </Button>
+              <Link to="/hazte-socio">
+                <Button fullWidth className="bg-yellow-300 text-coop-green font-bold">
+                  Hazte Socio
+                </Button>
+              </Link>
             </div>
           </motion.div>
         )}

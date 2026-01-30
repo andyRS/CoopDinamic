@@ -35,9 +35,11 @@ const Home = () => {
               <Button variant="cta" size="xl" onClick={() => setShowSimulator(true)}>
                 🧮 Simular Crédito
               </Button>
-              <Button variant="outline" size="xl">
-                ✅ Hazte Socio
-              </Button>
+              <Link to="/hazte-socio">
+                <Button variant="outline" size="xl">
+                  ✅ Hazte Socio
+                </Button>
+              </Link>
             </div>
           </div>
 
