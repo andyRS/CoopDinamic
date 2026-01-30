@@ -107,99 +107,100 @@ const Home = () => {
 
         {/* ================= PRODUCTOS Y SERVICIOS ================= */}
         <section className="py-16 bg-white border-t border-gray-100">
-          <div className="container mx-auto px-4">
-            <h2 className="text-4xl font-extrabold text-center mb-4 text-coop-green">
-              Productos y Servicios
-            </h2>
+  <div className="container mx-auto px-4">
+    <h2 className="text-4xl font-extrabold text-center mb-4 text-coop-green">
+      Productos y Servicios
+    </h2>
 
-            <p className="text-center text-gray-600 mb-12">
-              Todo lo que necesitas para cumplir tus objetivos financieros.
-            </p>
+    <p className="text-center text-gray-600 mb-12">
+      Todo lo que necesitas para cumplir tus objetivos financieros.
+    </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {[
-                {
-                  title: 'Ahorro',
-                  img: '/img/ahorro.webp',
-                  items: [
-                    'Cuentas de Ahorro',
-                    'Ahorros Programados',
-                    'Certificados Financieros',
-                    'Ahorro Escolar',
-                    'Ahorro Navideño'
-                  ]
-                },
-                {
-                  title: 'Crédito',
-                  img: '/img/credito.webp',
-                  items: [
-                    'Préstamos Expresos',
-                    'Hipotecarios',
-                    'Vehículos',
-                    'Educativos',
-                    'Empresariales'
-                  ]
-                },
-                {
-                  title: 'Servicios',
-                  img: '/img/servicios.webp',
-                  items: [
-                    'Asesoría financiera',
-                    'Educación cooperativa',
-                    'Actividades sociales',
-                    'Programas de recompensas',
-                    'Más beneficios'
-                  ]
-                }
-              ].map((card, i) => (
-                <div
-                  key={i}
-                  className="
-                    bg-white
-                    rounded-2xl
-                    border border-gray-100
-                    shadow-md
-                    hover:shadow-xl
-                    hover:-translate-y-1
-                    transition-all
-                    duration-300
-                    overflow-hidden
-                  "
-                >
-                  {/* Imagen profesional */}
-                  <div className="relative bg-gray-50">
-                    <img
-                      src={card.img}
-                      alt={card.title}
-                      className="
-                        w-full
-                        h-48
-                        object-contain
-                        px-6
-                        py-4
-                      "
-                      loading="lazy"
-                    />
-                  </div>
-                  <div className="border-b border-gray-100" />
-
-                  {/* Contenido */}
-                  <div className="p-6">
-                    <h3 className="text-2xl font-bold text-center text-coop-blue mb-4">
-                      {card.title}
-                    </h3>
-
-                    <ul className="space-y-2 text-gray-700 text-sm">
-                      {card.items.map((item, idx) => (
-                        <li key={idx}>✔ {item}</li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              ))}
-            </div>
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {[
+        {
+          title: 'Ahorro',
+          img: '/img/ahorro.webp',
+          items: [
+            'Cuentas de Ahorro',
+            'Ahorros Programados',
+            'Certificados Financieros',
+            'Ahorro Escolar',
+            'Ahorro Navideño'
+          ]
+        },
+        {
+          title: 'Crédito',
+          img: '/img/credito.webp',
+          items: [
+            'Préstamos Expresos',
+            'Hipotecarios',
+            'Vehículos',
+            'Educativos',
+            'Empresariales'
+          ]
+        },
+        {
+          title: 'Servicios',
+          img: '/img/servicios.webp',
+          items: [
+            'Asesoría financiera',
+            'Educación cooperativa',
+            'Actividades sociales',
+            'Programas de recompensas',
+            'Más beneficios'
+          ]
+        }
+      ].map((card, i) => (
+        <div
+          key={i}
+          className="
+            bg-white
+            rounded-2xl
+            border border-gray-100
+            shadow-md
+            hover:shadow-xl
+            hover:-translate-y-1
+            transition-all
+            duration-300
+            overflow-hidden
+          "
+        >
+          {/* Imagen bien adaptada */}
+          <div className="bg-gray-50">
+            <img
+              src={card.img}
+              alt={card.title}
+              className="
+                w-full
+                h-48
+                object-contain
+                px-6
+                py-4
+              "
+              loading="lazy"
+            />
           </div>
-        </section>
+
+          <div className="border-b border-gray-100" />
+
+          {/* Contenido */}
+          <div className="p-6">
+            <h3 className="text-2xl font-bold text-center text-coop-blue mb-4">
+              {card.title}
+            </h3>
+
+            <ul className="space-y-2 text-gray-700 text-sm">
+              {card.items.map((item, idx) => (
+                <li key={idx}>✔ {item}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
 
         {/* ================= FAQ ================= */}
         <FAQSection />
