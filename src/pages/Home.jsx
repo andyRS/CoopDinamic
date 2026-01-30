@@ -73,7 +73,7 @@ const Home = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                 <div>
-                  <h3 className="text-2xl font-bold mb-4">Ventajas</h3>
+                    <h3 className="text-2xl font-bold mb-4 text-black">Ventajas</h3>
                   <ul className="space-y-2 text-gray-700">
                     <li>✔ Ganas dinero por ahorrar</li>
                     <li>✔ Préstamos de fácil acceso</li>
@@ -84,7 +84,7 @@ const Home = () => {
                 </div>
 
                 <div>
-                  <h3 className="text-2xl font-bold mb-4">Beneficios</h3>
+                    <h3 className="text-2xl font-bold mb-4 text-black">Beneficios</h3>
                   <ul className="space-y-2 text-gray-700">
                     <li>✔ Repartición de excedentes</li>
                     <li>✔ Tasas competitivas</li>
