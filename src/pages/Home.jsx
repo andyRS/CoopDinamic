@@ -60,47 +60,59 @@ const Home = () => {
         </Modal>
 
         {/* ================= POR QUÉ HACERTE SOCIO ================= */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-4">
-            <p className="uppercase tracking-widest text-sm text-center text-gray-500 font-semibold mb-2">
+        <section className="py-20 bg-gradient-to-br from-white via-coop-light-green/10 to-coop-green/5 relative overflow-hidden">
+          <div className="absolute inset-0 pointer-events-none">
+            <svg width="100%" height="100%" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+              <ellipse cx="600" cy="100" rx="180" ry="60" fill="#09a33722" />
+              <ellipse cx="200" cy="350" rx="120" ry="40" fill="#4685fa22" />
+            </svg>
+          </div>
+          <div className="container mx-auto px-4 relative z-10">
+            <p className="uppercase tracking-widest text-sm text-center text-coop-green font-semibold mb-2 animate-fade-in">
               Aumenta tus oportunidades en la vida con CoopDinámica
             </p>
 
-            <h2 className="text-5xl font-extrabold text-center mb-16 text-gray-900">
+            <h2 className="text-5xl font-extrabold text-center mb-16 text-gray-900 animate-fade-in">
               ¿Por Qué Hacerte Socio?
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                <div>
-                  <h3 className="text-2xl font-bold mb-4">Ventajas</h3>
-                  <ul className="space-y-2 text-gray-700">
-                    <li>✔ Ganas dinero por ahorrar</li>
-                    <li>✔ Préstamos de fácil acceso</li>
-                    <li>✔ Financiamiento de bienes</li>
-                    <li>✔ Especiales de temporada</li>
-                    <li>✔ Apoyo sociocultural</li>
+                <div className="bg-white/80 rounded-xl shadow-lg p-6 animate-slide-up">
+                  <h3 className="text-2xl font-bold mb-4 text-coop-blue flex items-center gap-2">
+                    <span>🌱</span> Ventajas
+                  </h3>
+                  <ul className="space-y-3 text-gray-700 text-lg">
+                    <li className="flex items-center gap-2"><span className="text-coop-green">✔</span> Ganas dinero por ahorrar</li>
+                    <li className="flex items-center gap-2"><span className="text-coop-green">✔</span> Préstamos de fácil acceso</li>
+                    <li className="flex items-center gap-2"><span className="text-coop-green">✔</span> Financiamiento de bienes</li>
+                    <li className="flex items-center gap-2"><span className="text-coop-green">✔</span> Especiales de temporada</li>
+                    <li className="flex items-center gap-2"><span className="text-coop-green">✔</span> Apoyo sociocultural</li>
                   </ul>
                 </div>
 
-                <div>
-                  <h3 className="text-2xl font-bold mb-4">Beneficios</h3>
-                  <ul className="space-y-2 text-gray-700">
-                    <li>✔ Repartición de excedentes</li>
-                    <li>✔ Tasas competitivas</li>
-                    <li>✔ Amplia gama de productos</li>
-                    <li>✔ Educación financiera</li>
-                    <li>✔ Premios por ahorro</li>
+                <div className="bg-white/80 rounded-xl shadow-lg p-6 animate-slide-up delay-100">
+                  <h3 className="text-2xl font-bold mb-4 text-coop-blue flex items-center gap-2">
+                    <span>🎁</span> Beneficios
+                  </h3>
+                  <ul className="space-y-3 text-gray-700 text-lg">
+                    <li className="flex items-center gap-2"><span className="text-coop-green">✔</span> Repartición de excedentes</li>
+                    <li className="flex items-center gap-2"><span className="text-coop-green">✔</span> Tasas competitivas</li>
+                    <li className="flex items-center gap-2"><span className="text-coop-green">✔</span> Amplia gama de productos</li>
+                    <li className="flex items-center gap-2"><span className="text-coop-green">✔</span> Educación financiera</li>
+                    <li className="flex items-center gap-2"><span className="text-coop-green">✔</span> Premios por ahorro</li>
                   </ul>
                 </div>
               </div>
 
-              <img
-                src="/img/familia_real.webp"
-                alt="Familia socia de CoopDinámica"
-                className="w-full rounded-2xl shadow-xl"
-                loading="lazy"
-              />
+              <div className="flex justify-center animate-fade-in">
+                <img
+                  src="/img/familia_real.webp"
+                  alt="Familia socia de CoopDinámica"
+                  className="w-full max-w-md rounded-2xl shadow-2xl border-4 border-coop-green/20"
+                  loading="lazy"
+                />
+              </div>
             </div>
           </div>
         </section>
