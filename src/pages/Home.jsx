@@ -132,7 +132,7 @@ const Home = () => {
               {[
                 {
                   title: 'Ahorro',
-                  img: '/img/ahorro.jpg',
+                  img: '/img/ahorro.webp',
                   items: [
                     'Cuentas de Ahorro',
                     'Ahorros Programados',
@@ -143,7 +143,7 @@ const Home = () => {
                 },
                 {
                   title: 'Crédito',
-                  img: '/img/credito.jpg',
+                  img: '/img/prestamo.webp',
                   items: [
                     'Préstamos Expresos',
                     'Hipotecarios',
@@ -154,7 +154,7 @@ const Home = () => {
                 },
                 {
                   title: 'Servicios',
-                  img: '/img/servicios.jpg',
+                  img: '/img/certificado.webp',
                   items: [
                     'Asesoría financiera',
                     'Educación cooperativa',
@@ -171,10 +171,9 @@ const Home = () => {
                   <div className="relative mb-4">
                     <img
                       src={card.img}
-                      alt={card.title}
-                      className="w-full h-40 object-cover rounded-xl"
+                      alt={card.title === 'Ahorro' ? 'Ahorro' : card.title === 'Crédito' ? 'Préstamo' : 'Certificado'}
+                      className="w-full h-40 object-cover rounded-xl mb-4"
                     />
-                    <div className="absolute inset-0 bg-black/10 rounded-xl" />
                   </div>
 
                   <h3 className="text-2xl font-bold text-center text-coop-blue mb-2">
