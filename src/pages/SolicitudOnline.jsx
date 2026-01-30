@@ -72,9 +72,9 @@ const SolicitudOnline = () => {
     <>
       <Navigation />
       <div className="min-h-[90vh] flex items-center justify-center bg-gradient-to-br from-coop-green/10 to-coop-blue/10 py-10 px-2">
-        <div className="w-full max-w-2xl mx-auto bg-white rounded-2xl shadow-2xl p-8 md:p-12 border border-gray-100">
-        <h2 className="text-3xl md:text-4xl font-extrabold text-coop-green mb-2 text-center">Solicitud Online</h2>
-        <p className="text-gray-600 text-center mb-8">Solicita productos y servicios de CoopDinámica de forma rápida y segura.</p>
+        <div className="w-full max-w-2xl mx-auto bg-white rounded-2xl shadow-2xl p-8 md:p-12 border border-coop-green/40">
+        <h2 className="text-3xl md:text-4xl font-extrabold text-coop-green mb-2 text-center drop-shadow">Solicitud Online</h2>
+        <p className="text-gray-800 text-center mb-8 font-medium">Solicita productos y servicios de CoopDinámica de forma rápida y segura.</p>
         {enviado ? (
           <div className="bg-green-100 text-green-800 p-4 rounded-lg text-center text-lg font-semibold shadow mb-4 animate-fade-in">¡Solicitud enviada correctamente! Pronto nos pondremos en contacto.</div>
         ) : (
@@ -82,36 +82,36 @@ const SolicitudOnline = () => {
             {error && <div className="bg-red-100 text-red-700 p-2 rounded-lg text-center font-medium shadow animate-fade-in">{error}</div>}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label className="block font-semibold mb-1">Nombre completo *</label>
-                <input type="text" name="nombre" value={form.nombre} onChange={handleChange} className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-coop-green transition" required />
+                <label className="block font-bold mb-1 text-coop-green">Nombre completo *</label>
+                <input type="text" name="nombre" value={form.nombre} onChange={handleChange} className="w-full border-2 border-coop-green/40 text-gray-900 placeholder-gray-500 rounded-lg px-4 py-3 focus:outline-none focus:border-coop-green focus:bg-green-50 transition" required placeholder="Ej: Juan Pérez" />
               </div>
               <div>
-                <label className="block font-semibold mb-1">Cédula *</label>
-                <input type="text" name="cedula" value={form.cedula} onChange={handleChange} className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-coop-green transition" required />
+                <label className="block font-bold mb-1 text-coop-green">Cédula *</label>
+                <input type="text" name="cedula" value={form.cedula} onChange={handleChange} className="w-full border-2 border-coop-green/40 text-gray-900 placeholder-gray-500 rounded-lg px-4 py-3 focus:outline-none focus:border-coop-green focus:bg-green-50 transition" required placeholder="Ej: 001-0000000-0" />
               </div>
               <div>
-                <label className="block font-semibold mb-1">Fecha de nacimiento *</label>
-                <input type="date" name="fecha_nacimiento" value={form.fecha_nacimiento} onChange={handleChange} className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-coop-green transition" required />
+                <label className="block font-bold mb-1 text-coop-green">Fecha de nacimiento *</label>
+                <input type="date" name="fecha_nacimiento" value={form.fecha_nacimiento} onChange={handleChange} className="w-full border-2 border-coop-green/40 text-gray-900 rounded-lg px-4 py-3 focus:outline-none focus:border-coop-green focus:bg-green-50 transition" required />
               </div>
               <div>
-                <label className="block font-semibold mb-1">Nacionalidad</label>
-                <input type="text" name="nacionalidad" value={form.nacionalidad} onChange={handleChange} className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-coop-green transition" />
+                <label className="block font-bold mb-1 text-coop-green">Nacionalidad</label>
+                <input type="text" name="nacionalidad" value={form.nacionalidad} onChange={handleChange} className="w-full border-2 border-coop-green/40 text-gray-900 placeholder-gray-500 rounded-lg px-4 py-3 focus:outline-none focus:border-coop-green focus:bg-green-50 transition" placeholder="Ej: Dominicana" />
               </div>
               <div className="md:col-span-2">
-                <label className="block font-semibold mb-1">Dirección</label>
-                <input type="text" name="direccion" value={form.direccion} onChange={handleChange} className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-coop-green transition" />
+                <label className="block font-bold mb-1 text-coop-green">Dirección</label>
+                <input type="text" name="direccion" value={form.direccion} onChange={handleChange} className="w-full border-2 border-coop-green/40 text-gray-900 placeholder-gray-500 rounded-lg px-4 py-3 focus:outline-none focus:border-coop-green focus:bg-green-50 transition" placeholder="Ej: Calle 1, No. 2" />
               </div>
               <div>
-                <label className="block font-semibold mb-1">Teléfono *</label>
-                <input type="tel" name="telefono" value={form.telefono} onChange={handleChange} className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-coop-green transition" required />
+                <label className="block font-bold mb-1 text-coop-green">Teléfono *</label>
+                <input type="tel" name="telefono" value={form.telefono} onChange={handleChange} className="w-full border-2 border-coop-green/40 text-gray-900 placeholder-gray-500 rounded-lg px-4 py-3 focus:outline-none focus:border-coop-green focus:bg-green-50 transition" required placeholder="Ej: 809-000-0000" />
               </div>
               <div>
-                <label className="block font-semibold mb-1">Correo electrónico *</label>
-                <input type="email" name="email" value={form.email} onChange={handleChange} className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-coop-green transition" required />
+                <label className="block font-bold mb-1 text-coop-green">Correo electrónico *</label>
+                <input type="email" name="email" value={form.email} onChange={handleChange} className="w-full border-2 border-coop-green/40 text-gray-900 placeholder-gray-500 rounded-lg px-4 py-3 focus:outline-none focus:border-coop-green focus:bg-green-50 transition" required placeholder="Ej: correo@email.com" />
               </div>
               <div className="md:col-span-2">
-                <label className="block font-semibold mb-1">Tipo de solicitud *</label>
-                <select name="tipo" value={form.tipo} onChange={handleTipoChange} className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-coop-green transition" required>
+                <label className="block font-bold mb-1 text-coop-green">Tipo de solicitud *</label>
+                <select name="tipo" value={form.tipo} onChange={handleTipoChange} className="w-full border-2 border-coop-green/40 text-gray-900 rounded-lg px-4 py-3 focus:outline-none focus:border-coop-green focus:bg-green-50 transition" required>
                   <option value="">Selecciona una opción</option>
                   {tiposSolicitud.map(opt => (
                     <option key={opt.value} value={opt.value}>{opt.label}</option>
@@ -121,8 +121,8 @@ const SolicitudOnline = () => {
               {/* Campos dinámicos según tipo */}
               {camposDinamicos.includes('monto') && (
                 <div>
-                  <label className="block font-semibold mb-1">Monto solicitado/depositado</label>
-                  <input type="number" name="monto" value={form.monto} onChange={handleChange} className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-coop-green transition" min="0" />
+                  <label className="block font-bold mb-1 text-coop-green">Monto solicitado/depositado</label>
+                  <input type="number" name="monto" value={form.monto} onChange={handleChange} className="w-full border-2 border-coop-green/40 text-gray-900 placeholder-gray-500 rounded-lg px-4 py-3 focus:outline-none focus:border-coop-green focus:bg-green-50 transition" min="0" placeholder="Ej: 10000" />
                 </div>
               )}
               {camposDinamicos.includes('plazo') && (
