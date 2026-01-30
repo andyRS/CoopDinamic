@@ -65,49 +65,54 @@ const Home = () => {
         </Modal>
 
         {/* ================= POR QUÉ HACERTE SOCIO ================= */}
-        <section className="py-16 bg-white">
+        <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <p className="uppercase tracking-widest text-sm text-center text-gray-500 font-semibold mb-2">
               Aumenta tus oportunidades en la vida con CoopDinámica
             </p>
 
-            <h2 className="text-5xl font-extrabold text-center mb-10 text-gray-900">
+            <h2 className="text-5xl font-extrabold text-center mb-16 text-gray-900">
               ¿Por Qué Hacerte Socio?
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div>
-                <h3 className="text-2xl font-bold mb-4 text-center">Ventajas</h3>
-                <ul className="space-y-2 text-gray-700">
-                  <li>✔ Ganas dinero por ahorrar</li>
-                  <li>✔ Préstamos de fácil acceso</li>
-                  <li>✔ Financiamiento de bienes</li>
-                  <li>✔ Especiales de temporada</li>
-                  <li>✔ Apoyo sociocultural</li>
-                </ul>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+              
+              {/* TEXTO */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                <div>
+                  <h3 className="text-2xl font-bold mb-4 text-gray-900">
+                    Ventajas
+                  </h3>
+                  <ul className="space-y-2 text-gray-700">
+                    <li>✔ Ganas dinero por ahorrar</li>
+                    <li>✔ Préstamos de fácil acceso</li>
+                    <li>✔ Financiamiento de bienes</li>
+                    <li>✔ Especiales de temporada</li>
+                    <li>✔ Apoyo sociocultural</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="text-2xl font-bold mb-4 text-gray-900">
+                    Beneficios
+                  </h3>
+                  <ul className="space-y-2 text-gray-700">
+                    <li>✔ Repartición de excedentes</li>
+                    <li>✔ Tasas competitivas</li>
+                    <li>✔ Amplia gama de productos</li>
+                    <li>✔ Educación financiera</li>
+                    <li>✔ Premios por ahorro</li>
+                  </ul>
+                </div>
               </div>
 
-              <div>
-                <h3 className="text-2xl font-bold mb-4 text-center">Beneficios</h3>
-                <ul className="space-y-2 text-gray-700">
-                  <li>✔ Repartición de excedentes</li>
-                  <li>✔ Tasas competitivas</li>
-                  <li>✔ Amplia gama de productos</li>
-                  <li>✔ Educación financiera</li>
-                  <li>✔ Premios por ahorro</li>
-                </ul>
-              </div>
-
-              <div className="flex items-center justify-center">
-                <iframe
-                  className="rounded-xl shadow-lg"
-                  width="100%"
-                  height="220"
-                  src="https://www.youtube.com/embed/1QZQ2KkQ2dA"
-                  title="Testimonio"
-                  allowFullScreen
-                />
-              </div>
+              {/* IMAGEN EMOCIONAL */}
+              <img
+                src="/img/familia_real.webp"
+                alt="Familia socia de CoopDinámica"
+                className="w-full rounded-2xl shadow-xl"
+                loading="lazy"
+              />
             </div>
           </div>
         </section>
@@ -161,16 +166,21 @@ const Home = () => {
               ].map((card, i) => (
                 <div
                   key={i}
-                  className="bg-gray-50 rounded-2xl p-6 shadow-sm hover:shadow-lg transition"
+                  className="bg-gray-50 rounded-2xl p-6 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all"
                 >
-                  <img
-                    src={card.img}
-                    alt={card.title}
-                    className="w-full h-40 object-cover rounded-xl mb-4"
-                  />
+                  <div className="relative mb-4">
+                    <img
+                      src={card.img}
+                      alt={card.title}
+                      className="w-full h-40 object-cover rounded-xl"
+                    />
+                    <div className="absolute inset-0 bg-black/10 rounded-xl" />
+                  </div>
+
                   <h3 className="text-2xl font-bold text-center text-coop-blue mb-2">
                     {card.title}
                   </h3>
+
                   <ul className="space-y-1 text-gray-700">
                     {card.items.map((item, idx) => (
                       <li key={idx}>✔ {item}</li>
