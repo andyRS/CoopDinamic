@@ -166,15 +166,20 @@ const Home = () => {
                     overflow-hidden
                   "
                 >
-                  {/* Imagen */}
-                  <div className="relative h-36">
+                  {/* Imagen profesional */}
+                  <div className="relative bg-gray-50">
                     <img
                       src={card.img}
                       alt={card.title}
-                      className="w-full h-full object-cover"
+                      className="
+                        w-full
+                        h-48
+                        object-contain
+                        px-6
+                        py-4
+                      "
                       loading="lazy"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
                   </div>
 
                   {/* Contenido */}
